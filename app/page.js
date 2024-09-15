@@ -394,8 +394,6 @@ export default function Home() {
               className="subjects-carousel-swiper-button-next absolute transform -translate-y-1/2  top-1/2 right-3 z-50 cursor-pointer w-2"
             />
           </div>
-
-          
         </div>
       </section>
     </main>
