@@ -316,7 +316,7 @@ export default function Home() {
           {countries?.map((country, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="flex items-center min-[340px]:ms-0 ms-4 gap-2 min-[440px]:px-5">
+                <div className="flex min-[340px]:place-content-center place-content-start items-center gap-2">
                   <div>
                     <Image
                       alt={"Country Image"}
@@ -400,11 +400,11 @@ export default function Home() {
                 },
               }}
               modules={[Navigation, Pagination]}
-              className="subjects-carousel rounded-xl px-3 py-2 my-3 bg-white"
+              className="subjects-carousel rounded-xl px-3 py-4 my-3 bg-white"
             >
               {subjects?.map((subject, index) => {
                 return (
-                  <SwiperSlide key={index} className="min-[340px]:ps-0 ps-16">
+                  <SwiperSlide key={index} className="flex place-content-center">
                     <h3
                       className={`${
                         subject?.selected

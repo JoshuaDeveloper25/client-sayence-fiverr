@@ -34,18 +34,16 @@
 }
 
 /* Countries Carousel */
-.countries-carousel .swiper-wrapper,
-.subjects-carousel .swiper-wrapper {
+.countries-carousel .swiper-wrapper {
   padding: 1rem 2rem !important;
 }
 
-.subjects-carousel .swiper-slide-active {
-  width: 140px !important;
-  margin: 0 auto;
+.subjects-carousel .swiper-wrapper {
+  padding: 1rem 0 !important;
 }
 
 @media (min-width: 340px) {
-  .subjects-carousel .swiper-slide-active {
-    width: 90px !important;
+  .countries-carousel .swiper-wrapper {
+    padding: 1rem 0 !important;
   }
 }
