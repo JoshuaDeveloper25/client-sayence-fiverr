@@ -52,7 +52,7 @@ export default function LogIn() {
             </button>
 
             <h2 className="text-center text-[#1C1C1E] font-medium text-sm mt-6">
-              I can't sign in, help!
+              I can&apos;t sign in, help!
             </h2>
           </div>
 
