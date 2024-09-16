@@ -380,17 +380,17 @@ export default function Home() {
                 },
                 // when window width is >= 400px
                 400: {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                   spaceBetween: 30,
                 },
                 // when window width is >= 500px
                 500: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 30,
                 },
                 // when window width is >= 720px
                 720: {
-                  slidesPerView: 6,
+                  slidesPerView: 5,
                   spaceBetween: 10,
                 },
                 // when window width is >= 950px
