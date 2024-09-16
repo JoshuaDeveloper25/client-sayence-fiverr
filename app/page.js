@@ -8,17 +8,42 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
 
+import tutorVideoPreview from "./assets/images/tutor-video-preview.png";
+import tutorImagePreview from "./assets/images/tutor-image-preview.png";
 import unitedKingdom from "./assets/countries/united-kingdom.png";
+import womanWorking from "./assets/images/working-woman.png";
 import france from "./assets/countries/france.png";
 import header from "./assets/images/header.png";
 import italy from "./assets/countries/italy.png";
 import spain from "./assets/countries/spain.png";
 
+// Icons
 import chevronRight from "./assets/icons/chevron-right.png";
 import chevronLeft from "./assets/icons/chevron-left.png";
+import calculator from "./assets/icons/calculator.png";
+
+import threeUsers from "./assets/icons/3-users.png";
+import calendar from "./assets/icons/calendar.png";
+import walking from "./assets/icons/walking.png";
+import card from "./assets/icons/card.png";
+
+import twoUsers from "./assets/icons/2-users.png";
+import sparkle from "./assets/icons/sparkle.png";
+import library from "./assets/icons/library.png";
+import userScreen from "./assets/icons/user-screen.png";
+
 import bookOpen from "./assets/icons/book-open.png";
+import messages from "./assets/icons/messages.png";
+import pencil from "./assets/icons/pencil.png";
+import wrist from "./assets/icons/wrist.png";
+import badge from "./assets/icons/badge.png";
+
+import parachute from "./assets/icons/parachute.png";
+import luggage from "./assets/icons/lugagge.png";
+import badgeStar from "./assets/icons/badge-star.png";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const countries = [
   {
@@ -394,6 +419,677 @@ export default function Home() {
               className="subjects-carousel-swiper-button-next absolute transform -translate-y-1/2  top-1/2 right-3 z-50 cursor-pointer w-2"
             />
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5">
+            <div className="bg-white rounded-b-xl rounded-t-xl">
+              <Image
+                alt={"Tutor Video Image"}
+                className="w-full rounded-t-xl"
+                src={tutorVideoPreview}
+              />
+
+              <div className="p-3.5">
+                <div className="flex gap-3">
+                  <div className="relative">
+                    <Image
+                      alt={"Tutor Image"}
+                      className="rounded-lg"
+                      src={tutorImagePreview}
+                    />
+
+                    <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        alt={"Country Image"}
+                        className="w-5 rounded-md"
+                        src={unitedKingdom}
+                      />
+
+                      <h4 className="text-[#8E8E93] text-sm font-medium">
+                        Teaches English
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 items-center justify-between my-3.5">
+                  <ul className="flex items-center text-sm font-medium gap-3">
+                    <li>English</li>
+                    <li className="p-1 rounded-lg bg-black text-white">
+                      Native
+                    </li>
+                    <li>French</li>
+                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                  </ul>
+
+                  <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
+                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                      +1
+                    </h4>
+                  </div>
+                </div>
+
+                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                  Lesson rate
+                </h4>
+                <h3 className="font-bold">
+                  <span className="text-lg">8 USD/</span>30 mins
+                </h3>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-b-xl rounded-t-xl">
+              <Image
+                alt={"Tutor Video Image"}
+                className="w-full rounded-t-xl"
+                src={tutorVideoPreview}
+              />
+
+              <div className="p-3.5">
+                <div className="flex gap-3">
+                  <div className="relative">
+                    <Image
+                      alt={"Tutor Image"}
+                      className="rounded-lg"
+                      src={tutorImagePreview}
+                    />
+
+                    <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        alt={"Country Image"}
+                        className="w-5 rounded-md"
+                        src={unitedKingdom}
+                      />
+
+                      <h4 className="text-[#8E8E93] text-sm font-medium">
+                        Teaches English
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 items-center justify-between my-3.5">
+                  <ul className="flex items-center text-sm font-medium gap-3">
+                    <li>English</li>
+                    <li className="p-1 rounded-lg bg-black text-white">
+                      Native
+                    </li>
+                    <li>French</li>
+                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                  </ul>
+
+                  <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
+                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                      +1
+                    </h4>
+                  </div>
+                </div>
+
+                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                  Lesson rate
+                </h4>
+                <h3 className="font-bold">
+                  <span className="text-lg">8 USD/</span>30 mins
+                </h3>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-b-xl rounded-t-xl">
+              <Image
+                alt={"Tutor Video Image"}
+                className="w-full rounded-t-xl"
+                src={tutorVideoPreview}
+              />
+
+              <div className="p-3.5">
+                <div className="flex gap-3">
+                  <div className="relative">
+                    <Image
+                      alt={"Tutor Image"}
+                      className="rounded-lg"
+                      src={tutorImagePreview}
+                    />
+
+                    <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        alt={"Country Image"}
+                        className="w-5 rounded-md"
+                        src={unitedKingdom}
+                      />
+
+                      <h4 className="text-[#8E8E93] text-sm font-medium">
+                        Teaches English
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 items-center justify-between my-3.5">
+                  <ul className="flex items-center text-sm font-medium gap-3">
+                    <li>English</li>
+                    <li className="p-1 rounded-lg bg-black text-white">
+                      Native
+                    </li>
+                    <li>French</li>
+                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                  </ul>
+
+                  <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
+                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                      +1
+                    </h4>
+                  </div>
+                </div>
+
+                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                  Lesson rate
+                </h4>
+                <h3 className="font-bold">
+                  <span className="text-lg">8 USD/</span>30 mins
+                </h3>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-b-xl rounded-t-xl">
+              <Image
+                alt={"Tutor Video Image"}
+                className="w-full rounded-t-xl"
+                src={tutorVideoPreview}
+              />
+
+              <div className="p-3.5">
+                <div className="flex gap-3">
+                  <div className="relative">
+                    <Image
+                      alt={"Tutor Image"}
+                      className="rounded-lg"
+                      src={tutorImagePreview}
+                    />
+
+                    <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        alt={"Country Image"}
+                        className="w-5 rounded-md"
+                        src={unitedKingdom}
+                      />
+
+                      <h4 className="text-[#8E8E93] text-sm font-medium">
+                        Teaches English
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 items-center justify-between my-3.5">
+                  <ul className="flex items-center text-sm font-medium gap-3">
+                    <li>English</li>
+                    <li className="p-1 rounded-lg bg-black text-white">
+                      Native
+                    </li>
+                    <li>French</li>
+                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                  </ul>
+
+                  <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
+                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                      +1
+                    </h4>
+                  </div>
+                </div>
+
+                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                  Lesson rate
+                </h4>
+                <h3 className="font-bold">
+                  <span className="text-lg">8 USD/</span>30 mins
+                </h3>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-b-xl rounded-t-xl">
+              <Image
+                alt={"Tutor Video Image"}
+                className="w-full rounded-t-xl"
+                src={tutorVideoPreview}
+              />
+
+              <div className="p-3.5">
+                <div className="flex gap-3">
+                  <div className="relative">
+                    <Image
+                      alt={"Tutor Image"}
+                      className="rounded-lg"
+                      src={tutorImagePreview}
+                    />
+
+                    <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        alt={"Country Image"}
+                        className="w-5 rounded-md"
+                        src={unitedKingdom}
+                      />
+
+                      <h4 className="text-[#8E8E93] text-sm font-medium">
+                        Teaches English
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 items-center justify-between my-3.5">
+                  <ul className="flex items-center text-sm font-medium gap-3">
+                    <li>English</li>
+                    <li className="p-1 rounded-lg bg-black text-white">
+                      Native
+                    </li>
+                    <li>French</li>
+                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                  </ul>
+
+                  <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
+                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                      +1
+                    </h4>
+                  </div>
+                </div>
+
+                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                  Lesson rate
+                </h4>
+                <h3 className="font-bold">
+                  <span className="text-lg">8 USD/</span>30 mins
+                </h3>
+              </div>
+            </div>
+            <div className="bg-[#1C1C1E] text-whit p-3 rounded-b-xl rounded-t-xl">
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-2xl text-white font-bold">
+                    Discovers more{" "}
+                    <span className="sm:block inline">teachers</span>
+                  </h3>
+                  <p className="font-medium text-white my-6">
+                    Search through 1000+ qualified teachers and select the
+                    perfect fit based on your target subject, goals and budget.
+                  </p>
+                </div>
+
+                <div>
+                  <Link href={"#"} className="btn btn-white text-center">
+                    Discover more teachers
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Started Easy */}
+      <section className="container-page px-3 py-12">
+        <h3 className="font-bold text-xl">
+          <Image
+            alt="User Walking Icon"
+            className="align-text-bottom w-4 inline-block me-2"
+            src={walking}
+          />{" "}
+          Only few easy steps to get started
+        </h3>
+
+        <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+          In only four words, choose, schedule, pay, start.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image
+              alt={"Icon 3 Users"}
+              className="w-12 mx-auto"
+              src={threeUsers}
+            />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Choose a tutor
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Browse qualified tutors based on level, goals, budget, and
+              availability.
+            </p>
+          </div>
+
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image
+              alt={"Icon Calendar"}
+              className="w-12 mx-auto"
+              src={calendar}
+            />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Schedule a lesson
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Pick the date and time that works for you and get ready to conquer
+              your goals.
+            </p>
+          </div>
+
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image alt={"Icon Card"} className="w-12 mx-auto" src={card} />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Pay as you go
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Pay only for the lessons you take, no contracts or hidden fees.
+            </p>
+          </div>
+
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image
+              alt={"Icon Screen User"}
+              className="w-12 mx-auto"
+              src={userScreen}
+            />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Start learning
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Pay only for the lessons you take, no contracts or hidden fees.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet our services */}
+      <section className="bg-[#F2F2F7]">
+        <div className="container-page px-3 py-12">
+          <h3 className="font-bold text-xl">
+            <Image
+              alt="Sparkle Icon"
+              className="align-text-bottom w-5 inline-block me-2"
+              src={sparkle}
+            />{" "}
+            Meet our services
+          </h3>
+
+          <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+            Start learning today
+          </p>
+
+          <article className="flex flex-col-reverse md:flex-row gap-5 mt-5">
+            <div className="flex-1">
+              <div className="flex flex-col justify-between">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 mb-6">
+                  <Image
+                    alt={"2 Users Icon"}
+                    className="w-16 mx-auto"
+                    src={twoUsers}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                    Dedicated lessons
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Find teachers from all over the world sharing their
+                    languages, dialects, and cultures.
+                  </p>
+                </div>
+
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                  <Image
+                    alt={"Icon library"}
+                    className="w-16 mx-auto"
+                    src={library}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                    Library access
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Find teachers from all over the world sharing their
+                    languages, dialects, and cultures.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-[30%]">
+              <div className="max-w-full mx-auto">
+                <Image
+                  alt="Woman Working"
+                  className="w-full h-[23rem] object-cover rounded-2xl"
+                  src={womanWorking}
+                />{" "}
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* Get Started Not Easy*/}
+      <section className="container-page px-3 py-12">
+        <h3 className="font-bold text-xl">
+          <Image
+            alt="User Add Icon"
+            className="align-text-bottom w-6 inline-block me-2"
+            src={badge}
+          />{" "}
+          Only few steps to get started
+        </h3>
+
+        <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+          Start learning today
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image
+              alt={"Icon Calculator"}
+              className="w-12 mx-auto"
+              src={calculator}
+            />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Scientific subjects
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Browse qualified tutors based on level, goals, budget, and
+              availability.
+            </p>
+          </div>
+
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image
+              alt={"Icon Message"}
+              className="w-16 mx-auto"
+              src={messages}
+            />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Linguistic subjects
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Pick the date and time that works for you and get ready to conquer
+              your goals.
+            </p>
+          </div>
+
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image alt={"Icon Pencil"} className="w-16 mx-auto" src={pencil} />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Artistic subjects
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Pay only for the lessons you take, no contracts or hidden fees.
+            </p>
+          </div>
+
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+            <Image alt={"Icon Wrist"} className="w-16 mx-auto" src={wrist} />
+
+            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              Practical subjects
+            </h2>
+            <p className="text-[#8E8E93] font-medium">
+              Pay only for the lessons you take, no contracts or hidden fees.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Discover how our lessons support you */}
+      <section className="bg-[#F2F2F7]">
+        <div className="container-page px-3 py-12">
+          <h3 className="font-bold text-xl">
+            <Image
+              alt="Sparkle Icon"
+              className="align-text-bottom w-5 inline-block me-2"
+              src={sparkle}
+            />{" "}
+            Discover how our lessons can support You
+          </h3>
+
+          <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+            From school support to professional skill improvement, find lessons
+            that fit your needs and learning style.
+          </p>
+
+          <article className="flex flex-col-reverse md:flex-row gap-5 my-8">
+            <div className="flex-1">
+              <div className="flex flex-col justify-between">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                  <Image
+                    alt={"Parachute Icon"}
+                    className="w-12 mx-auto"
+                    src={parachute}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                    School support
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Get personalized help to reinforce what you’re learning in
+                    class.
+                  </p>
+                </div>
+
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 my-6">
+                  <Image
+                    alt={"Luggage Icon"}
+                    className="w-12 mx-auto"
+                    src={luggage}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                    Conversational lessons
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Practice real-life conversations to improve fluency and
+                    confidence.
+                  </p>
+                </div>
+
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                  <Image
+                    alt={"Badge Star Icon"}
+                    className="w-6 mx-auto"
+                    src={badgeStar}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                    Exam preparation
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Focused guidance to help you excel in your upcoming exams.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-[30%]">
+              <div className="max-w-full mx-auto">
+                <Image
+                  alt="Woman Working"
+                  className="w-full h-[35.8rem] object-cover rounded-2xl"
+                  src={womanWorking}
+                />{" "}
+              </div>
+            </div>
+          </article>
+
+          <article className="flex flex-col md:flex-row gap-5">
+            <div className="flex-[30%]">
+              <div className="max-w-full mx-auto">
+                <Image
+                  alt="Woman Working"
+                  className="w-full h-[23rem] object-cover rounded-2xl"
+                  src={womanWorking}
+                />{" "}
+              </div>
+            </div>
+
+            <div className="flex-1">
+              <div className="flex flex-col justify-between">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 mb-6">
+                  <Image
+                    alt={"2 Users Icon"}
+                    className="w-16 mx-auto"
+                    src={twoUsers}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  Initiation lessons
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Find teachers from all over the world sharing their
+                    languages, dialects, and cultures.
+                  </p>
+                </div>
+
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                  <Image
+                    alt={"Icon library"}
+                    className="w-16 mx-auto"
+                    src={library}
+                  />
+
+                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                    Library access
+                  </h2>
+                  <p className="text-[#8E8E93] font-medium">
+                    Find teachers from all over the world sharing their
+                    languages, dialects, and cultures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </main>

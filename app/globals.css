@@ -26,6 +26,11 @@
     background: #1a47ff;
     color: #ffffff;
   }
+
+  .btn-white {
+    background: white;
+    color: black;
+  }
 }
 
 /* Countries Carousel */
