@@ -40,10 +40,12 @@ const Tabs = ({ activeTabIndex, setActiveTabIndex }) => {
           return (
             <button
               key={idx}
-              className={`py-2 transition-colors duration-300 rounded-lg px-2 w-full font-bold text-white  ${
+              className={`py-2 transition-colors duration-300 rounded-lg px-2 w-full ${
+                idx > activeTabIndex && "bg-[#C7C7C7]"
+              } font-bold text-white ${
                 idx === activeTabIndex
                   ? "bg-[#1a47ff] text-white "
-                  : "bg-[#C7C7CC]"
+                  : "bg-[#BDCAFF]"
               }`}
               // Change the active tab on click.
               onClick={() => setActiveTabIndex(idx)}

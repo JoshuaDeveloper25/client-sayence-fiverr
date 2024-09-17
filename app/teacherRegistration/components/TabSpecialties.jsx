@@ -1,4 +1,5 @@
 import userLugagge from "../../assets/icons/user-lugagge.png";
+import userFill from "../../assets/icons/user-fill.png";
 import book2 from "../../assets/icons/book-alt-2.png";
 import metrics from "../../assets/icons/metrics.png";
 import eye from "../../assets/icons/eye.png";
@@ -10,8 +11,9 @@ const TabSpecialties = () => {
     <section className="flex flex-col sm:flex-row gap-14">
       <div className="flex-1">
         <div className="mb-8">
-          <h3 className="flex items-center font-bold text-lg">
-            <Image alt="Eye Icon" className="w-6 inline-block me-2" src={eye} />{" "}
+          <h3 className="flex items-center font-bold text-lg     ">
+            <Image alt="Eye Icon" className="sm:inline-block hidden w-6 me-2" src={eye} />{" "}
+            <Image alt="User Icon" className="sm:hidden inline-block w-6 me-2" src={userFill} />{" "}
             Student preferences
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
@@ -22,7 +24,7 @@ const TabSpecialties = () => {
 
         <div className="mb-8">
           <h3 className="flex items-center font-bold text-lg">
-            <Image alt="Metrics Icon" className="w-6 me-2" src={metrics} />{" "}
+            <Image alt="Metrics Icon" className="sm:block hidden w-6 me-2" src={metrics} />{" "}
             Student's level
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
@@ -51,10 +53,11 @@ const TabSpecialties = () => {
           <h3 className="flex sm:items-center items-start font-bold text-lg">
             <Image
               alt="User Lugagge Icon"
-              className="w-6 inline-block me-2"
+              className="sm:inline-block hidden w-6 me-2"
               src={userLugagge}
             />{" "}
-            Student's age
+            <span className="sm:block hidden">Student's age</span>
+            <span className="sm:hidden block">Education for young learners</span>
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
             iPractis considers all students aged between 5 and 14 as young

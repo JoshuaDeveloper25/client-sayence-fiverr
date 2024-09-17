@@ -178,6 +178,36 @@ const TabPricing = () => {
           </p>
         </div>
 
+        <div className="mb-4">
+          <div className="flex gap-5">
+            <div className="flex-1 cursor-pointer">
+              <Image className="w-full" src={payment1} alt="Payment One" />
+            </div>
+
+            <div className="flex-1 cursor-pointer">
+              <Image className="w-full" src={payment2} alt="Payment Two" />
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <h3 className="text-[#48484A] font-semibold">
+            Withdrawal from iPractis account
+          </h3>
+          <p className="text-sm text-[#48484A] mt-1 font-medium">
+            Enter the email address related to your account
+          </p>
+          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
+            <Image alt="Email Icon" className="w-6 me-2" src={email} />
+            <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
+            <input
+              placeholder="Email address"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+              type="email"
+            />
+          </div>
+        </div>
+
         <div>
           <h3 className="text-[#48484A] font-semibold">Private lesson rate</h3>
           <p className="text-sm text-[#48484A] mt-1 font-medium">
