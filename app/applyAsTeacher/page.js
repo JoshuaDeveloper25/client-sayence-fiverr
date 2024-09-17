@@ -7,6 +7,7 @@ import book from "../assets/icons/book.png";
 import user from "../assets/icons/user-fill-alt.png";
 import dollar from "../assets/icons/dollar.png";
 import hat from "../assets/icons/hat.png";
+import Link from "next/link";
 
 export default function ApplyAsATeacher() {
   return (
@@ -41,9 +42,11 @@ export default function ApplyAsATeacher() {
                 />
               </div>
 
-              <button className="btn btn-black" type="button">
-                Apply now!
-              </button>
+              <Link href={"/teacherRegistration"}>
+                <button className="btn btn-black" type="button">
+                  Apply now!
+                </button>
+              </Link>
             </div>
           </div>
 

@@ -19,7 +19,8 @@ import Link from "next/link";
 const Navbar = () => {
   const pathname = usePathname();
 
-  return pathname === "/applyAsTeacher" ? (
+  return pathname === "/applyAsTeacher" ||
+    pathname === "/teacherRegistration" ? (
     <nav className="container-page px-3 py-3">
       <div className="flex justify-between items-center gap-4">
         <div>
