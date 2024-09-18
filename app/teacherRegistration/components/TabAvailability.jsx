@@ -65,8 +65,8 @@ const TabAvailability = () => {
             <p className="text-sm text-[#8E8E93] mt-1 font-medium">
               Set your daily work time limit to manage your workload effectively
               and maintain a healthy work-life balance. This limit helps ensure
-              you don't overcommit and have enough time for rest and practice
-              personal activities.
+              you don&apos;t overcommit and have enough time for rest and
+              practice personal activities.
             </p>
           </div>
 

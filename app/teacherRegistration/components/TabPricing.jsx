@@ -156,8 +156,8 @@ const TabPricing = () => {
         <ul className="list-disc ps-5 mb-4">
           <li>
             <p>
-              Keep in mind that your teacher's profile is “New” and you
-              currently don't have any profile rate, and review. Make a
+              Keep in mind that your teacher&apos;s profile is “New” and you
+              currently don&apos;t have any profile rate, and review. Make a
               competitive price to attract students.
             </p>
           </li>

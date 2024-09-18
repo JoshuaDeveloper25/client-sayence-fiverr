@@ -118,7 +118,7 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             Tell students about yourself
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
-            Capture prospective students' attention with compelling details
+            Capture prospective students&apos; attention with compelling details
             about you as a teacher
           </p>
         </div>

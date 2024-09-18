@@ -25,7 +25,7 @@ export default function teacherRegistration() {
           as soon as possible.
         </p>
         <p className="sm:hidden block text-sm text-[#8E8E93] mt-1 font-medium">
-          Fill your teacher's profile
+          Fill your teacher&apos;s profile
         </p>
       </div>
 

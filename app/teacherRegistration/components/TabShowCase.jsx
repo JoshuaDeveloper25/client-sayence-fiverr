@@ -18,8 +18,9 @@ const TabShowCase = () => {
             Video presentation
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
-            Introduce yourself to students in the language you'll be teaching
-            and make sure your video meets the requirements to get approved.
+            Introduce yourself to students in the language you&apos;ll be
+            teaching and make sure your video meets the requirements to get
+            approved.
           </p>
         </div>
 
@@ -48,8 +49,8 @@ const TabShowCase = () => {
             certification(s)
           </li>
           <li>
-            Uploaded on YouTube and set to 'Public' visibility. Then provide the
-            link in the right area.
+            Uploaded on YouTube and set to &apos;Public&apos; visibility. Then
+            provide the link in the right area.
           </li>
         </ul>
       </div>
@@ -83,7 +84,7 @@ const TabShowCase = () => {
             <input type="file" className="hidden" />
           </label>
         </div>
-       
+
         <ul className="list-disc ps-5 text-[#48484A] font-medium space-y-1">
           <li>You must be clearly visible and centered in the picture.</li>
           <li>Use a plain background to avoid distractions.</li>

@@ -37,7 +37,7 @@ const TabSpecialties = () => {
               className="sm:block hidden w-6 me-2"
               src={metrics}
             />{" "}
-            Student's level
+            Student&apos;s level
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
             Select the level you can teach
@@ -68,7 +68,7 @@ const TabSpecialties = () => {
               className="sm:inline-block hidden w-6 me-2"
               src={userLugagge}
             />{" "}
-            <span className="sm:block hidden">Student's age</span>
+            <span className="sm:block hidden">Student&apos;s age</span>
             <span className="sm:hidden block">
               Education for young learners
             </span>
@@ -119,7 +119,10 @@ const TabSpecialties = () => {
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
             <Image alt="Book Image" className="w-6" src={book2} />
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <select name="subSubject" className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
+            <select
+              name="subSubject"
+              className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+            >
               <option value={""}>Select a sub-subject</option>
               <option value={"temperature"}>Temperature</option>
               <option value={"location"}>Location</option>
