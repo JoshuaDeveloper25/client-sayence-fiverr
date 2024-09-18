@@ -12,8 +12,16 @@ const TabSpecialties = () => {
       <div className="flex-1">
         <div className="mb-8">
           <h3 className="flex items-center font-bold text-lg     ">
-            <Image alt="Eye Icon" className="sm:inline-block hidden w-6 me-2" src={eye} />{" "}
-            <Image alt="User Icon" className="sm:hidden inline-block w-6 me-2" src={userFill} />{" "}
+            <Image
+              alt="Eye Icon"
+              className="sm:inline-block hidden w-6 me-2"
+              src={eye}
+            />{" "}
+            <Image
+              alt="User Icon"
+              className="sm:hidden inline-block w-6 me-2"
+              src={userFill}
+            />{" "}
             Student preferences
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
@@ -24,7 +32,11 @@ const TabSpecialties = () => {
 
         <div className="mb-8">
           <h3 className="flex items-center font-bold text-lg">
-            <Image alt="Metrics Icon" className="sm:block hidden w-6 me-2" src={metrics} />{" "}
+            <Image
+              alt="Metrics Icon"
+              className="sm:block hidden w-6 me-2"
+              src={metrics}
+            />{" "}
             Student's level
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
@@ -57,7 +69,9 @@ const TabSpecialties = () => {
               src={userLugagge}
             />{" "}
             <span className="sm:block hidden">Student's age</span>
-            <span className="sm:hidden block">Education for young learners</span>
+            <span className="sm:hidden block">
+              Education for young learners
+            </span>
           </h3>
           <p className="text-sm text-[#8E8E93] mt-1 font-medium">
             iPractis considers all students aged between 5 and 14 as young
@@ -105,8 +119,13 @@ const TabSpecialties = () => {
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
             <Image alt="Book Image" className="w-6" src={book2} />
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
-              <option>Select a sub-subject</option>
+            <select name="subSubject" className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
+              <option value={""}>Select a sub-subject</option>
+              <option value={"temperature"}>Temperature</option>
+              <option value={"location"}>Location</option>
+              <option value={"terrain"}>Terrain</option>
+              <option value={"sanitation"}>Sanitation</option>
+              <option value={"conflicts"}>Conflicts</option>
             </select>
           </div>
         </div>

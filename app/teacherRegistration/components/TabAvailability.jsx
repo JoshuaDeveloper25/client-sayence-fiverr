@@ -8,6 +8,7 @@ import lugaggeClock from "../../assets/icons/lugagge-clock.png";
 import calendar from "../../assets/icons/calendar-alt.png";
 
 import Image from "next/image";
+import { dailyWorkTime, timeZones } from "./data";
 
 const TabAvailability = () => {
   return (
@@ -42,7 +43,10 @@ const TabAvailability = () => {
 
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
-                <option>Select a time zone</option>
+                <option value={""}>Select a time zone</option>
+                {timeZones?.map((item, index) => (
+                  <option key={index}>{item}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -77,7 +81,10 @@ const TabAvailability = () => {
 
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
-                <option>Define your daily work time</option>
+                <option value={""}>Define your daily work time</option>
+                {dailyWorkTime?.map((item, index) => (
+                  <option key={index}>{item}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -369,7 +376,6 @@ const TableAvailability = () => {
                 </tr>
               );
             })}
-           
           </tbody>
         </table>
       </div>

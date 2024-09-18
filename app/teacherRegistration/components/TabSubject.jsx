@@ -4,8 +4,21 @@ import book2 from "../../assets/icons/book-alt-2.png";
 import book from "../../assets/icons/book-alt.png";
 import { IoIosAdd } from "react-icons/io";
 import Image from "next/image";
+import { useRef } from "react";
 
-const TabSubject = () => {
+const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
+  const languageKnownRef = useRef("");
+  const levelKnownRef = useRef("");
+
+  const handleAddMasteredLanguage = () => {
+    const masteredLanguageDetails = {
+      languageKnown: languageKnownRef?.current?.value,
+      levelKnown: levelKnownRef?.current?.value,
+    };
+
+    setMasteredLanguages([...masteredLanguages, masteredLanguageDetails]);
+  };
+
   return (
     <section className="flex flex-col sm:flex-row gap-14">
       <div className="flex-1">
@@ -34,8 +47,14 @@ const TabSubject = () => {
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
             <Image alt="Book Image" className="w-6" src={book2} />
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
-              <option>Select a teaching subject</option>
+            <select
+              name="teachingSubject"
+              className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+            >
+              <option value={""}>Select a teaching subject</option>
+              <option value={"mathematics"}>Mathematics</option>
+              <option value={"science"}>Science</option>
+              <option value={"spanish"}>Spanish</option>
             </select>
           </div>
         </div>
@@ -53,6 +72,7 @@ const TabSubject = () => {
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
             <input
               placeholder="Enter a profile title"
+              name="profileTitle"
               className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
               type="text"
             />
@@ -75,6 +95,7 @@ const TabSubject = () => {
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
             <textarea
               placeholder="Enter a text"
+              name="teachedSubjects"
               className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] text-sm font-medium px-1 resize-none"
             />
           </div>
@@ -114,6 +135,7 @@ const TabSubject = () => {
             <textarea
               placeholder="Enter a text"
               className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] text-sm font-medium px-1 resize-none"
+              name="introductionOfYourself"
             />
           </div>
           <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
@@ -137,19 +159,48 @@ const TabSubject = () => {
           </p>
         </div>
 
-        <div className="flex justify-center items-stretch gap-3">
-          <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5 py-3 rounded-lg">
-            <option value={""}>Language</option>
-          </select>
+        {masteredLanguages?.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="flex justify-center items-stretch gap-3 mb-3"
+            >
+              <select
+                ref={languageKnownRef}
+                name="languageKnown"
+                className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5 py-3 rounded-lg"
+              >
+                <option value={""}>Language</option>
+                <option value={"spanish"}>Spanish</option>
+                <option value={"english"}>English</option>
+                <option value={"french"}>French</option>
+                <option value={"chinese"}>Chinese</option>
+              </select>
 
-          <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5 py-3 rounded-lg">
-            <option value={""}>Level</option>
-          </select>
+              <select
+                ref={levelKnownRef}
+                name="levelKnown"
+                className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5 py-3 rounded-lg"
+              >
+                <option value={""}>Level</option>
+                <option value={"a1"}>A1</option>
+                <option value={"a2"}>A2</option>
+                <option value={"b1"}>B1</option>
+                <option value={"b2"}>B2</option>
+                <option value={"c1"}>C1</option>
+                <option value={"c2"}>C2</option>
+              </select>
 
-          <button type="button" className="bg-[#F2F2F7] rounded-lg px-3">
-            <IoIosAdd className="size-6 " />
-          </button>
-        </div>
+              <button
+                onClick={handleAddMasteredLanguage}
+                type="button"
+                className="bg-[#F2F2F7] rounded-lg px-3"
+              >
+                <IoIosAdd className="size-6 " />
+              </button>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

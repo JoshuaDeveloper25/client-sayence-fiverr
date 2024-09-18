@@ -21,6 +21,8 @@ const TabBackground = () => {
         <div className="flex justify-center items-stretch gap-3">
           <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-semibold px-1.5 py-3 rounded-lg">
             <option value={""}>Add an experience</option>
+            <option value={"economics"}>Economics</option>
+            <option value={"system engineering"}>Systems Engineering</option>
           </select>
         </div>
       </div>
@@ -41,6 +43,9 @@ const TabBackground = () => {
         <div className="flex justify-center items-stretch gap-3">
           <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-semibold px-1.5 py-3 rounded-lg">
             <option value={""}>Add an experience</option>
+            <option value={"data science"}>Data Science</option>
+            <option value={"data structures"}>Data Structures</option>
+            <option value={"algorythms"}>Algorythms</option>
           </select>
         </div>
       </div>

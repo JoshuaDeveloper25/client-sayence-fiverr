@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="container-page px-3 py-3">
       <div className="flex justify-between items-center gap-4">
         <div>
-          <Link href={"#"}>
+          <Link href={"/applyAsTeacher"}>
             <Image
               alt="Logo Image"
               className="w-32 inline-block"
