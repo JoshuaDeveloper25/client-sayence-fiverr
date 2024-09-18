@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import header from "../assets/images/header-2.png";
 
