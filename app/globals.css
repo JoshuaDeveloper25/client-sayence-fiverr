@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +7,7 @@
 @layer components {
   /* Layout View */
   .container-page {
-    @apply max-w-[1200px] mx-auto;
+    @apply max-w-[900px] mx-auto;
   }
 
   /* Typography and Buttons */
@@ -13,12 +15,13 @@
     display: inline-block;
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 16px;
     width: 100%;
   }
 
   .btn-black {
-    background: #1C1C1E;
+    background: #1c1c1e;
     color: #ffffff;
   }
 
@@ -31,6 +34,85 @@
     background: white;
     color: black;
   }
+}
+
+/* Global styles */
+body {
+  font-family: "Poppins", system-ui;
+}
+
+.poppins-medium {
+  font-weight: 500;
+}
+
+.poppins-semibold {
+  font-weight: 600;
+}
+
+/* Utilities */
+.LT-SB-2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.MT-SB-3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.MT-SB-2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.MT-SB-1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.MT-1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ST-SB-4 {
+  font-size: 14.4px;
+  font-weight: 600;
+}
+
+.ST-SB-3 {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ST-SB-2 {
+  font-size: 11.2px;
+  font-weight: 600;
+}
+
+.ST-SB-1 {
+  font-size: 9.6px;
+  font-weight: 600;
+}
+
+.ST-4 {
+  font-size: 14.4px;
+  font-weight: 500;
+}
+
+.ST-3 {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ST-2 {
+  font-size: 11.2px;
+  font-weight: 500;
+}
+
+.ST-1 {
+  font-size: 9.6px;
+  font-weight: 500;
 }
 
 /* Countries Carousel */

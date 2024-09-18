@@ -11,27 +11,27 @@ import Image from "next/image";
 
 export default function Register() {
   return (
-    <main className="max-w-3xl mx-auto px-3 my-8">
-      <h2 className="font-bold text-2xl mb-14">
-        Online tutoring with a real teacher.
-      </h2>
+    <main className="container-page px-3 my-8">
+      <h2 className="MT-SB-3 mb-14">Online tutoring with a real teacher.</h2>
 
       <section>
-        <h3 className="font-bold">
-          <Image
-            alt="User Add Icon"
-            className="align-text-top w-6 sm:inline-block hidden"
-            src={userPlus}
-          />{" "}
-          <Image
-            alt="User Fill Icon"
-            className="align-sub w-6 sm:hidden inline-block "
-            src={userFill}
-          />{" "}
+        <h3 className="flex gap-1 items-start MT-SB-2">
+          <div>
+            <Image
+              alt="User Add Icon"
+              className="w-8 sm:inline-block hidden"
+              src={userPlus}
+            />{" "}
+            <Image
+              alt="User Fill Icon"
+              className="align-sub w-6 sm:hidden inline-block "
+              src={userFill}
+            />{" "}
+          </div>
           Create an account
         </h3>
 
-        <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+        <p className="ST-3 text-[#8E8E93] mt-1 ">
           You are about to create an account. Please fill in your security
           information.
         </p>
@@ -45,7 +45,7 @@ export default function Register() {
                   <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
                   <input
                     placeholder="First name"
-                    className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+                    className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                     type="email"
                   />
                 </div>
@@ -57,7 +57,7 @@ export default function Register() {
                   <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
                   <input
                     placeholder="Last name"
-                    className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+                    className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                     type="email"
                   />
                 </div>
@@ -69,7 +69,7 @@ export default function Register() {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Enter your email address"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                 type="email"
               />
             </div>
@@ -79,7 +79,7 @@ export default function Register() {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Enter your password"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                 type="password"
               />
             </div>
@@ -90,11 +90,11 @@ export default function Register() {
               <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
               <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
             </div>
-            <h3 className="font-medium mt-2 text-sm">
+            <h3 className="mt-2 ST-4">
               Password Security Level
             </h3>
 
-            <button type="submit" className="btn btn-blue mt-6">
+            <button type="submit" className="btn btn-blue MT-SB-1 mt-6">
               Create an account
             </button>
           </div>
@@ -102,14 +102,14 @@ export default function Register() {
           {/* Or - Desktop */}
           <div className="sm:block hidden">
             <div className="w-[.1rem] mx-auto h-28 bg-[#1C1C1E]/70"></div>
-            <h3 className=" font-bold my-4">Or</h3>
+            <h3 className=" MT-1 my-4">Or</h3>
             <div className="w-[.1rem] mx-auto h-28 bg-[#1C1C1E]/70"></div>
           </div>
 
           {/* Or - Mobile */}
           <div className="sm:hidden flex gap-3 items-center">
             <div className="w-56 mx-auto h-[.1rem] bg-[#1C1C1E]/70"></div>
-            <h3 className="font-bold">Or</h3>
+            <h3 className="MT-1">Or</h3>
             <div className="w-56 mx-auto h-[.1rem] bg-[#1C1C1E]/70"></div>
           </div>
 
@@ -118,7 +118,7 @@ export default function Register() {
             <div className="sm:block hidden">
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Google Icon"
@@ -130,7 +130,7 @@ export default function Register() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Microsoft Icon"
@@ -142,7 +142,7 @@ export default function Register() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Apple Icon"
@@ -157,7 +157,7 @@ export default function Register() {
             <div className="sm:hidden flex gap-3">
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Google Icon"
@@ -168,7 +168,7 @@ export default function Register() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Microsoft Icon"
@@ -179,7 +179,7 @@ export default function Register() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Apple Icon"
@@ -189,7 +189,7 @@ export default function Register() {
               </button>
             </div>
 
-            <p className="text-[#1C1C1E] text-sm mt-3">
+            <p className="text-[#1C1C1E] ST-2 mt-3">
               <span className="sm:block hidden">
                 By signing in or singing up, you agree with our Privacy policy
               </span>

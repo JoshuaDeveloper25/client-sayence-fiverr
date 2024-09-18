@@ -17,7 +17,7 @@ const TabPricing = () => {
       <section className="sm:flex hidden flex-col sm:flex-row gap-14">
         <div className="flex-1">
           <div className="mb-8">
-            <h3 className="flex items-center font-bold text-lg">
+            <h3 className="flex items-center MT-SB-1">
               <Image
                 alt="Dollar Icon"
                 className="w-3 inline-block me-2"
@@ -25,13 +25,13 @@ const TabPricing = () => {
               />{" "}
               Average price
             </h3>
-            <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+            <p className="text-sm text-[#8E8E93] mt-1 font-medium ST-3">
               Price is crucial for students when choosing a tutor as it
               determines affordability and value for money.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 mb-8">
+          <div className="flex items-center gap-2 mb-8 leading-4">
             <div>
               <Image
                 alt={"Country Image"}
@@ -40,20 +40,18 @@ const TabPricing = () => {
               />
             </div>
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Average price</h3>
+              <h3 className="ST-SB-3 text-[#1C1C1E]">Average price</h3>
               <p className="text-[#8E8E93]">
                 {" "}
-                <span className="font-bold">13 USD</span>
-                <span className="font-medium text-sm">/30 mins</span>
+                <span className="ST-SB-2">13 USD</span>
+                <span className="ST-1">/30 mins</span>
               </p>
             </div>
           </div>
 
           <div>
-            <h3 className="text-[#48484A] font-semibold">
-              Private lesson rate
-            </h3>
-            <p className="text-sm text-[#48484A] mt-1 font-medium">
+            <h3 className="text-[#48484A] MT-SB-1">Private lesson rate</h3>
+            <p className="text-sm text-[#48484A] mt-1 ST-3">
               Define your rate for 1:1 private lesson.
             </p>
             <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
@@ -61,7 +59,7 @@ const TabPricing = () => {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Set your hourly base rate"
-                className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+                className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
                 type="text"
               />
             </div>
@@ -70,7 +68,7 @@ const TabPricing = () => {
 
         <div className="flex-1">
           <div className="mb-8">
-            <h3 className="flex items-center font-bold text-lg">
+            <h3 className="flex items-center MT-3">
               <Image
                 alt="Finance Icon"
                 className="w-6 inline-block me-2"
@@ -78,7 +76,7 @@ const TabPricing = () => {
               />{" "}
               Withdrawal your money
             </h3>
-            <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+            <p className="text-[#8E8E93] mt-1 ST-3">
               You have the freedom to establish a rate that aligns with your
               professional standards.
             </p>
@@ -97,10 +95,10 @@ const TabPricing = () => {
           </div>
 
           <div>
-            <h3 className="text-[#48484A] font-semibold">
+            <h3 className="text-[#48484A] MT-SB-1">
               Withdrawal from iPractis account
             </h3>
-            <p className="text-sm text-[#48484A] mt-1 font-medium">
+            <p className=" text-[#48484A] mt-1 ST-3">
               Enter the email address related to your account
             </p>
             <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
@@ -108,7 +106,7 @@ const TabPricing = () => {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Email address"
-                className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+                className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
                 type="email"
               />
             </div>
@@ -119,7 +117,7 @@ const TabPricing = () => {
       {/* Responsive */}
       <section className="sm:hidden flex flex-col gap-4">
         <div className="mb-4">
-          <h3 className="flex items-center font-bold text-lg">
+          <h3 className="flex items-center ST-SB-3">
             <Image
               alt="Checkbox Icon"
               className="w-5 inline-block me-2"
@@ -127,7 +125,7 @@ const TabPricing = () => {
             />{" "}
             Average price
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             Price is crucial for students when choosing a tutor as it determines
             affordability and value for money. Budget constraints, perceived
             quality, and transparency in pricing influence their
@@ -135,7 +133,7 @@ const TabPricing = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-4 leading-4">
           <div>
             <Image
               alt={"Country Image"}
@@ -144,16 +142,16 @@ const TabPricing = () => {
             />
           </div>
           <div>
-            <h3 className="font-bold text-[#1C1C1E]">Average price</h3>
+            <h3 className="ST-SB-3 text-[#1C1C1E]">Average price</h3>
             <p className="text-[#8E8E93]">
               {" "}
-              <span className="font-bold">13 USD</span>
-              <span className="font-medium text-sm">/30 mins</span>
+              <span className="ST-SB-2">13 USD</span>
+              <span className="ST-1">/30 mins</span>
             </p>
           </div>
         </div>
 
-        <ul className="list-disc ps-5 mb-4">
+        <ul className="list-disc ps-5 mb-4 ST-4 text-[#48484A]">
           <li>
             <p>
               Keep in mind that your teacher&apos;s profile is “New” and you
@@ -164,7 +162,7 @@ const TabPricing = () => {
         </ul>
 
         <div className="mb-4">
-          <h3 className="flex items-center font-bold text-lg">
+          <h3 className="flex items-center MT-SB-2">
             <Image
               alt="Time Icon"
               className="w-3 inline-block me-2"
@@ -172,7 +170,7 @@ const TabPricing = () => {
             />
             Set up your hour rate
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             You have the freedom to establish a rate that aligns with your
             professional standards.
           </p>
@@ -191,10 +189,10 @@ const TabPricing = () => {
         </div>
 
         <div className="mb-4">
-          <h3 className="text-[#48484A] font-semibold">
+          <h3 className="text-[#48484A] MT-SB-1">
             Withdrawal from iPractis account
           </h3>
-          <p className="text-sm text-[#48484A] mt-1 font-medium">
+          <p className="text-[#48484A] mt-1 ST-3">
             Enter the email address related to your account
           </p>
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
@@ -202,15 +200,15 @@ const TabPricing = () => {
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
             <input
               placeholder="Email address"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
               type="email"
             />
           </div>
         </div>
 
         <div>
-          <h3 className="text-[#48484A] font-semibold">Private lesson rate</h3>
-          <p className="text-sm text-[#48484A] mt-1 font-medium">
+          <h3 className="text-[#48484A] MT-SB-1">Private lesson rate</h3>
+          <p className=" text-[#48484A] mt-1 ST-3">
             Define your rate for 1:1 private lesson.
           </p>
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
@@ -218,7 +216,7 @@ const TabPricing = () => {
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
             <input
               placeholder="Set your hourly base rate"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
               type="text"
             />
           </div>

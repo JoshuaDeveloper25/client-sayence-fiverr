@@ -15,20 +15,20 @@ export default function ApplyAsATeacher() {
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="flex-1">
             <div className="flex flex-col justify-between h-full pe-6">
-              <h1 className="font-bold text-3xl text-[#1C1C1E]">
+              <h1 className="LT-SB-2 text-[#1C1C1E]">
                 Join our top rated
                 <span className="sm:block inline-block">community tutors</span>
               </h1>
 
-              <ul className="list-disc text-[#8E8E93] font-medium ps-5 space-y-2 sm:my-0 my-3">
+              <ul className="list-disc text-[#8E8E93] ps-5 space-y-2 sm:my-0 my-3">
                 <li>
-                  <p>Work at your suitable hours</p>
+                  <p className="MT-SB-1">Work at your suitable hours</p>
                 </li>
                 <li>
-                  <p>Work online from anywhere</p>
+                  <p className="MT-SB-1">Work online from anywhere</p>
                 </li>
                 <li>
-                  <p>Do the job that make you feel free</p>
+                  <p className="MT-SB-1">Do the job that make you feel free</p>
                 </li>
               </ul>
 
@@ -41,7 +41,7 @@ export default function ApplyAsATeacher() {
               </div>
 
               <Link href={"/teacherRegistration"}>
-                <button className="btn btn-black" type="button">
+                <button className="btn btn-black MT-SB-2" type="button">
                   Apply now!
                 </button>
               </Link>
@@ -62,11 +62,9 @@ export default function ApplyAsATeacher() {
 
       {/* Few steps to start your career */}
       <section className="container-page px-3 my-8">
-        <h3 className="font-bold text-2xl">
-          Few steps only to start your career
-        </h3>
+        <h3 className="MT-SB-3">Few steps only to start your career</h3>
 
-        <p className="text-base text-[#8E8E93] mt-1 font-medium">
+        <p className="MT-SB-1 text-[#8E8E93] mt-1">
           Kickstart your tutoring career with iPractis! Do the job you love and
           enjoy a competitive pay, flexible hours, and the opportunity to make a
           real impact.
@@ -86,41 +84,41 @@ export default function ApplyAsATeacher() {
 
             <Image alt="Dollar Icon" className="w-10" src={dollar} />
 
-            <button className="btn btn-black ms-3 w-auto" type="button">
+            <button className="btn btn-black MT-SB-2 ms-3 w-auto" type="button">
               Start!
             </button>
           </div>
 
           <div className="flex items-center gap-6 justify-between mt-6">
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Pick a subject</h3>
-              <p className="font-medium text-[#8E8E93]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">Pick a subject</h3>
+              <p className="ST-4 text-[#8E8E93]">
                 Choose a subject you{" "}
                 <span className="lg:block inline">master</span>
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Fill up your profile</h3>
-              <p className="font-medium text-[#8E8E93]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">Fill up your profile</h3>
+              <p className="ST-4 text-[#8E8E93]">
                 Set up your tutor profile in{" "}
                 <span className="lg:block inline">a few steps.</span>
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Get approved</h3>
-              <p className="font-medium text-[#8E8E93]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">Get approved</h3>
+              <p className="ST-4 text-[#8E8E93]">
                 Match requirement to get{" "}
                 <span className="lg:block inline">approved.</span>
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">
                 Start a new career life
               </h3>
-              <p className="font-medium text-[#8E8E93]">
+              <p className="ST-4 text-[#8E8E93]">
                 Work from anywhere at{" "}
                 <span className="lg:block inline">your own path.</span>
               </p>
@@ -135,8 +133,8 @@ export default function ApplyAsATeacher() {
               <Image alt="Book Icon" className="w-10" src={book} />
             </div>
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Pick a subject</h3>
-              <p className="font-medium text-[#8E8E93]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">Pick a subject</h3>
+              <p className="ST-4 text-[#8E8E93]">
                 Choose a subject you{" "}
                 <span className="lg:block inline">master</span>
               </p>
@@ -148,8 +146,8 @@ export default function ApplyAsATeacher() {
               <Image alt="User Icon" className="w-10" src={user} />
             </div>
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Fill up your profile</h3>
-              <p className="font-medium text-[#8E8E93]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">Fill up your profile</h3>
+              <p className="ST-4 text-[#8E8E93]">
                 Set up your tutor profile in a few steps.
               </p>
             </div>
@@ -160,8 +158,8 @@ export default function ApplyAsATeacher() {
               <Image alt="Hat Icon" className="w-10" src={hat} />
             </div>
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">Get approved</h3>
-              <p className="font-medium text-[#8E8E93]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">Get approved</h3>
+              <p className="ST-4 text-[#8E8E93]">
                 Match requirement to get approved.
               </p>
             </div>
@@ -172,14 +170,18 @@ export default function ApplyAsATeacher() {
               <Image alt="Dollar Icon" className="w-10" src={dollar} />
             </div>
             <div>
-              <h3 className="font-bold text-[#1C1C1E]">
+              <h3 className="MT-SB-1 text-[#1C1C1E]">
                 Start a new career life
               </h3>
-              <p className="font-medium text-[#8E8E93]">
+              <p className="ST-4 text-[#8E8E93]">
                 Work from anywhere at your own path.
               </p>
             </div>
           </div>
+
+          <button className="btn btn-black MT-SB-2" type="button">
+            Start!
+          </button>
         </article>
       </section>
     </>

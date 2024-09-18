@@ -9,7 +9,7 @@ import TabAvailability from "./TabAvailability";
 // Icons
 import chevronRightWhite from "../../assets/icons/chevron-right-white.png";
 import chevronLeftWhite from "../../assets/icons/chevron-left-white.png";
-import { act, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -69,7 +69,7 @@ const Tabs = () => {
               key={idx}
               className={`py-2 transition-colors duration-300 pointer-events-none rounded-lg px-2 w-full ${
                 idx > activeTabIndex && "bg-[#C7C7C7]"
-              } font-bold text-white ${
+              } ST-SB-4 text-white ${
                 idx === activeTabIndex
                   ? "bg-[#1a47ff] text-white "
                   : "bg-[#BDCAFF]"
@@ -120,7 +120,7 @@ const Tabs = () => {
           <Link href={"/applyAsTeacher"} className="w-full">
             <button
               type="button"
-              className="flex items-center justify-center btn btn-black"
+              className="flex items-center justify-center btn btn-black MT-SB-1"
             >
               <span className="sm:block hidden">
                 <Image
@@ -136,7 +136,7 @@ const Tabs = () => {
           <button
             type="button"
             onClick={() => setActiveTabIndex((prev) => prev - 1)}
-            className="flex items-center justify-center btn btn-black"
+            className="flex items-center justify-center btn btn-black MT-SB-1"
           >
             <span className="sm:block hidden">
               <Image
@@ -153,7 +153,7 @@ const Tabs = () => {
           <Link href={"/approvalTeacher"} className="w-full">
             <button
               type="submit"
-              className="flex items-center justify-center btn btn-blue"
+              className="flex items-center justify-center btn btn-blue MT-SB-1"
             >
               <span className="sm:block hidden">
                 Save, and continue{" "}
@@ -169,7 +169,7 @@ const Tabs = () => {
         ) : (
           <button
             type="submit"
-            className="flex items-center justify-center btn btn-blue"
+            className="flex items-center justify-center btn btn-blue MT-SB-1"
           >
             <span className="sm:block hidden">
               Save, and continue{" "}

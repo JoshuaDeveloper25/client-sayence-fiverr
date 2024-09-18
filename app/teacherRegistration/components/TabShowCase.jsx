@@ -9,7 +9,7 @@ const TabShowCase = () => {
     <section className="flex flex-col-reverse sm:flex-row gap-14">
       <div className="flex-1">
         <div className="mb-8">
-          <h3 className="flex items-center font-bold text-lg">
+          <h3 className="flex items-center MT-SB-1">
             <Image
               alt="Video Icon"
               className="w-6 inline-block me-2"
@@ -17,7 +17,7 @@ const TabShowCase = () => {
             />{" "}
             Video presentation
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className="ST-3 text-[#8E8E93] mt-1 ">
             Introduce yourself to students in the language you&apos;ll be
             teaching and make sure your video meets the requirements to get
             approved.
@@ -30,13 +30,13 @@ const TabShowCase = () => {
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
             <input
               placeholder="Enter your video link"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
               type="text"
             />
           </div>
         </div>
 
-        <ul className="list-disc ps-5 text-[#48484A] font-medium space-y-1">
+        <ul className="list-disc ps-5 text-[#48484A] ST-4 space-y-1">
           <li>You must appear in the video.</li>
           <li>Record in horizontal mode and at eye level.</li>
           <li>The video aspect ratio should be 16:9.</li>
@@ -57,7 +57,7 @@ const TabShowCase = () => {
 
       <div className="flex-1">
         <div className="mb-8">
-          <h3 className="flex items-center font-bold text-lg">
+          <h3 className="flex items-center MT-SB-1">
             <Image
               alt="Camera Icon"
               className="w-6 inline-block me-2"
@@ -65,7 +65,7 @@ const TabShowCase = () => {
             />{" "}
             Profile picture
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             Upload clear profile picture to help students recognize you and make
             a positive first impression. Ensure your profile picture meets the
             following guidelines:
@@ -85,7 +85,7 @@ const TabShowCase = () => {
           </label>
         </div>
 
-        <ul className="list-disc ps-5 text-[#48484A] font-medium space-y-1">
+        <ul className="list-disc ps-5 text-[#48484A] ST-4 space-y-1">
           <li>You must be clearly visible and centered in the picture.</li>
           <li>Use a plain background to avoid distractions.</li>
           <li>The picture should be a recent, high-quality image.</li>

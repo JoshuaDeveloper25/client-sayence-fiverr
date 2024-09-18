@@ -62,8 +62,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -73,8 +73,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -84,8 +84,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -95,8 +95,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -106,8 +106,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -117,8 +117,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -128,8 +128,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -139,8 +139,8 @@ const countries = [
     title: "Average price",
     subtitle: (
       <>
-        <span className="font-bold">13 USD</span>{" "}
-        <span className="font-medium">/ 30 mins</span>
+        <span className="ST-SB-2">13 USD</span>{" "}
+        <span className="ST-1">/ 30 mins</span>
       </>
     ),
   },
@@ -236,9 +236,8 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="flex-1">
             <div className="flex flex-col justify-between h-full pe-6">
-              <h1 className="font-bold text-3xl text-[#48484A]">
-                Learn any subject with{" "}
-                <span className="sm:block inline-block">top-rated tutor</span>
+              <h1 className="font-bold text-[#1C1C1E] LT-SB-2">
+                Learn any subject with top-rated tutor
               </h1>
               <div className="sm:hidden block max-w-full mx-auto my-8">
                 <Image
@@ -247,15 +246,19 @@ export default function Home() {
                   src={header}
                 />
               </div>
-              <ul className="list-disc text-[#8E8E93] font-medium ps-5 space-y-2">
+              <ul className="list-disc text-[#8E8E93] ps-5 space-y-2">
                 <li>
-                  <p>1 : 1 Online Lessons with a real matched tutors</p>
+                  <p className="MT-SB-1">
+                    1 : 1 Online Lessons with a real matched tutors
+                  </p>
                 </li>
                 <li>
-                  <p>Flexible scheduling and rescheduling</p>
+                  <p className="MT-SB-1">
+                    Flexible scheduling and rescheduling
+                  </p>
                 </li>
                 <li>
-                  <p>Access to a library</p>
+                  <p className="MT-SB-1">Access to a library</p>
                 </li>
               </ul>
               <button className="btn btn-black mt-6" type="button">
@@ -294,20 +297,20 @@ export default function Home() {
               slidesPerView: 1,
               spaceBetween: 30,
             },
-            // when window width is >= 440px
-            440: {
+            // when window width is >= 550px
+            550: {
               slidesPerView: 2,
               spaceBetween: 30,
             },
-            // when window width is >= 700px
-            700: {
+            // when window width is >= 860px
+            860: {
               slidesPerView: 3,
               spaceBetween: 30,
             },
-            // when window width is >= 950px
-            950: {
+            // when window width is >= 1140px
+            1140: {
               slidesPerView: 4,
-              spaceBetween: 20,
+              spaceBetween: 0,
             },
           }}
           modules={[Navigation, Pagination]}
@@ -316,7 +319,7 @@ export default function Home() {
           {countries?.map((country, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="flex min-[340px]:place-content-center place-content-start items-center gap-2">
+                <div className="flex min-[340px]:place-content-center place-content-start leading-4 items-center gap-2">
                   <div>
                     <Image
                       alt={"Country Image"}
@@ -325,7 +328,7 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold">{country?.title}</h3>
+                    <h3 className="ST-SB-3">{country?.title}</h3>
                     <p className="text-[#8E8E93]">{country?.subtitle}</p>
                   </div>
                 </div>
@@ -337,19 +340,19 @@ export default function Home() {
         <Image
           alt="Chevron Left"
           src={chevronLeft}
-          className="countries-carousel-swiper-button-prev absolute transform -translate-y-1/2  top-1/2 md:left-10 left-5 z-50 cursor-pointer w-2"
+          className="countries-carousel-swiper-button-prev absolute transform -translate-y-1/2  top-1/2 left-6 z-50 cursor-pointer w-2"
         />
         <Image
           alt="Chevron Right"
           src={chevronRight}
-          className="countries-carousel-swiper-button-next absolute transform -translate-y-1/2  top-1/2 md:right-10 right-5 z-50 cursor-pointer w-2"
+          className="countries-carousel-swiper-button-next absolute transform -translate-y-1/2  top-1/2  right-6 z-50 cursor-pointer w-2"
         />
       </section>
 
       {/* Browser Subjects and Tutors */}
       <section className="bg-[#F2F2F7] ">
         <div className="container-page px-3 py-12">
-          <h3 className="flex sm:items-center items-start font-bold text-xl">
+          <h3 className="flex sm:items-center items-start MT-SB-2">
             <Image
               alt="User Add Icon"
               className="w-6 inline-block me-2"
@@ -358,7 +361,7 @@ export default function Home() {
             Browse our subjects and tutors to find the right Fit for You.
           </h3>
 
-          <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+          <p className="ST-3 text-[#8E8E93] mt-1">
             Meet our top-rated tutors and learn at your own pace.
           </p>
 
@@ -375,22 +378,12 @@ export default function Home() {
               breakpoints={{
                 // when window width is >= 340px
                 340: {
-                  slidesPerView: 1,
-                  spaceBetween: 0,
-                },
-                // when window width is >= 400px
-                400: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                // when window width is >= 500px
-                500: {
                   slidesPerView: 3,
-                  spaceBetween: 30,
+                  spaceBetween: 0,
                 },
                 // when window width is >= 720px
                 720: {
-                  slidesPerView: 5,
+                  slidesPerView: 4,
                   spaceBetween: 10,
                 },
                 // when window width is >= 950px
@@ -404,13 +397,16 @@ export default function Home() {
             >
               {subjects?.map((subject, index) => {
                 return (
-                  <SwiperSlide key={index} className="flex place-content-center">
+                  <SwiperSlide
+                    key={index}
+                    className="flex place-content-center"
+                  >
                     <h3
                       className={`${
                         subject?.selected
-                          ? "bg-black text-white rounded-lg w-[90px] mx-auto"
-                          : ""
-                      } font-bold cursor-pointer py-1 text-center`}
+                          ? "bg-black text-white rounded-lg w-fit mx-auto px-2"
+                          : "w-full px-2"
+                      } ST-SB-3 cursor-pointer py-1 text-center`}
                     >
                       {subject?.name}
                     </h3>
@@ -422,12 +418,12 @@ export default function Home() {
             <Image
               alt="Chevron Left"
               src={chevronLeft}
-              className="subjects-carousel-swiper-button-prev absolute transform -translate-y-1/2  top-1/2 left-3 z-50 cursor-pointer w-2"
+              className="subjects-carousel-swiper-button-prev absolute transform -translate-y-1/2  top-1/2 left-1 z-50 cursor-pointer w-2"
             />
             <Image
               alt="Chevron Right"
               src={chevronRight}
-              className="subjects-carousel-swiper-button-next absolute transform -translate-y-1/2  top-1/2 right-3 z-50 cursor-pointer w-2"
+              className="subjects-carousel-swiper-button-next absolute transform -translate-y-1/2  top-1/2 right-1 z-50 cursor-pointer w-2"
             />
           </div>
 
@@ -452,7 +448,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
                     <div className="flex gap-2 items-center">
                       <Image
                         alt={"Country Image"}
@@ -460,35 +456,35 @@ export default function Home() {
                         src={unitedKingdom}
                       />
 
-                      <h4 className="text-[#8E8E93] text-sm font-medium">
-                        Teaches English
-                      </h4>
+                      <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center justify-between my-3.5">
                   <ul className="flex items-center text-sm font-medium gap-3">
-                    <li>English</li>
-                    <li className="p-1 rounded-lg bg-black text-white">
+                    <li className="ST-SB-2">English</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
                       Native
                     </li>
-                    <li>French</li>
-                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                    <li className="ST-SB-2">French</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
+                      Fluent C2
+                    </li>
                   </ul>
 
                   <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                    <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
                       +1
                     </h4>
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                <h4 className="text-[#8E8E93] ST-2">
                   Lesson rate
                 </h4>
-                <h3 className="font-bold">
-                  <span className="text-lg">8 USD/</span>30 mins
+                <h3>
+                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -513,7 +509,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
                     <div className="flex gap-2 items-center">
                       <Image
                         alt={"Country Image"}
@@ -521,35 +517,35 @@ export default function Home() {
                         src={unitedKingdom}
                       />
 
-                      <h4 className="text-[#8E8E93] text-sm font-medium">
-                        Teaches English
-                      </h4>
+                      <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center justify-between my-3.5">
                   <ul className="flex items-center text-sm font-medium gap-3">
-                    <li>English</li>
-                    <li className="p-1 rounded-lg bg-black text-white">
+                    <li className="ST-SB-2">English</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
                       Native
                     </li>
-                    <li>French</li>
-                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                    <li className="ST-SB-2">French</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
+                      Fluent C2
+                    </li>
                   </ul>
 
                   <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                    <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
                       +1
                     </h4>
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                <h4 className="text-[#8E8E93] ST-2">
                   Lesson rate
                 </h4>
-                <h3 className="font-bold">
-                  <span className="text-lg">8 USD/</span>30 mins
+                <h3>
+                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -574,7 +570,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
                     <div className="flex gap-2 items-center">
                       <Image
                         alt={"Country Image"}
@@ -582,35 +578,35 @@ export default function Home() {
                         src={unitedKingdom}
                       />
 
-                      <h4 className="text-[#8E8E93] text-sm font-medium">
-                        Teaches English
-                      </h4>
+                      <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center justify-between my-3.5">
                   <ul className="flex items-center text-sm font-medium gap-3">
-                    <li>English</li>
-                    <li className="p-1 rounded-lg bg-black text-white">
+                    <li className="ST-SB-2">English</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
                       Native
                     </li>
-                    <li>French</li>
-                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                    <li className="ST-SB-2">French</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
+                      Fluent C2
+                    </li>
                   </ul>
 
                   <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                    <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
                       +1
                     </h4>
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                <h4 className="text-[#8E8E93] ST-2">
                   Lesson rate
                 </h4>
-                <h3 className="font-bold">
-                  <span className="text-lg">8 USD/</span>30 mins
+                <h3>
+                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -635,7 +631,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
                     <div className="flex gap-2 items-center">
                       <Image
                         alt={"Country Image"}
@@ -643,35 +639,35 @@ export default function Home() {
                         src={unitedKingdom}
                       />
 
-                      <h4 className="text-[#8E8E93] text-sm font-medium">
-                        Teaches English
-                      </h4>
+                      <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center justify-between my-3.5">
                   <ul className="flex items-center text-sm font-medium gap-3">
-                    <li>English</li>
-                    <li className="p-1 rounded-lg bg-black text-white">
+                    <li className="ST-SB-2">English</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
                       Native
                     </li>
-                    <li>French</li>
-                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                    <li className="ST-SB-2">French</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
+                      Fluent C2
+                    </li>
                   </ul>
 
                   <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                    <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
                       +1
                     </h4>
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                <h4 className="text-[#8E8E93] ST-2">
                   Lesson rate
                 </h4>
-                <h3 className="font-bold">
-                  <span className="text-lg">8 USD/</span>30 mins
+                <h3>
+                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -696,7 +692,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-[#48484A]">Alexandra</h3>
+                    <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
                     <div className="flex gap-2 items-center">
                       <Image
                         alt={"Country Image"}
@@ -704,53 +700,53 @@ export default function Home() {
                         src={unitedKingdom}
                       />
 
-                      <h4 className="text-[#8E8E93] text-sm font-medium">
-                        Teaches English
-                      </h4>
+                      <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center justify-between my-3.5">
                   <ul className="flex items-center text-sm font-medium gap-3">
-                    <li>English</li>
-                    <li className="p-1 rounded-lg bg-black text-white">
+                    <li className="ST-SB-2">English</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
                       Native
                     </li>
-                    <li>French</li>
-                    <li className="p-1 rounded-lg bg-[#A3FFBD]">Fluent C2</li>
+                    <li className="ST-SB-2">French</li>
+                    <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
+                      Fluent C2
+                    </li>
                   </ul>
 
                   <div className="flex  items-center  justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                    <h4 className="text-sm text-center font-bold text-[#48484A] tracking-tighter">
+                    <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
                       +1
                     </h4>
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] text-sm font-extrabold">
+                <h4 className="text-[#8E8E93] ST-2">
                   Lesson rate
                 </h4>
-                <h3 className="font-bold">
-                  <span className="text-lg">8 USD/</span>30 mins
+                <h3>
+                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
             <div className="bg-[#1C1C1E] text-whit p-3 rounded-b-xl rounded-t-xl">
               <div className="flex flex-col justify-between h-full">
                 <div>
-                  <h3 className="text-2xl text-white font-bold">
+                  <h3 className="MT-SB-3 text-white">
                     Discovers more{" "}
                     <span className="sm:block inline">teachers</span>
                   </h3>
-                  <p className="font-medium text-white my-6">
+                  <p className="ST-4 text-white my-6">
                     Search through 1000+ qualified teachers and select the
                     perfect fit based on your target subject, goals and budget.
                   </p>
                 </div>
 
                 <div>
-                  <Link href={"#"} className="btn btn-white text-center">
+                  <Link href={"#"} className="btn btn-white MT-1 text-center">
                     Discover more teachers
                   </Link>
                 </div>
@@ -762,7 +758,7 @@ export default function Home() {
 
       {/* Get Started Easy */}
       <section className="container-page px-3 py-12">
-        <h3 className="flex sm:items-center items-start font-bold text-xl">
+        <h3 className="flex sm:items-center items-start MT-SB-2">
           <Image
             alt="User Walking Icon"
             className="w-4 inline-block me-2"
@@ -771,65 +767,65 @@ export default function Home() {
           Only few easy steps to get started
         </h3>
 
-        <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+        <p className=" text-[#8E8E93] mt-1 ST-3">
           In only four words, choose, schedule, pay, start.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image
               alt={"Icon 3 Users"}
               className="w-12 mx-auto"
               src={threeUsers}
             />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Choose a tutor
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Browse qualified tutors based on level, goals, budget, and
               availability.
             </p>
           </div>
 
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image
               alt={"Icon Calendar"}
               className="w-12 mx-auto"
               src={calendar}
             />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Schedule a lesson
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Pick the date and time that works for you and get ready to conquer
               your goals.
             </p>
           </div>
 
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image alt={"Icon Card"} className="w-12 mx-auto" src={card} />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Pay as you go
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>
           </div>
 
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image
               alt={"Icon Screen User"}
               className="w-12 mx-auto"
               src={userScreen}
             />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Start learning
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>
           </div>
@@ -839,7 +835,7 @@ export default function Home() {
       {/* Meet our services */}
       <section className="bg-[#F2F2F7]">
         <div className="container-page px-3 py-12">
-          <h3 className="flex sm:items-center items-start font-bold text-xl">
+          <h3 className="flex sm:items-center items-start MT-SB-2">
             <Image
               alt="Sparkle Icon"
               className="w-5 inline-block me-2"
@@ -848,7 +844,7 @@ export default function Home() {
             Meet our services
           </h3>
 
-          <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             Start learning today
           </p>
 
@@ -862,26 +858,26 @@ export default function Home() {
                     src={twoUsers}
                   />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                     Dedicated lessons
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3">
                     Find teachers from all over the world sharing their
                     languages, dialects, and cultures.
                   </p>
                 </div>
 
-                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
                   <Image
                     alt={"Icon library"}
                     className="w-16 mx-auto"
                     src={library}
                   />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                     Library access
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3">
                     Find teachers from all over the world sharing their
                     languages, dialects, and cultures.
                   </p>
@@ -893,7 +889,7 @@ export default function Home() {
               <div className="max-w-full mx-auto">
                 <Image
                   alt="Woman Working"
-                  className="w-full h-[23rem] object-cover rounded-2xl"
+                  className="w-full h-[23.5rem] object-cover rounded-2xl"
                   src={womanWorking}
                 />{" "}
               </div>
@@ -904,7 +900,7 @@ export default function Home() {
 
       {/* Get Started Not Easy*/}
       <section className="container-page px-3 py-12">
-        <h3 className="flex sm:items-center items-start font-bold text-xl">
+        <h3 className="flex sm:items-center items-start MT-SB-2">
           <Image
             alt="User Add Icon"
             className="w-6 inline-block me-2"
@@ -913,61 +909,61 @@ export default function Home() {
           Only few steps to get started
         </h3>
 
-        <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+        <p className=" text-[#8E8E93] mt-1 ST-3">
           Start learning today
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image
               alt={"Icon Calculator"}
               className="w-12 mx-auto"
               src={calculator}
             />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Scientific subjects
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Browse qualified tutors based on level, goals, budget, and
               availability.
             </p>
           </div>
 
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image
               alt={"Icon Message"}
               className="w-16 mx-auto"
               src={messages}
             />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Linguistic subjects
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Pick the date and time that works for you and get ready to conquer
               your goals.
             </p>
           </div>
 
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image alt={"Icon Pencil"} className="w-16 mx-auto" src={pencil} />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Artistic subjects
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>
           </div>
 
-          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-8">
+          <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image alt={"Icon Wrist"} className="w-16 mx-auto" src={wrist} />
 
-            <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
               Practical subjects
             </h2>
-            <p className="text-[#8E8E93] font-medium">
+            <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>
           </div>
@@ -977,7 +973,7 @@ export default function Home() {
       {/* Discover how our lessons support you */}
       <section className="bg-[#F2F2F7]">
         <div className="container-page px-3 py-12">
-          <h3 className="flex sm:items-center items-start font-bold text-xl">
+          <h3 className="flex sm:items-center items-start MT-SB-2">
             <Image
               alt="Sparkle Icon"
               className="w-5 inline-block me-2"
@@ -986,7 +982,7 @@ export default function Home() {
             Discover how our lessons can support You
           </h3>
 
-          <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             From school support to professional skill improvement, find lessons
             that fit your needs and learning style.
           </p>
@@ -994,17 +990,17 @@ export default function Home() {
           <article className="flex flex-col-reverse md:flex-row gap-5 my-8">
             <div className="flex-1">
               <div className="flex flex-col justify-between">
-                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
                   <Image
                     alt={"Parachute Icon"}
                     className="w-12 mx-auto"
                     src={parachute}
                   />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                     School support
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3">
                     Get personalized help to reinforce what you’re learning in
                     class.
                   </p>
@@ -1017,26 +1013,26 @@ export default function Home() {
                     src={luggage}
                   />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                     Conversational lessons
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3">
                     Practice real-life conversations to improve fluency and
                     confidence.
                   </p>
                 </div>
 
-                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
                   <Image
                     alt={"Badge Star Icon"}
                     className="w-6 mx-auto"
                     src={badgeStar}
                   />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                     Exam preparation
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3 font-medium">
                     Focused guidance to help you excel in your upcoming exams.
                   </p>
                 </div>
@@ -1047,7 +1043,7 @@ export default function Home() {
               <div className="max-w-full mx-auto">
                 <Image
                   alt="Woman Working"
-                  className="w-full h-[35.8rem] object-cover rounded-2xl"
+                  className="w-full h-[33.4rem] object-cover rounded-2xl"
                   src={womanWorking}
                 />{" "}
               </div>
@@ -1059,7 +1055,7 @@ export default function Home() {
               <div className="max-w-full mx-auto">
                 <Image
                   alt="Woman Working"
-                  className="w-full h-[23.2rem] object-cover rounded-2xl"
+                  className="w-full h-[23rem] object-cover rounded-2xl"
                   src={womanWorking}
                 />{" "}
               </div>
@@ -1070,22 +1066,22 @@ export default function Home() {
                 <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 mb-6">
                   <Image alt={"Icon Sun"} className="w-12 mx-auto" src={sun} />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                     Initiation lessons
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3">
                     Start from the basics and build a strong foundation in any
                     subject.
                   </p>
                 </div>
 
-                <div className="bg-white flex-1 text-center rounded-xl py-5 px-8">
+                <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
                   <Image alt={"Icon Bee"} className="w-12 mx-auto" src={bee} />
 
-                  <h2 className="text-[#48484A] text-lg font-bold my-1.5 leading-5">
+                  <h2 className="text-[#48484A] MT-SB-1 my-1.5 leading-5">
                     Professional skills improvement
                   </h2>
-                  <p className="text-[#8E8E93] font-medium">
+                  <p className="text-[#8E8E93] ST-3">
                     Enhance your career by developing essential skills for the
                     workplace.
                   </p>
@@ -1098,7 +1094,7 @@ export default function Home() {
 
       {/* Save learning environment */}
       <section className="container-page px-3 py-12">
-        <h3 className="flex sm:items-center items-start font-bold text-xl">
+        <h3 className="flex sm:items-center items-start MT-SB-2">
           <Image
             alt="Shield Icon"
             className="w-6 inline-block me-2"
@@ -1107,7 +1103,7 @@ export default function Home() {
           Safe learning environment
         </h3>
 
-        <p className="text-sm text-[#8E8E93] mt-1 font-bold">
+        <p className=" text-[#8E8E93] mt-1 ST-3">
           Our platform provides a secure, monitored space with verified tutors,
           ensuring a safe and supportive learning experience for all.
         </p>
@@ -1121,10 +1117,10 @@ export default function Home() {
                 src={camera}
               />
 
-              <h2 className="text-[#48484A] text-lg font-bold my-1.5">
+              <h2 className="text-[#48484A] MT-SB-1 my-1.5">
                 Monitored Sessions
               </h2>
-              <p className="text-[#8E8E93] font-medium">
+              <p className="text-[#8E8E93] ST-3 font-medium">
                 Tutors and lessons are monitored for quality and safety.
               </p>
             </div>
@@ -1134,7 +1130,7 @@ export default function Home() {
             <div className="max-w-full mx-auto">
               <Image
                 alt="Woman Working"
-                className="w-full h-[13rem] object-cover rounded-2xl"
+                className="w-full h-[12.1rem] object-cover rounded-2xl"
                 src={womanWorkingAlt}
               />{" "}
             </div>
@@ -1145,84 +1141,84 @@ export default function Home() {
       {/* Footer */}
       <footer>
         <div className="bg-[#F2F2F7] ">
-          <div className="container-page px-3 py-12">
+          <div className="px-3 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 sm:place-items-stretch place-items-center sm:text-start text-center md:gap-3 gap-6 text-[#1C1C1E]">
               <div>
-                <h3 className="font-bold text-lg mb-3">Linguistic subjects</h3>
+                <h3 className="MT-SB-1 mb-3">Linguistic subjects</h3>
                 <div className="space-y-1.5">
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn English
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn French
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn Spanish
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn Italian
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn Japenese
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn Arabic
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn Chinese
                   </Link>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-bold text-lg mb-3">Scientific subjects</h3>
+                <h3 className="MT-SB-1 mb-3">Scientific subjects</h3>
                 <div className="space-y-1.5">
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn mathematic
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn science
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn physics
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn coding
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn design
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn accounting
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn economics
                   </Link>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-bold text-lg mb-3">Artistic subjects</h3>
+                <h3 className="MT-SB-1 mb-3">Artistic subjects</h3>
                 <div className="space-y-1.5">
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn drawing
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn singing
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn fashion
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn history
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn 3D sculpting
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn 3D modeling
                   </Link>
-                  <Link className="font-medium block" href={"#"}>
+                  <Link className="ST-3 block" href={"#"}>
                     Learn animation
                   </Link>
                 </div>
@@ -1230,27 +1226,29 @@ export default function Home() {
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Services</h3>
+                  <h3 className="MT-SB-1 mb-3">Services</h3>
                   <div className="space-y-1.5">
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Conversational lessons
                     </Link>
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       School support
                     </Link>
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Family mode
                     </Link>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">Teaching</h3>
+                  <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">
+                    Teaching
+                  </h3>
                   <div className="space-y-1.5">
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Become a teacher
                     </Link>
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Code of conduct
                     </Link>
                   </div>
@@ -1259,12 +1257,12 @@ export default function Home() {
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Support</h3>
+                  <h3 className="MT-SB-1 mb-3">Support</h3>
                   <div className="space-y-1.5">
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Support center
                     </Link>
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Report a concern
                     </Link>
                   </div>
@@ -1273,10 +1271,10 @@ export default function Home() {
                 <div>
                   <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">Legal</h3>
                   <div className="space-y-1.5">
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Terms of use
                     </Link>
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Privacy
                     </Link>
                   </div>
@@ -1285,9 +1283,9 @@ export default function Home() {
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-3">Promotion</h3>
+                  <h3 className="MT-SB-1 mb-3">Promotion</h3>
                   <div className="space-y-1.5">
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       Refer to a friend
                     </Link>
                   </div>
@@ -1296,10 +1294,10 @@ export default function Home() {
                 <div>
                   <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">More</h3>
                   <div className="space-y-1.5">
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       FAQ
                     </Link>
-                    <Link className="font-medium block" href={"#"}>
+                    <Link className="ST-3 block" href={"#"}>
                       iPractis Blog
                     </Link>
                   </div>
@@ -1328,13 +1326,13 @@ export default function Home() {
         </div>
 
         <div className="bg-[#1C1C1E] ">
-          <div className="container-page px-3 py-3">
+          <div className="px-3 py-3">
             <div className="flex flex-col-reverse sm:flex-row sm:items-start items-center sm:gap-9 gap-3 text-white font-medium">
               <div>
-                <p>&copy; 2024 iPractis Limited.</p>
+                <p className="ST-2">&copy; 2024 iPractis Limited.</p>
               </div>
 
-              <div className="space-x-6">
+              <div className="space-x-6 ST-2">
                 <Link href={"#"}>About us</Link>
                 <Link href={"#"}>Careers</Link>
                 <Link href={"#"}>Contact us</Link>

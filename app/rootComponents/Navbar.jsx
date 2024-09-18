@@ -22,7 +22,7 @@ const Navbar = () => {
   return pathname === "/applyAsTeacher" ||
     pathname === "/teacherRegistration" ||
     pathname === "/approvalTeacher" ? (
-    <nav className="container-page px-3 py-3">
+    <nav className="px-3 py-3">
       <div className="flex justify-between items-center gap-4">
         <div>
           <Link href={"/applyAsTeacher"}>
@@ -41,7 +41,7 @@ const Navbar = () => {
             src={dashboard}
           />
 
-          <h3 className="font-medium">Dashboard</h3>
+          <h3 className="ST-SB-4">Dashboard</h3>
         </div>
 
         <div className="space-x-6 sm:flex items-center hidden">
@@ -110,7 +110,7 @@ const Navbar = () => {
     </nav>
   ) : (
     <>
-      <nav className="container-page px-3 py-3">
+      <nav className="px-3 py-3">
         <div className="flex justify-between items-center gap-4">
           <div>
             <Link href={"/"}>
@@ -124,7 +124,7 @@ const Navbar = () => {
 
           <div className="relative sm:block hidden">
             <input
-              className="placeholder-black outline-none font-bold px-8"
+              className="placeholder-black outline-none ST-SB-4 px-8"
               placeholder="Find a tutor"
               type="text"
             />
@@ -136,11 +136,11 @@ const Navbar = () => {
           </div>
 
           <div className="space-x-6 sm:block hidden">
-            <Link className="font-bold" href={"/applyAsTeacher"}>
+            <Link className="ST-SB-4" href={"/applyAsTeacher"}>
               Become a tutor
             </Link>
 
-            <Link className="font-bold" href={"/login"}>
+            <Link className="ST-SB-4" href={"/login"}>
               Log in{" "}
               <Image
                 alt="Arrow Door"
@@ -150,7 +150,7 @@ const Navbar = () => {
             </Link>
 
             <Link href={"/register"}>
-              <button type="button" className="btn btn-black w-auto">
+              <button type="button" className="btn btn-black ST-SB-4 w-auto">
                 Register
               </button>
             </Link>

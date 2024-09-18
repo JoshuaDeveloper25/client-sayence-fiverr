@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function PasswordRecovery() {
   return (
-    <main className="max-w-sm mx-auto px-3 my-8">
-      <h3 className="font-bold">
+    <main className="max-w-[400px] mx-auto px-3 my-8">
+      <h3 className="MT-SB-1">
         <Image 
           alt="Lock User Icon"
-          className="align-sub inline-block w-6" src={lockUser} /> Request
+          className="align-middle inline-block w-5" src={lockUser} /> Request
         password changes
       </h3>
 
-      <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+      <p className=" text-[#8E8E93] mt-1 ST-3">
         Please enter your email address to receive a password recovery link.
       </p>
 
@@ -23,12 +23,12 @@ export default function PasswordRecovery() {
         <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
         <input
           placeholder="Enter your email address"
-          className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+          className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm ST-3 px-1.5"
           type="email"
         />
       </div>
 
-      <button className="btn btn-blue" type="button">
+      <button className="btn btn-blue MT-SB-1" type="button">
         Send me an email
       </button>
     </main>

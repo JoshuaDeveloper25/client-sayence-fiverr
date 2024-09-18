@@ -8,11 +8,11 @@ import Image from "next/image";
 
 export default function LogIn() {
   return (
-    <main className="max-w-3xl mx-auto px-3 my-8">
-      <h2 className="font-bold text-2xl mb-14">Welcome Back.</h2>
+    <main className="container-page px-3 my-8">
+      <h2 className="MT-SB-3 mb-14">Welcome Back.</h2>
 
       <section>
-        <h3 className="font-bold">
+        <h3 className="MT-SB-2">
           <Image
             alt="User Lock Logo"
             className="align-sub inline-block w-6"
@@ -21,7 +21,7 @@ export default function LogIn() {
           Log in
         </h3>
 
-        <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+        <p className=" text-[#8E8E93] mt-1 ST-3">
           Enter your account information to access to your account.
         </p>
 
@@ -32,7 +32,7 @@ export default function LogIn() {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Enter your email address"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                 type="email"
               />
             </div>
@@ -42,16 +42,16 @@ export default function LogIn() {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Enter your password"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                 type="password"
               />
             </div>
 
-            <button type="submit" className="btn btn-black">
+            <button type="submit" className="btn btn-black MT-SB-1">
               Log in
             </button>
 
-            <h2 className="text-center text-[#1C1C1E] font-medium text-sm mt-6">
+            <h2 className="text-center text-[#1C1C1E] ST-4 mt-6 ">
               I can&apos;t sign in, help!
             </h2>
           </div>
@@ -59,14 +59,14 @@ export default function LogIn() {
           {/* Or - Desktop */}
           <div className="sm:block hidden">
             <div className="w-[.1rem] mx-auto h-14 bg-[#1C1C1E]/70"></div>
-            <h3 className=" font-bold my-4">Or</h3>
+            <h3 className=" MT-1 my-4">Or</h3>
             <div className="w-[.1rem] mx-auto h-14 bg-[#1C1C1E]/70"></div>
           </div>
 
           {/* Or - Mobile */}
           <div className="sm:hidden flex gap-3 items-center">
             <div className="w-56 mx-auto h-[.1rem] bg-[#1C1C1E]/70"></div>
-            <h3 className="font-bold">Or</h3>
+            <h3 className="MT-1">Or</h3>
             <div className="w-56 mx-auto h-[.1rem] bg-[#1C1C1E]/70"></div>
           </div>
 
@@ -75,7 +75,7 @@ export default function LogIn() {
             <div className="sm:block hidden">
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Google Logo"
@@ -87,7 +87,7 @@ export default function LogIn() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Microsoft Logo"
@@ -99,7 +99,7 @@ export default function LogIn() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Apple Logo"
@@ -114,7 +114,7 @@ export default function LogIn() {
             <div className="sm:hidden flex gap-3">
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Google Logo"
@@ -125,7 +125,7 @@ export default function LogIn() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-[#1C1C1E] bg-[#F2F2F7] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Microsoft Logo"
@@ -136,7 +136,7 @@ export default function LogIn() {
 
               <button
                 type="button"
-                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full font-medium"
+                className="flex gap-4 items-center rounded-lg py-3 px-2.5 text-white bg-[#1C1C1E] mb-3 w-full MT-1"
               >
                 <Image
                   alt="Apple Logo"
@@ -146,7 +146,7 @@ export default function LogIn() {
               </button>
             </div>
 
-            <p className="text-[#1C1C1E] text-sm mt-3">
+            <p className="text-[#1C1C1E] ST-2 mt-3">
               By signing in or singing up, you agree with our Privacy policy
             </p>
           </div>

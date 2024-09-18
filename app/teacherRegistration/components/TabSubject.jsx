@@ -23,7 +23,7 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
     <section className="flex flex-col sm:flex-row gap-14">
       <div className="flex-1">
         <div className="mb-8">
-          <h3 className="flex sm:items-center items-start font-bold text-lg">
+          <h3 className="flex sm:items-center items-start MT-SB-1">
             <Image
               alt="Book Icon"
               className="w-6 inline-block me-2"
@@ -31,25 +31,26 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             />{" "}
             Set up your teaching subject
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             Remember, students rely on this information to choose their teacher.
           </p>
         </div>
 
         <div className="mb-8">
-          <h3 className="text-[#48484A] font-semibold">
+          <h3 className="text-[#48484A] MT-SB-1">
             Select the subject you wish to teach
           </h3>
-          <p className="text-sm text-[#48484A] mt-1 font-medium">
+          <p className=" text-[#48484A] mt-1 ST-3">
             At iPractis you can teach only one subject, however, you can switch
             subject at anytime
           </p>
+
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
             <Image alt="Book Image" className="w-6" src={book2} />
             <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
             <select
               name="teachingSubject"
-              className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5"
+              className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
             >
               <option value={""}>Select a teaching subject</option>
               <option value={"mathematics"}>Mathematics</option>
@@ -60,10 +61,10 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
         </div>
 
         <div className="mb-8">
-          <h3 className="text-[#48484A] font-semibold">
+          <h3 className="text-[#48484A] MT-SB-1">
             Write a catchy headline
           </h3>
-          <p className="text-sm text-[#48484A] mt-1 font-medium">
+          <p className=" text-[#48484A] mt-1 ST-3">
             Your headline is the first thing peoples are going to read, it will
             allow you to attract the students you wish to have.
           </p>
@@ -73,22 +74,22 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             <input
               placeholder="Enter a profile title"
               name="profileTitle"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] text-sm font-medium px-1.5"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
               type="text"
             />
           </div>
           <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
-            <h4>Limited to 120 characters</h4>
+            <h4 className="ST-2">Limited to 120 characters</h4>
 
-            <h4>0/120</h4>
+            <h4 className="ST-2">0/120</h4>
           </div>
         </div>
 
         <div>
-          <h3 className="text-[#48484A] font-semibold">
+          <h3 className="text-[#48484A] MT-SB-1">
             Write an introduction about the subject you teaches
           </h3>
-          <p className="text-sm text-[#48484A] mt-1 font-medium">
+          <p className="text-[#48484A] mt-1 ST-3">
             Provide a detailed description of your teaching methodology,
             education, teaching experience, and subject expertise.
           </p>
@@ -96,20 +97,20 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             <textarea
               placeholder="Enter a text"
               name="teachedSubjects"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] text-sm font-medium px-1 resize-none"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] ST-3 px-1 resize-none"
             />
           </div>
           <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
-            <h4>Limited to 1000 characters</h4>
+            <h4 className="ST-2">Limited to 1000 characters</h4>
 
-            <h4>0/1000</h4>
+            <h4 className="ST-2">0/1000</h4>
           </div>
         </div>
       </div>
 
       <div className="flex-1">
         <div className="mb-8">
-          <h3 className="flex sm:items-center items-start font-bold text-lg">
+          <h3 className="flex sm:items-center items-start MT-SB-1">
             <Image
               alt="User Listen Icon"
               className="w-6 inline-block me-2"
@@ -117,36 +118,36 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             />{" "}
             Tell students about yourself
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className="text-[#8E8E93] mt-1 ST-3">
             Capture prospective students&apos; attention with compelling details
             about you as a teacher
           </p>
         </div>
 
         <div className="mb-8">
-          <h3 className="text-[#48484A] font-semibold">
+          <h3 className="text-[#48484A] MT-SB-1">
             Write Introduction about yourself
           </h3>
-          <p className="text-sm text-[#48484A] mt-1 font-medium">
+          <p className=" text-[#48484A] mt-1 ST-3">
             Introduce yourself in a few lines and Highlight your unique
             interests, and what sets you apart as an educator.
           </p>
           <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
             <textarea
               placeholder="Enter a text"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] text-sm font-medium px-1 resize-none"
+              className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] ST-3 px-1 resize-none"
               name="introductionOfYourself"
             />
           </div>
           <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
-            <h4>Limited to 1000 characters</h4>
+            <h4 className="ST-2">Limited to 1000 characters</h4>
 
-            <h4>0/1000</h4>
+            <h4 className="ST-2">0/1000</h4>
           </div>
         </div>
 
         <div className="mb-8">
-          <h3 className="flex sm:items-center items-start font-bold text-lg">
+          <h3 className="flex sm:items-center items-start MT-SB-1">
             <Image
               alt="User Listen Icon"
               className="w-6 inline-block me-2"
@@ -154,7 +155,7 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             />{" "}
             Select the languages your masters
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             Select only the languages you can use to teach your students
           </p>
         </div>
@@ -168,7 +169,7 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
               <select
                 ref={languageKnownRef}
                 name="languageKnown"
-                className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5 py-3 rounded-lg"
+                className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] MT-1 px-1.5 py-3 rounded-lg"
               >
                 <option value={""}>Language</option>
                 <option value={"spanish"}>Spanish</option>
@@ -180,7 +181,7 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
               <select
                 ref={levelKnownRef}
                 name="levelKnown"
-                className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5 py-3 rounded-lg"
+                className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] MT-1 px-1.5 py-3 rounded-lg"
               >
                 <option value={""}>Level</option>
                 <option value={"a1"}>A1</option>

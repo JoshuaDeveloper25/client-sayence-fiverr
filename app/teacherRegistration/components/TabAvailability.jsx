@@ -16,7 +16,7 @@ const TabAvailability = () => {
       <div className="flex flex-col sm:flex-row gap-14">
         <div className="flex-1">
           <div className="mb-8">
-            <h3 className="flex items-center font-bold text-lg">
+            <h3 className="flex items-center MT-SB-1">
               <Image
                 alt="Clock Icon"
                 className="w-5 inline-block me-2"
@@ -24,7 +24,7 @@ const TabAvailability = () => {
               />{" "}
               Set your time zone
             </h3>
-            <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+            <p className=" text-[#8E8E93] mt-1 ST-3">
               Please set your time zone to ensure that all session times are
               displayed accurately in your local time. This helps avoid any
               scheduling conflicts and ensures smooth coordination between tutor
@@ -42,7 +42,7 @@ const TabAvailability = () => {
               </div>
 
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
+              <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5">
                 <option value={""}>Select a time zone</option>
                 {timeZones?.map((item, index) => (
                   <option key={index}>{item}</option>
@@ -54,7 +54,7 @@ const TabAvailability = () => {
 
         <div className="flex-1">
           <div className="mb-8">
-            <h3 className="flex sm:items-center items-start font-bold text-lg">
+            <h3 className="flex sm:items-center items-start MT-SB-1">
               <Image
                 alt="Clock Icon"
                 className="w-5 inline-block me-2"
@@ -62,7 +62,7 @@ const TabAvailability = () => {
               />{" "}
               Set your daily work time limit
             </h3>
-            <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+            <p className=" text-[#8E8E93] mt-1 ST-3">
               Set your daily work time limit to manage your workload effectively
               and maintain a healthy work-life balance. This limit helps ensure
               you don&apos;t overcommit and have enough time for rest and
@@ -80,7 +80,7 @@ const TabAvailability = () => {
               </div>
 
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm font-medium px-1.5">
+              <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5">
                 <option value={""}>Define your daily work time</option>
                 {dailyWorkTime?.map((item, index) => (
                   <option key={index}>{item}</option>
@@ -93,7 +93,7 @@ const TabAvailability = () => {
 
       <div>
         <div className="mt-8">
-          <h3 className="flex sm:items-center items-start font-bold text-lg">
+          <h3 className="flex sm:items-center items-start MT-SB-1">
             <div className="sm:block hidden">
               <Image
                 alt="Luggage Clock Icon"
@@ -106,7 +106,7 @@ const TabAvailability = () => {
             </div>
             Set your work schedule
           </h3>
-          <p className="text-sm text-[#8E8E93] mt-1 font-medium">
+          <p className=" text-[#8E8E93] mt-1 ST-3">
             Minimum working time is set to 8 hours par week, please consider
             your weekly tasks and commitment to define your work time.
           </p>
@@ -125,7 +125,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          04:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">04:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -133,7 +134,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          05:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">05:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -141,7 +143,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          06:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">06:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -149,7 +152,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          07:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">07:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -157,7 +161,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          08:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">08:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -165,7 +170,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          09:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">09:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -173,7 +179,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          10:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">10:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -181,7 +188,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          11:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">11:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -189,7 +197,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          12:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">12:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -197,7 +206,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          13:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">13:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -205,7 +215,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          14:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">14:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -213,7 +224,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          15:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">15:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -221,7 +233,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          16:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">16:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -229,7 +242,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          17:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">17:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -237,7 +251,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          18:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">18:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -245,7 +260,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          19:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">19:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -253,7 +269,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          20:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">20:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -261,7 +278,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          21:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">21:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -269,7 +287,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          22:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">22:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -277,7 +296,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          23:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">23:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -285,7 +305,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          00:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">00:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -293,7 +314,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          01:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">01:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -301,7 +323,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          02:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">02:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -309,7 +332,8 @@ const TableAvailability = () => {
     {
       hourTime: (
         <>
-          03:00 <span className="text-[#8E8E93]">AM</span>
+          <span className="text-[#1C1C1E] ST-4">03:00</span>{" "}
+          <span className="text-[#8E8E93] ST-SB-4">AM</span>
         </>
       ),
     },
@@ -334,7 +358,7 @@ const TableAvailability = () => {
             <tr>
               <th
                 scope="col"
-                className="border-r-2 border-white px-6 py-3"
+                className="border-r-2 border-white  py-3"
               ></th>
 
               {daysOfWeek?.map((day, index) => {
@@ -342,7 +366,7 @@ const TableAvailability = () => {
                   <th
                     key={index}
                     scope="col"
-                    className="border-r-2 border-white px-6 py-3 text-base  last:border-r-0"
+                    className="border-r-2 border-white  py-3 ST-4  last:border-r-0"
                   >
                     {day}
                   </th>

@@ -8,7 +8,7 @@ export default function teacherRegistration() {
       <div className="mb-6">
         {" "}
         <div className="sm:block hidden">
-          <h3 className="flex sm:items-center items-start font-bold text-xl">
+          <h3 className="flex sm:items-center items-start MT-SB-2">
             <Image
               alt="Book Icon"
               className="w-6 inline-block me-2"
@@ -17,14 +17,14 @@ export default function teacherRegistration() {
             Complete the application form
           </h3>
         </div>
-        <div className="sm:hidden block">
-          <h3 className="font-bold text-xl">Complete your application</h3>
+        <div className="sm:hidden block MT-SB-2">
+          <h3>Complete your application</h3>
         </div>
-        <p className="sm:block hidden text-sm text-[#8E8E93] mt-1 font-medium">
+        <p className="sm:block hidden text-[#8E8E93] mt-1 ST-3">
           Fill the form with all the necessary information, we will review them
           as soon as possible.
         </p>
-        <p className="sm:hidden block text-sm text-[#8E8E93] mt-1 font-medium">
+        <p className="sm:hidden block text-[#8E8E93] mt-1 ST-3">
           Fill your teacher&apos;s profile
         </p>
       </div>

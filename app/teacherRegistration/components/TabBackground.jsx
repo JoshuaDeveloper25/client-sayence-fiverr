@@ -6,7 +6,7 @@ const TabBackground = () => {
   return (
     <section className="flex flex-col sm:flex-row sm:gap-12 gap-8">
       <div className="flex-1">
-        <h3 className="flex sm:items-center items-start font-bold text-lg">
+        <h3 className="flex sm:items-center items-start MT-SB-1">
           <Image
             alt="Student Hat Icon"
             className="w-6 inline-block me-2"
@@ -14,7 +14,7 @@ const TabBackground = () => {
           />{" "}
           Education
         </h3>
-        <p className="text-sm text-[#8E8E93] mt-1 font-medium mb-6">
+        <p className="ST-3 text-[#8E8E93] mt-1 mb-6">
           Tell us about your education path.
         </p>
 
@@ -28,7 +28,7 @@ const TabBackground = () => {
       </div>
 
       <div className="flex-1">
-        <h3 className="flex items-center font-bold text-lg">
+        <h3 className="flex items-center MT-SB-1">
           <Image
             alt="Elegant User Icon"
             className="w-4 inline-block me-2"
@@ -36,7 +36,7 @@ const TabBackground = () => {
           />{" "}
           Experience
         </h3>
-        <p className="text-sm text-[#8E8E93] mt-1 font-medium mb-6">
+        <p className="ST-3 text-[#8E8E93] mt-1 mb-6">
           Tell us about your career and experience
         </p>
 
