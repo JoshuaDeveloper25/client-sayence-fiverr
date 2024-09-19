@@ -2,6 +2,7 @@ import doubleUsers from "../assets/icons/double-users.png";
 import microsoft from "../assets/icons/microsoft.png";
 import userPlus from "../assets/icons/user-plus.png";
 import userFill from "../assets/icons/user-fill.png";
+import RegisterForm from "./components/RegisterForm";
 import google from "../assets/icons/google.png";
 import apple from "../assets/icons/apple.png";
 import email from "../assets/icons/email.png";
@@ -36,7 +37,7 @@ export default function Register() {
           information.
         </p>
 
-        <form className="flex flex-col sm:flex-row gap-6 mt-8">
+        <RegisterForm>
           <div className="flex-1">
             <div className="flex gap-3">
               <div className="flex-1">
@@ -46,7 +47,8 @@ export default function Register() {
                   <input
                     placeholder="First name"
                     className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-                    type="email"
+                    type="text"
+                    name="firstName"
                   />
                 </div>
               </div>
@@ -58,7 +60,8 @@ export default function Register() {
                   <input
                     placeholder="Last name"
                     className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-                    type="email"
+                    type="text"
+                    name="lastName"
                   />
                 </div>
               </div>
@@ -71,6 +74,7 @@ export default function Register() {
                 placeholder="Enter your email address"
                 className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                 type="email"
+                name="email"
               />
             </div>
 
@@ -81,6 +85,7 @@ export default function Register() {
                 placeholder="Enter your password"
                 className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
                 type="password"
+                name="password"
               />
             </div>
 
@@ -90,9 +95,7 @@ export default function Register() {
               <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
               <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
             </div>
-            <h3 className="mt-2 ST-4">
-              Password Security Level
-            </h3>
+            <h3 className="mt-2 ST-4">Password Security Level</h3>
 
             <button type="submit" className="btn btn-blue MT-SB-1 mt-6">
               Create an account
@@ -200,7 +203,7 @@ export default function Register() {
               </span>
             </p>
           </div>
-        </form>
+        </RegisterForm>
       </section>
     </main>
   );

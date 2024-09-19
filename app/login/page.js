@@ -1,6 +1,7 @@
 import microsoft from "../assets/icons/microsoft.png";
 import lockUser from "../assets/icons/lock-user.png";
 import google from "../assets/icons/google.png";
+import LoginForm from "./components/LoginForm";
 import apple from "../assets/icons/apple.png";
 import lock from "../assets/icons/lock.png";
 import user from "../assets/icons/user.png";
@@ -25,15 +26,18 @@ export default function LogIn() {
           Enter your account information to access to your account.
         </p>
 
-        <form className="flex flex-col sm:flex-row gap-6 mt-8">
+        <LoginForm>
           <div className="flex-1">
             <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
               <Image alt="User Icon" className="w-6" src={user} />
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Enter your email address"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
+                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 "
                 type="email"
+                name="email"
+                id="email"
+                required
               />
             </div>
 
@@ -42,8 +46,11 @@ export default function LogIn() {
               <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
               <input
                 placeholder="Enter your password"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
+                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5  "
                 type="password"
+                name="password"
+                id="password"
+                required
               />
             </div>
 
@@ -150,7 +157,7 @@ export default function LogIn() {
               By signing in or singing up, you agree with our Privacy policy
             </p>
           </div>
-        </form>
+        </LoginForm>
       </section>
     </main>
   );

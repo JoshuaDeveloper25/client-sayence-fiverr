@@ -1,3 +1,4 @@
+import { Providers } from "@/contextProviders/Providers";
 import Navbar from "./rootComponents/Navbar";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -25,9 +26,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
-        <Navbar />
+        <Providers>
+          <Navbar />
 
-        {children}
+          {children}
+        </Providers>
       </body>
     </html>
   );
