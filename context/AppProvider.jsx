@@ -7,23 +7,26 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState({});
-  console.log(userInfo);
+  const [isLoading, setIsLoading] = useState(true);
 
   axios.defaults.headers.common["Authorization"] = userInfo?.token
     ? `Bearer ${userInfo?.token}`
     : null;
 
   useEffect(() => {
+    setIsLoading(true);
+
     if (typeof window !== "undefined") {
       const getUserInfoFromLocalStorage = localStorage.getItem("userInfo")
         ? JSON.parse(localStorage.getItem("userInfo"))
         : null;
       setUserInfo(getUserInfoFromLocalStorage);
+      setIsLoading(false);
     }
   }, []);
 
   return (
-    <AppContext.Provider value={{ userInfo, setUserInfo }}>
+    <AppContext.Provider value={{ userInfo, setUserInfo, isLoading }}>
       {children}
     </AppContext.Provider>
   );

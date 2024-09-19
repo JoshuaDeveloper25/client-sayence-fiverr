@@ -1,10 +1,10 @@
-import microsoft from "../assets/icons/microsoft.png";
-import lockUser from "../assets/icons/lock-user.png";
-import google from "../assets/icons/google.png";
+import microsoft from "../../assets/icons/microsoft.png";
+import lockUser from "../../assets/icons/lock-user.png";
+import google from "../../assets/icons/google.png";
 import LoginForm from "./components/LoginForm";
-import apple from "../assets/icons/apple.png";
-import lock from "../assets/icons/lock.png";
-import user from "../assets/icons/user.png";
+import apple from "../../assets/icons/apple.png";
+import lock from "../../assets/icons/lock.png";
+import user from "../../assets/icons/user.png";
 import Image from "next/image";
 
 export default function LogIn() {

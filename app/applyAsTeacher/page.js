@@ -37,6 +37,7 @@ export default function ApplyAsATeacher() {
                   alt="Header Image"
                   className="w-full h-full"
                   src={header}
+                  priority
                 />
               </div>
 

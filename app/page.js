@@ -244,6 +244,7 @@ export default function Home() {
                   alt="Header Image"
                   className="w-full h-full"
                   src={header}
+                  priority
                 />
               </div>
               <ul className="list-disc text-[#8E8E93] ps-5 space-y-2">
@@ -480,11 +481,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] ST-2">
-                  Lesson rate
-                </h4>
+                <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
                 <h3>
-                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
+                  <span className="MT-SB-1">8 USD/</span>
+                  <span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -541,11 +541,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] ST-2">
-                  Lesson rate
-                </h4>
+                <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
                 <h3>
-                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
+                  <span className="MT-SB-1">8 USD/</span>
+                  <span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -602,11 +601,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] ST-2">
-                  Lesson rate
-                </h4>
+                <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
                 <h3>
-                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
+                  <span className="MT-SB-1">8 USD/</span>
+                  <span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -663,11 +661,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] ST-2">
-                  Lesson rate
-                </h4>
+                <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
                 <h3>
-                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
+                  <span className="MT-SB-1">8 USD/</span>
+                  <span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -724,11 +721,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-[#8E8E93] ST-2">
-                  Lesson rate
-                </h4>
+                <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
                 <h3>
-                  <span className="MT-SB-1">8 USD/</span><span className="ST-3">30 mins</span>
+                  <span className="MT-SB-1">8 USD/</span>
+                  <span className="ST-3">30 mins</span>
                 </h3>
               </div>
             </div>
@@ -779,9 +775,7 @@ export default function Home() {
               src={threeUsers}
             />
 
-            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
-              Choose a tutor
-            </h2>
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">Choose a tutor</h2>
             <p className="text-[#8E8E93] ST-3">
               Browse qualified tutors based on level, goals, budget, and
               availability.
@@ -795,9 +789,7 @@ export default function Home() {
               src={calendar}
             />
 
-            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
-              Schedule a lesson
-            </h2>
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">Schedule a lesson</h2>
             <p className="text-[#8E8E93] ST-3">
               Pick the date and time that works for you and get ready to conquer
               your goals.
@@ -807,9 +799,7 @@ export default function Home() {
           <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image alt={"Icon Card"} className="w-12 mx-auto" src={card} />
 
-            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
-              Pay as you go
-            </h2>
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">Pay as you go</h2>
             <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>
@@ -822,9 +812,7 @@ export default function Home() {
               src={userScreen}
             />
 
-            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
-              Start learning
-            </h2>
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">Start learning</h2>
             <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>
@@ -844,9 +832,7 @@ export default function Home() {
             Meet our services
           </h3>
 
-          <p className=" text-[#8E8E93] mt-1 ST-3">
-            Start learning today
-          </p>
+          <p className=" text-[#8E8E93] mt-1 ST-3">Start learning today</p>
 
           <article className="flex flex-col-reverse md:flex-row gap-5 mt-5">
             <div className="flex-1">
@@ -909,9 +895,7 @@ export default function Home() {
           Only few steps to get started
         </h3>
 
-        <p className=" text-[#8E8E93] mt-1 ST-3">
-          Start learning today
-        </p>
+        <p className=" text-[#8E8E93] mt-1 ST-3">Start learning today</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
           <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
@@ -949,9 +933,7 @@ export default function Home() {
           <div className="bg-[#F2F2F7] text-center rounded-xl py-5 px-5">
             <Image alt={"Icon Pencil"} className="w-16 mx-auto" src={pencil} />
 
-            <h2 className="text-[#48484A] MT-SB-1 my-1.5">
-              Artistic subjects
-            </h2>
+            <h2 className="text-[#48484A] MT-SB-1 my-1.5">Artistic subjects</h2>
             <p className="text-[#8E8E93] ST-3">
               Pay only for the lessons you take, no contracts or hidden fees.
             </p>

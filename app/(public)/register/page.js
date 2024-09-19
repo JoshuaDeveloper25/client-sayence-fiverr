@@ -1,13 +1,13 @@
-import doubleUsers from "../assets/icons/double-users.png";
-import microsoft from "../assets/icons/microsoft.png";
-import userPlus from "../assets/icons/user-plus.png";
-import userFill from "../assets/icons/user-fill.png";
+import doubleUsers from "../../assets/icons/double-users.png";
+import microsoft from "../../assets/icons/microsoft.png";
+import userPlus from "../../assets/icons/user-plus.png";
+import userFill from "../../assets/icons/user-fill.png";
 import RegisterForm from "./components/RegisterForm";
-import google from "../assets/icons/google.png";
-import apple from "../assets/icons/apple.png";
-import email from "../assets/icons/email.png";
-import lock from "../assets/icons/lock.png";
-import user from "../assets/icons/user.png";
+import google from "../../assets/icons/google.png";
+import apple from "../../assets/icons/apple.png";
+import email from "../../assets/icons/email.png";
+import lock from "../../assets/icons/lock.png";
+import user from "../../assets/icons/user.png";
 import Image from "next/image";
 
 export default function Register() {

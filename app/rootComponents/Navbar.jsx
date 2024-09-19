@@ -1,25 +1,25 @@
 "use client";
 
-import AppContext from "@/context/AppProvider";
 import tutorImagePreview from "../assets/images/tutor-image-preview.png";
 import logoProffesional from "../assets/icons/logo-professional.png";
 import menuResponsive from "../assets/icons/menu-responsive.png";
-import arrowDoor from "../assets/icons/arrow-door.png";
-import dashboard from "../assets/icons/dashboard.png";
 import notifications from "../assets/icons/notifications.png";
 import messagesAlt from "../assets/icons/messages-alt.png";
-import finance from "../assets/icons/finance.png";
-import add from "../assets/icons/add.png";
-import search from "../assets/icons/search.png";
+import arrowDoor from "../assets/icons/arrow-door.png";
+import dashboard from "../assets/icons/dashboard.png";
 import settings from "../assets/icons/settings.png";
+import finance from "../assets/icons/finance.png";
+import search from "../assets/icons/search.png";
+import AppContext from "@/context/AppProvider";
 import { usePathname } from "next/navigation";
 import logo from "../assets/icons/logo.png";
+import add from "../assets/icons/add.png";
 import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
-  const { userInfo, setUserInfo } = useContext(AppContext);
+  const { userInfo, setUserInfo, isLoading } = useContext(AppContext);
   const pathname = usePathname();
 
   const handleLogout = () => {
@@ -27,7 +27,19 @@ const Navbar = () => {
     localStorage.removeItem("userInfo");
   };
 
-  return pathname === "/applyAsTeacher" ||
+  return isLoading ? (
+    <div className="px-3 py-3 w-full">
+      <div className="animate-pulse rounded-sm">
+        <div className="flex justify-between items-center gap-4">
+          <div className="w-44 h-12 rounded-sm bg-[#8E8E93] shadow"></div>
+
+          <div className="w-56 h-8 rounded-sm bg-[#8E8E93] shadow"></div>
+        
+          <div className="w-44 h-12 rounded-sm bg-[#8E8E93] shadow"></div>
+        </div>
+      </div>
+    </div>
+  ) : pathname === "/applyAsTeacher" ||
     pathname === "/teacherRegistration" ||
     pathname === "/approvalTeacher" ? (
     <nav className="px-3 py-3">

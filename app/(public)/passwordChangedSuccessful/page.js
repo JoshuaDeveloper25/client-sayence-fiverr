@@ -1,8 +1,8 @@
-import lockOpen from "../assets/icons/lock-open.png";
+import lockOpen from "../../assets/icons/lock-open.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NewPassword() {
+export default function PasswordChangedSuccessful() {
   return (
     <main className="max-w-[400px] mx-auto px-3 my-8">
       <h3 className="MT-SB-1">

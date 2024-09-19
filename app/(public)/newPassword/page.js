@@ -1,5 +1,5 @@
-import lockBlack from "../assets/icons/lock-black.png";
-import lock from "../assets/icons/lock.png";
+import lockBlack from "../../assets/icons/lock-black.png";
+import lock from "../../assets/icons/lock.png";
 import Image from "next/image";
 
 export default function NewPassword() {

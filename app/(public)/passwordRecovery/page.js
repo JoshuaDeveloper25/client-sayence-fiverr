@@ -1,6 +1,6 @@
 import PasswordRecoveryForm from "./components/PasswordRecoveryForm";
-import lockUser from "../assets/icons/lock-user.png";
-import email from "../assets/icons/email.png";
+import lockUser from "../../assets/icons/lock-user.png";
+import email from "../../assets/icons/email.png";
 import Image from "next/image";
 
 export default function PasswordRecovery() {
