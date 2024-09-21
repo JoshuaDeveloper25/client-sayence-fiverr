@@ -3,21 +3,19 @@
 import { getError } from "@/utils/getError";
 import axios from "axios";
 
-const RegisterForm = ({ children }) => {
+const NewPasswordForm = ({ children, structure = 1 }) => {
   const handleSubmit = async (e) => {
     // Form object
-    const registerInfo = {
-      firstName: e?.get("firstName"),
-      lastName: e?.get("lastName"),
+    const newPasswordInfo = {
       email: e?.get("email"),
       password: e?.get("password"),
     };
 
     try {
       // Send info to server
-      const { data } = await axios.post(
-        `${process.env.customKey}/users/register`,
-        registerInfo
+      const { data } = await axios.patch(
+        `${process.env.customKey}/users/change-password/${"aqui va token"}`,
+        newPasswordInfo
       );
       console.log(data);
     } catch (error) {
@@ -25,14 +23,16 @@ const RegisterForm = ({ children }) => {
     }
   };
 
-  return (
+  return structure === 1 ? (
     <form
       className="flex flex-col sm:flex-row gap-6 mt-8"
       action={handleSubmit}
     >
       {children}
     </form>
+  ) : (
+    children
   );
 };
 
-export default RegisterForm;
+export default NewPasswordForm;

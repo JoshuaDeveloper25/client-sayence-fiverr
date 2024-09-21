@@ -5,11 +5,9 @@ import axios from "axios";
 
 const PasswordRecoveryForm = ({ children }) => {
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
     // Form object
     const forgotPasswordInfo = {
-      email: e?.target?.email?.value,
+      email: e?.get("email"),
     };
 
     try {
@@ -24,7 +22,7 @@ const PasswordRecoveryForm = ({ children }) => {
     }
   };
 
-  return <form onSubmit={handleSubmit}>{children}</form>;
+  return <form action={handleSubmit}>{children}</form>;
 };
 
 export default PasswordRecoveryForm;

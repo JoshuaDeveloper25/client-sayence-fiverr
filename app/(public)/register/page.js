@@ -9,6 +9,7 @@ import email from "../../assets/icons/email.png";
 import lock from "../../assets/icons/lock.png";
 import user from "../../assets/icons/user.png";
 import Image from "next/image";
+import BtnFormStatus from "@/app/components/BtnFormStatus";
 
 export default function Register() {
   return (
@@ -97,9 +98,10 @@ export default function Register() {
             </div>
             <h3 className="mt-2 ST-4">Password Security Level</h3>
 
-            <button type="submit" className="btn btn-blue MT-SB-1 mt-6">
-              Create an account
-            </button>
+            <BtnFormStatus
+              buttonText={"Create an account"}
+              styles={"btn btn-blue MT-SB-1 mt-6"}
+            />
           </div>
 
           {/* Or - Desktop */}

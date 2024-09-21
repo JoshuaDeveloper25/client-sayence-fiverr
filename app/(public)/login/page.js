@@ -6,6 +6,7 @@ import apple from "../../assets/icons/apple.png";
 import lock from "../../assets/icons/lock.png";
 import user from "../../assets/icons/user.png";
 import Image from "next/image";
+import BtnFormStatus from "@/app/components/BtnFormStatus";
 
 export default function LogIn() {
   return (
@@ -54,9 +55,10 @@ export default function LogIn() {
               />
             </div>
 
-            <button type="submit" className="btn btn-black MT-SB-1">
-              Log in
-            </button>
+            <BtnFormStatus
+              styles={"btn btn-black MT-SB-1"}
+              buttonText={"Log In"}
+            />
 
             <h2 className="text-center text-[#1C1C1E] ST-4 mt-6 ">
               I can&apos;t sign in, help!

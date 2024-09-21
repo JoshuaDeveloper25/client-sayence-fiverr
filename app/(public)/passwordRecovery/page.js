@@ -1,4 +1,5 @@
 import PasswordRecoveryForm from "./components/PasswordRecoveryForm";
+import BtnFormStatus from "@/app/components/BtnFormStatus";
 import lockUser from "../../assets/icons/lock-user.png";
 import email from "../../assets/icons/email.png";
 import Image from "next/image";
@@ -31,9 +32,10 @@ export default function PasswordRecovery() {
           />
         </div>
 
-        <button className="btn btn-blue MT-SB-1" type="submit">
-          Send me an email
-        </button>
+        <BtnFormStatus
+          buttonText={"Send me an email"}
+          styles={"btn btn-blue MT-SB-1"}
+        />
       </PasswordRecoveryForm>
     </main>
   );

@@ -9,12 +9,10 @@ const LoginForm = ({ children }) => {
   const { setUserInfo } = useContext(AppContext);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
     // Form object
     const loginInfo = {
-      email: e?.target?.email?.value,
-      password: e?.target?.password?.value,
+      email: e?.get("email"),
+      password: e?.get("password"),
     };
 
     try {
@@ -35,8 +33,7 @@ const LoginForm = ({ children }) => {
   return (
     <form
       className="flex flex-col sm:flex-row gap-6 mt-8"
-      onSubmit={handleSubmit}
-      noValidate
+      action={handleSubmit}
     >
       {children}
     </form>
