@@ -36,7 +36,7 @@ const SecondaryNav = () => {
     <nav className="px-3 py-3">
       <div className="flex justify-between items-center gap-4">
         <div>
-          <Link href={"/applyAsTeacher"}>
+          <Link href={"/"}>
             <Image
               alt="Logo Image"
               className="w-32 inline-block"
@@ -128,7 +128,7 @@ const SecondaryNav = () => {
               >
                 <div
                   id="dropdown"
-                  className="absolute top-14 right-0 z-10 rounded-lg shadow-xl bg-white border w-72 py-3 px-5"
+                  className="absolute top-14 right-0 z-[100] rounded-lg shadow-xl bg-white border w-72 py-3 px-5"
                 >
                   <div className="flex gap-3">
                     <Image

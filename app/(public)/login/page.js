@@ -1,3 +1,4 @@
+import BtnFormStatus from "@/app/components/BtnFormStatus";
 import microsoft from "../../assets/icons/microsoft.png";
 import lockUser from "../../assets/icons/lock-user.png";
 import google from "../../assets/icons/google.png";
@@ -6,7 +7,7 @@ import apple from "../../assets/icons/apple.png";
 import lock from "../../assets/icons/lock.png";
 import user from "../../assets/icons/user.png";
 import Image from "next/image";
-import BtnFormStatus from "@/app/components/BtnFormStatus";
+import { Input } from "@/app/components/InputUtilities";
 
 export default function LogIn() {
   return (
@@ -41,6 +42,8 @@ export default function LogIn() {
                 required
               />
             </div>
+
+            <Input imgPath={lock} />
 
             <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-6">
               <Image alt="Lock Image" className="w-6" src={lock} />
