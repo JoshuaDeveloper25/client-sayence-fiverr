@@ -1,23 +1,28 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { getError } from "@/utils/getError";
 import axios from "axios";
 
-const NewPasswordForm = ({ children, structure = 1 }) => {
+const NewPasswordForm = ({ children, structure = 1, token }) => {
+  const router = useRouter();
+
   const handleSubmit = async (e) => {
     // Form object
     const newPasswordInfo = {
-      email: e?.get("email"),
       password: e?.get("password"),
     };
+
+    console.log(newPasswordInfo);
 
     try {
       // Send info to server
       const { data } = await axios.patch(
-        `${process.env.customKey}/users/change-password/${"aqui va token"}`,
+        `${process.env.customKey}/users/change-password/${token}`,
         newPasswordInfo
       );
       console.log(data);
+      router.push("/passwordChangedSuccessful");
     } catch (error) {
       console.log(getError(error));
     }
@@ -31,7 +36,7 @@ const NewPasswordForm = ({ children, structure = 1 }) => {
       {children}
     </form>
   ) : (
-    children
+    <form action={handleSubmit}>{children}</form>
   );
 };
 

@@ -1,14 +1,14 @@
 "use client";
 import getSecurityLevelMessage from "@/utils/getSecurityLevelMessage";
-import NewPasswordForm from "./components/NewPasswordForm";
-import lockBlack from "../../assets/icons/lock-black.png";
+import NewPasswordForm from "../components/NewPasswordForm";
+import lockBlack from "../../../assets/icons/lock-black.png";
 import BtnFormStatus from "@/app/components/BtnFormStatus";
 import { Input } from "@/app/components/InputUtilities";
-import lock from "../../assets/icons/lock.png";
-import Image from "next/image";
+import lock from "../../../assets/icons/lock.png";
 import { useState } from "react";
+import Image from "next/image";
 
-export default function NewPassword() {
+export default function NewPassword({ params }) {
   const [password, setPassword] = useState("");
   const [securityLevel, setSecurityLevel] = useState(0);
 
@@ -47,7 +47,7 @@ export default function NewPassword() {
         Please enter your new password to access your account.
       </p>
 
-      <NewPasswordForm structure={2}>
+      <NewPasswordForm structure={2} token={params?.token}>
         <Input
           inputProp={{
             placeholder: "Enter your new password",
@@ -67,7 +67,7 @@ export default function NewPassword() {
         <Input
           inputProp={{
             placeholder: "Retape your new password",
-            name: "password",
+            name: "repeatPassword",
             type: "password",
             required: true,
           }}
@@ -119,7 +119,7 @@ export default function NewPassword() {
           ></div>
         </div>
 
-        <h3 className="mt-2 ST-4">
+        <h3 className="mt-2 ST-4 mb-3">
           Password Security Level{securityLevel > 0 ? ":" : ""}{" "}
           {getSecurityLevelMessage(securityLevel)}
         </h3>

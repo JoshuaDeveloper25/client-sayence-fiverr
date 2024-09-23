@@ -26,7 +26,7 @@ export const Input = ({
 
     // Manejar el cambio de contraseña si se proporciona la función
     if (inputProp.type === "password" && handlePasswordChange) {
-      handlePasswordChange(e); // Llamar a la función para manejar el cambio
+      handlePasswordChange(e);
     }
 
     if (inputProp.onChange) inputProp.onChange(e);
@@ -58,7 +58,7 @@ export const Input = ({
           className="bg-transparent outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 py-3.5"
           onChange={handleInputChange}
           {...inputProp}
-          value={passwordValue} // Establecer el valor de la contraseña
+          value={passwordValue} 
         />
       </label>
 
