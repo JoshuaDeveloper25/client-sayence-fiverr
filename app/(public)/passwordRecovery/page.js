@@ -1,9 +1,9 @@
 import PasswordRecoveryForm from "./components/PasswordRecoveryForm";
 import BtnFormStatus from "@/app/components/BtnFormStatus";
 import lockUser from "../../assets/icons/lock-user.png";
+import { Input } from "@/app/components/InputUtilities";
 import email from "../../assets/icons/email.png";
 import Image from "next/image";
-import { Input } from "@/app/components/InputUtilities";
 
 export default function PasswordRecovery() {
   return (
@@ -17,7 +17,7 @@ export default function PasswordRecovery() {
         Request password changes
       </h3>
 
-      <p className=" text-[#8E8E93] mt-1 ST-3">
+      <p className=" text-[#8E8E93] mt-3 mb-3 ST-3">
         Please enter your email address to receive a password recovery link.
       </p>
 

@@ -8,6 +8,7 @@ import LoginForm from "./components/LoginForm";
 import lock from "../../assets/icons/lock.png";
 import user from "../../assets/icons/user.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LogIn() {
   return (
@@ -63,9 +64,11 @@ export default function LogIn() {
               buttonText={"Log In"}
             />
 
-            <h2 className="text-center text-[#1C1C1E] ST-4 mt-6 ">
-              I can&apos;t sign in, help!
-            </h2>
+            <Link href={'/passwordRecovery'}>
+              <h2 className="text-center text-[#1C1C1E] ST-4 mt-6 underline">
+                I can&apos;t sign in, help!
+              </h2>
+            </Link>
           </div>
 
           {/* Or - Desktop */}

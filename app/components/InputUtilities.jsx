@@ -12,7 +12,6 @@ export const Input = ({
   twoColumns = false,
   iconStyles = false,
   handlePasswordChange,
-  passwordValue,
 }) => {
   const [isInvalid, setIsInvalid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
@@ -58,7 +57,6 @@ export const Input = ({
           className="bg-transparent outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 py-3.5"
           onChange={handleInputChange}
           {...inputProp}
-          value={passwordValue} 
         />
       </label>
 

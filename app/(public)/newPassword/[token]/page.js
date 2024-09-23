@@ -43,11 +43,15 @@ export default function NewPassword({ params }) {
         Make a new password
       </h3>
 
-      <p className="text-[#8E8E93] mt-1 mb-5 ST-3">
+      <p className="text-[#8E8E93] mt-3 mb-5 ST-3">
         Please enter your new password to access your account.
       </p>
 
-      <NewPasswordForm structure={2} token={params?.token}>
+      <NewPasswordForm
+        securityLevel={securityLevel}
+        structure={2}
+        token={params?.token}
+      >
         <Input
           inputProp={{
             placeholder: "Enter your new password",
@@ -55,7 +59,7 @@ export default function NewPassword({ params }) {
             type: "password",
             required: true,
             onChange: handlePasswordChange,
-            passwordValue: password,
+            value: password,
           }}
           errorName={"Invalid Password"}
           errorDesc={"Please, make sure to input your password."}

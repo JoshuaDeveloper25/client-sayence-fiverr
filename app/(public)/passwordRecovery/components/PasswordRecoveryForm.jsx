@@ -1,9 +1,12 @@
 "use client";
 
 import { getError } from "@/utils/getError";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 
 const PasswordRecoveryForm = ({ children }) => {
+  const router = useRouter();
+
   const handleSubmit = async (e) => {
     // Form object
     const forgotPasswordInfo = {
@@ -17,6 +20,7 @@ const PasswordRecoveryForm = ({ children }) => {
         forgotPasswordInfo
       );
       console.log(data);
+      router.push("/passwordRecoverySuccess");
     } catch (error) {
       console.log(getError(error));
     }

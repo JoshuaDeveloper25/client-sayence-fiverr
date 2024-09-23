@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { getError } from "@/utils/getError";
 import axios from "axios";
 
-const NewPasswordForm = ({ children, structure = 1, token }) => {
+const NewPasswordForm = ({ children, structure = 1, token, securityLevel }) => {
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -15,17 +15,19 @@ const NewPasswordForm = ({ children, structure = 1, token }) => {
 
     console.log(newPasswordInfo);
 
-    try {
-      // Send info to server
-      const { data } = await axios.patch(
-        `${process.env.customKey}/users/change-password/${token}`,
-        newPasswordInfo
-      );
-      console.log(data);
-      router.push("/passwordChangedSuccessful");
-    } catch (error) {
-      console.log(getError(error));
-    }
+    if (securityLevel === 4) {
+      try {
+        // Send info to server
+        const { data } = await axios.patch(
+          `${process.env.customKey}/users/change-password/${token}`,
+          newPasswordInfo
+        );
+        console.log(data);
+        router.push("/passwordChangedSuccessful");
+      } catch (error) {
+        console.log(getError(error));
+      }
+    } else return;
   };
 
   return structure === 1 ? (

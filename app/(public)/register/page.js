@@ -65,7 +65,7 @@ export default function Register() {
           information.
         </p>
 
-        <RegisterForm>
+        <RegisterForm securityLevel={securityLevel}>
           <div className="flex-1">
             <div className="flex gap-3">
               <div className="flex-1">
@@ -124,7 +124,7 @@ export default function Register() {
                 type: "password",
                 required: true,
                 onChange: handlePasswordChange,
-                passwordValue: password,
+                value: password,
               }}
               errorName={"Invalid Password"}
               errorDesc={"Please, make sure to input your password."}
@@ -165,7 +165,7 @@ export default function Register() {
                       ? "bg-[#29FF64]" // Level 4
                       : "bg-[#FFDD29]" // Level 3
                     : "bg-[#E5E5EA]" // Without color
-              }`}
+                }`}
               ></div>
               <div
                 className={`flex-1 h-1.5 rounded-full transition-colors ${
