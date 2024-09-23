@@ -90,11 +90,12 @@ const Tabs = () => {
           <TabSubject
             setMasteredLanguages={setMasteredLanguages}
             masteredLanguages={masteredLanguages}
+            activeTabIndex={activeTabIndex}
           />
         </div>
 
         <div className={`${activeTabIndex !== 1 && "hidden"}`}>
-          <TabSpecialties />
+          <TabSpecialties activeTabIndex={activeTabIndex} />
         </div>
 
         <div className={`${activeTabIndex !== 2 && "hidden"}`}>
@@ -102,15 +103,15 @@ const Tabs = () => {
         </div>
 
         <div className={`${activeTabIndex !== 3 && "hidden"}`}>
-          <TabShowCase />
+          <TabShowCase activeTabIndex={activeTabIndex} />
         </div>
 
         <div className={`${activeTabIndex !== 4 && "hidden"}`}>
-          <TabPricing />
+          <TabPricing activeTabIndex={activeTabIndex} />
         </div>
 
         <div className={`${activeTabIndex !== 5 && "hidden"}`}>
-          <TabAvailability />
+          <TabAvailability activeTabIndex={activeTabIndex} />
         </div>
       </div>
 

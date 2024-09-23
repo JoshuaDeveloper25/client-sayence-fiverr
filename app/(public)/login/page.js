@@ -1,13 +1,13 @@
 import BtnFormStatus from "@/app/components/BtnFormStatus";
 import microsoft from "../../assets/icons/microsoft.png";
 import lockUser from "../../assets/icons/lock-user.png";
+import { Input } from "@/app/components/InputUtilities";
 import google from "../../assets/icons/google.png";
-import LoginForm from "./components/LoginForm";
 import apple from "../../assets/icons/apple.png";
+import LoginForm from "./components/LoginForm";
 import lock from "../../assets/icons/lock.png";
 import user from "../../assets/icons/user.png";
 import Image from "next/image";
-import { Input } from "@/app/components/InputUtilities";
 
 export default function LogIn() {
   return (
@@ -30,33 +30,33 @@ export default function LogIn() {
 
         <LoginForm>
           <div className="flex-1">
-            <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
-              <Image alt="User Icon" className="w-6" src={user} />
-              <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <input
-                placeholder="Enter your email address"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 "
-                type="email"
-                name="email"
-                id="email"
-                required
-              />
-            </div>
+            <Input
+              inputProp={{
+                placeholder: "Enter your email address",
+                name: "email",
+                type: "email",
+                required: true,
+              }}
+              errorName={"Please input a valid email."}
+              errorDesc={"Invalid Email"}
+              boxInputError={true}
+              alt={"User Icon"}
+              imgPath={user}
+            />
 
-            <Input imgPath={lock} />
-
-            <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-6">
-              <Image alt="Lock Image" className="w-6" src={lock} />
-              <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <input
-                placeholder="Enter your password"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5  "
-                type="password"
-                name="password"
-                id="password"
-                required
-              />
-            </div>
+            <Input
+              inputProp={{
+                placeholder: "Enter your password",
+                name: "password",
+                type: "password",
+                required: true,
+              }}
+              errorName={"Invalid Password"}
+              errorDesc={"Please, make sure to input your password."}
+              boxInputError={true}
+              alt={"Lock Icon"}
+              imgPath={lock}
+            />
 
             <BtnFormStatus
               styles={"btn btn-black MT-SB-1"}

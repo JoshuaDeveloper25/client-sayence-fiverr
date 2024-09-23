@@ -1,10 +1,11 @@
+import { Input } from "@/app/components/InputUtilities";
 import addImage from "../../assets/icons/add-image.png";
 import camera from "../../assets/icons/camera-alt.png";
 import video from "../../assets/icons/video.png";
 import link from "../../assets/icons/link.png";
 import Image from "next/image";
 
-const TabShowCase = () => {
+const TabShowCase = ({ activeTabIndex }) => {
   return (
     <section className="flex flex-col-reverse sm:flex-row gap-14">
       <div className="flex-1">
@@ -25,15 +26,22 @@ const TabShowCase = () => {
         </div>
 
         <div className="mb-8">
-          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
-            <Image alt="Link Icon" className="w-5" src={link} />
-            <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <input
-              placeholder="Enter your video link"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
-              type="text"
-            />
-          </div>
+          <Input
+            inputProp={{
+              placeholder: "Enter your video link",
+              name: "videoLink",
+              type: "text",
+              required: activeTabIndex === 3 ? true : false,
+            }}
+            iconStyles={"w-[1.3rem] h-[1.3rem] object-contain"}
+            errorName={"Invalid link"}
+            errorDesc={
+              "Please ensure the link provided is a valid YouTube URL."
+            }
+            boxInputError={true}
+            alt={"Link Icon"}
+            imgPath={link}
+          />
         </div>
 
         <ul className="list-disc ps-5 text-[#48484A] ST-4 space-y-1">

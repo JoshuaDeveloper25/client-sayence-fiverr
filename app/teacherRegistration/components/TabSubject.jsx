@@ -1,4 +1,5 @@
 import userListen from "../../assets/icons/user-listen.png";
+import { Input, Select, Textarea } from "@/app/components/InputUtilities";
 import userHat from "../../assets/icons/user-hat.png";
 import book2 from "../../assets/icons/book-alt-2.png";
 import book from "../../assets/icons/book-alt.png";
@@ -6,7 +7,11 @@ import { IoIosAdd } from "react-icons/io";
 import Image from "next/image";
 import { useRef } from "react";
 
-const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
+const TabSubject = ({
+  setMasteredLanguages,
+  masteredLanguages,
+  activeTabIndex,
+}) => {
   const languageKnownRef = useRef("");
   const levelKnownRef = useRef("");
 
@@ -40,45 +45,58 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
           <h3 className="text-[#48484A] MT-SB-1">
             Select the subject you wish to teach
           </h3>
-          <p className=" text-[#48484A] mt-1 ST-3">
+          <p className=" text-[#48484A] mt-1 mb-2 ST-3">
             At iPractis you can teach only one subject, however, you can switch
             subject at anytime
           </p>
 
-          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
-            <Image alt="Book Image" className="w-6" src={book2} />
-            <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <select
-              name="teachingSubject"
-              className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-            >
-              <option value={""}>Select a teaching subject</option>
-              <option value={"mathematics"}>Mathematics</option>
-              <option value={"science"}>Science</option>
-              <option value={"spanish"}>Spanish</option>
-            </select>
-          </div>
+          <Select
+            selectProp={{
+              name: "teachingSubject",
+              required: activeTabIndex === 0 ? true : false,
+            }}
+            defaultOption={"Select a teaching subject"}
+            options={[
+              { value: "mathematics", text: "Mathematics" },
+              {
+                value: "science",
+                text: "Science",
+              },
+              {
+                value: "spanish",
+                text: "Spanish",
+              },
+            ]}
+            errorName={"Please select teaching subject."}
+            errorDesc={"Invalid Teaching subject"}
+            boxInputError={true}
+            alt={"Book Image"}
+            imgPath={book2}
+          />
         </div>
 
         <div className="mb-8">
-          <h3 className="text-[#48484A] MT-SB-1">
-            Write a catchy headline
-          </h3>
-          <p className=" text-[#48484A] mt-1 ST-3">
+          <h3 className="text-[#48484A] MT-SB-1">Write a catchy headline</h3>
+          <p className=" text-[#48484A] mt-1 ST-3 mb-2">
             Your headline is the first thing peoples are going to read, it will
             allow you to attract the students you wish to have.
           </p>
-          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
-            <Image alt="User Hat Image" className="w-6" src={userHat} />
-            <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <input
-              placeholder="Enter a profile title"
-              name="profileTitle"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none w-full placeholder-[#48484A] ST-3 px-1.5"
-              type="text"
-            />
-          </div>
-          <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
+
+          <Input
+            inputProp={{
+              placeholder: "Enter a profile title",
+              name: "profileTitle",
+              type: "text",
+              required: activeTabIndex === 0 ? true : false,
+            }}
+            iconStyles={"w-[1.2rem] h-[1.2rem] object-contain"}
+            errorName={"Please input a profile title."}
+            errorDesc={"Invalid Profile Title"}
+            boxInputError={true}
+            alt={"User Hat Image"}
+            imgPath={userHat}
+          />
+          <div className="flex justify-between gap-3 text-sm text-[#45484A]">
             <h4 className="ST-2">Limited to 120 characters</h4>
 
             <h4 className="ST-2">0/120</h4>
@@ -93,14 +111,19 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             Provide a detailed description of your teaching methodology,
             education, teaching experience, and subject expertise.
           </p>
-          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
-            <textarea
-              placeholder="Enter a text"
-              name="teachedSubjects"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] ST-3 px-1 resize-none"
-            />
-          </div>
-          <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
+
+          <Textarea
+            textAreaProp={{
+              placeholder: "Enter a text",
+              name: "introductionSubject",
+              required: activeTabIndex === 0 ? true : false,
+            }}
+            errorName={"Please input a text."}
+            errorDesc={"Invalid Text"}
+            boxInputError={true}
+          />
+
+          <div className="flex justify-between gap-3 text-sm text-[#45484A]">
             <h4 className="ST-2">Limited to 1000 characters</h4>
 
             <h4 className="ST-2">0/1000</h4>
@@ -132,14 +155,19 @@ const TabSubject = ({ setMasteredLanguages, masteredLanguages }) => {
             Introduce yourself in a few lines and Highlight your unique
             interests, and what sets you apart as an educator.
           </p>
-          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
-            <textarea
-              placeholder="Enter a text"
-              className="bg-[#F2F2F7] text-[#48484A] outline-none h-28 w-full placeholder-[#48484A] ST-3 px-1 resize-none"
-              name="introductionOfYourself"
-            />
-          </div>
-          <div className="flex justify-between gap-3 text-sm text-[#45484A] mt-1">
+
+          <Textarea
+            textAreaProp={{
+              placeholder: "Enter a text",
+              name: "introductionOfYourself",
+              required: activeTabIndex === 0 ? true : false,
+            }}
+            errorName={"Please input a text."}
+            errorDesc={"Invalid Text"}
+            boxInputError={true}
+          />
+
+          <div className="flex justify-between gap-3 text-sm text-[#45484A]">
             <h4 className="ST-2">Limited to 1000 characters</h4>
 
             <h4 className="ST-2">0/1000</h4>

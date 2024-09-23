@@ -1,4 +1,8 @@
+"use client";
+import getSecurityLevelMessage from "@/utils/getSecurityLevelMessage";
 import doubleUsers from "../../assets/icons/double-users.png";
+import BtnFormStatus from "@/app/components/BtnFormStatus";
+import { Input } from "@/app/components/InputUtilities";
 import microsoft from "../../assets/icons/microsoft.png";
 import userPlus from "../../assets/icons/user-plus.png";
 import userFill from "../../assets/icons/user-fill.png";
@@ -8,10 +12,33 @@ import apple from "../../assets/icons/apple.png";
 import email from "../../assets/icons/email.png";
 import lock from "../../assets/icons/lock.png";
 import user from "../../assets/icons/user.png";
+import { useState } from "react";
 import Image from "next/image";
-import BtnFormStatus from "@/app/components/BtnFormStatus";
 
 export default function Register() {
+  const [password, setPassword] = useState("");
+  const [securityLevel, setSecurityLevel] = useState(0);
+
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+
+    if (newPassword === "") {
+      setSecurityLevel(0);
+      return;
+    }
+
+    if (newPassword.length < 6) {
+      setSecurityLevel(1);
+    } else if (newPassword.length < 8) {
+      setSecurityLevel(2);
+    } else if (newPassword.length < 10) {
+      setSecurityLevel(3);
+    } else {
+      setSecurityLevel(4);
+    }
+  };
+
   return (
     <main className="container-page px-3 my-8">
       <h2 className="MT-SB-3 mb-14">Online tutoring with a real teacher.</h2>
@@ -42,61 +69,115 @@ export default function Register() {
           <div className="flex-1">
             <div className="flex gap-3">
               <div className="flex-1">
-                <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
-                  <Image alt="User Icon" className="w-6" src={user} />
-                  <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-                  <input
-                    placeholder="First name"
-                    className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-                    type="text"
-                    name="firstName"
-                  />
-                </div>
+                <Input
+                  inputProp={{
+                    placeholder: "First name",
+                    name: "firstName",
+                    type: "text",
+                    required: true,
+                  }}
+                  errorName={"Please input a name."}
+                  errorDesc={"Invalid Name"}
+                  boxInputError={true}
+                  alt={"User Icon"}
+                  imgPath={user}
+                  twoColumns={true}
+                />
               </div>
 
               <div className="flex-1">
-                <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
-                  <Image alt="User Icon" className="w-6" src={doubleUsers} />
-                  <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-                  <input
-                    placeholder="Last name"
-                    className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-                    type="text"
-                    name="lastName"
-                  />
-                </div>
+                <Input
+                  inputProp={{
+                    placeholder: "Last name",
+                    name: "lastName",
+                    type: "text",
+                    required: true,
+                  }}
+                  errorName={"Please input last name."}
+                  errorDesc={"Invalid LastName"}
+                  boxInputError={true}
+                  alt={"Double Users Icon"}
+                  imgPath={doubleUsers}
+                  twoColumns={true}
+                />
               </div>
             </div>
 
-            <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
-              <Image alt="Email Icon" className="w-6" src={email} />
-              <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <input
-                placeholder="Enter your email address"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-                type="email"
-                name="email"
-              />
+            <Input
+              inputProp={{
+                placeholder: "Enter your email address",
+                name: "email",
+                type: "email",
+                required: true,
+              }}
+              errorName={"Please input a valid email."}
+              errorDesc={"Invalid Email"}
+              boxInputError={true}
+              alt={"Email Icon"}
+              imgPath={email}
+            />
+
+            <Input
+              inputProp={{
+                placeholder: "Enter your password",
+                name: "password",
+                type: "password",
+                required: true,
+                onChange: handlePasswordChange,
+                passwordValue: password,
+              }}
+              errorName={"Invalid Password"}
+              errorDesc={"Please, make sure to input your password."}
+              boxInputError={true}
+              alt={"Lock Icon"}
+              imgPath={lock}
+            />
+
+            <div className="flex gap-3 text-[#1C1C1E]">
+              <div
+                className={`flex-1 h-1.5 rounded-full transition-colors ${
+                  securityLevel >= 1
+                    ? securityLevel >= 2
+                      ? securityLevel >= 3
+                        ? securityLevel >= 4
+                          ? "bg-[#29FF64]" // Level 4
+                          : "bg-[#FFDD29]" // Level 3
+                        : "bg-[#FF9264]" // Level 2
+                      : "bg-[#FF2937]" // Level 1
+                    : "bg-[#E5E5EA]" // Without color
+                }`}
+              ></div>
+              <div
+                className={`flex-1 h-1.5 rounded-full transition-colors ${
+                  securityLevel >= 2
+                    ? securityLevel >= 3
+                      ? securityLevel >= 4
+                        ? "bg-[#29FF64]" // Level 4
+                        : "bg-[#FFDD29]" // Level 3
+                      : "bg-[#FF9264]" // Level 2
+                    : "bg-[#E5E5EA]" // Without color
+                }`}
+              ></div>
+              <div
+                className={`flex-1 h-1.5 rounded-full transition-colors ${
+                  securityLevel >= 3
+                    ? securityLevel >= 4
+                      ? "bg-[#29FF64]" // Level 4
+                      : "bg-[#FFDD29]" // Level 3
+                    : "bg-[#E5E5EA]" // Without color
+              }`}
+              ></div>
+              <div
+                className={`flex-1 h-1.5 rounded-full transition-colors ${
+                  securityLevel >= 4 ? "bg-[#29FF64]" : "bg-[#E5E5EA]"
+                }`}
+              ></div>
             </div>
 
-            <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-6">
-              <Image alt="Lock Icon" className="w-6" src={lock} />
-              <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <input
-                placeholder="Enter your password"
-                className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-                type="password"
-                name="password"
-              />
-            </div>
-
-            <div className="flex gap-3">
-              <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-              <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-              <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-              <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-            </div>
-            <h3 className="mt-2 ST-4">Password Security Level</h3>
+            <h3 className="mt-2 ST-4">
+              Password Security Level{securityLevel > 0 ? ":" : ""}{" "}
+              {getSecurityLevelMessage(securityLevel)}
+            </h3>
 
             <BtnFormStatus
               buttonText={"Create an account"}

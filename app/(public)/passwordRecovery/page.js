@@ -3,6 +3,7 @@ import BtnFormStatus from "@/app/components/BtnFormStatus";
 import lockUser from "../../assets/icons/lock-user.png";
 import email from "../../assets/icons/email.png";
 import Image from "next/image";
+import { Input } from "@/app/components/InputUtilities";
 
 export default function PasswordRecovery() {
   return (
@@ -21,16 +22,19 @@ export default function PasswordRecovery() {
       </p>
 
       <PasswordRecoveryForm>
-        <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] my-6">
-          <Image alt="Email Icon" className="w-6" src={email} />
-          <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-          <input
-            placeholder="Enter your email address"
-            className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] text-sm ST-3 px-1.5"
-            type="email"
-            name="email"
-          />
-        </div>
+        <Input
+          inputProp={{
+            placeholder: "Enter your email address",
+            name: "email",
+            type: "email",
+            required: true,
+          }}
+          errorName={"Please input a valid email."}
+          errorDesc={"Invalid Email"}
+          boxInputError={true}
+          alt={"Email Icon"}
+          imgPath={email}
+        />
 
         <BtnFormStatus
           buttonText={"Send me an email"}

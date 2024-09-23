@@ -1,4 +1,5 @@
 import userLugagge from "../../assets/icons/user-lugagge.png";
+import { Select } from "@/app/components/InputUtilities";
 import userFill from "../../assets/icons/user-fill.png";
 import book2 from "../../assets/icons/book-alt-2.png";
 import metrics from "../../assets/icons/metrics.png";
@@ -6,7 +7,7 @@ import eye from "../../assets/icons/eye.png";
 import pin from "../../assets/icons/pin.png";
 import Image from "next/image";
 
-const TabSpecialties = () => {
+const TabSpecialties = ({ activeTabIndex }) => {
   return (
     <section className="flex flex-col sm:flex-row gap-14">
       <div className="flex-1">
@@ -82,16 +83,12 @@ const TabSpecialties = () => {
           <div className="sm:mt-6 mt-2 space-y-3">
             <label className="flex items-center gap-3">
               <input type="radio" />
-              <h4 className="ST-4">
-                I accept to teach to young student
-              </h4>
+              <h4 className="ST-4">I accept to teach to young student</h4>
             </label>
 
             <label className="flex items-center gap-3">
               <input type="radio" />
-              <h4 className="ST-4">
-                I accept to teach to mature student
-              </h4>
+              <h4 className="ST-4">I accept to teach to mature student</h4>
             </label>
           </div>
         </div>
@@ -116,21 +113,38 @@ const TabSpecialties = () => {
           <p className="ST-3 text-[#48484A] mt-1 ">
             Select only the subtopics you have mastered and can teach.
           </p>
-          <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mt-2">
-            <Image alt="Book Image" className="w-6" src={book2} />
-            <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-            <select
-              name="subSubject"
-              className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-            >
-              <option value={""}>Select a sub-subject</option>
-              <option value={"temperature"}>Temperature</option>
-              <option value={"location"}>Location</option>
-              <option value={"terrain"}>Terrain</option>
-              <option value={"sanitation"}>Sanitation</option>
-              <option value={"conflicts"}>Conflicts</option>
-            </select>
-          </div>
+
+          <Select
+            selectProp={{
+              name: "subSubject",
+              required: activeTabIndex === 1 ? true : false,
+            }}
+            defaultOption={"Select a sub-subject"}
+            options={[
+              { value: "temperature", text: "Temperature" },
+              {
+                value: "location",
+                text: "Location",
+              },
+              {
+                value: "terrain",
+                text: "Terrain",
+              },
+              {
+                value: "sanitation",
+                text: "Sanitation",
+              },
+              {
+                value: "conflicts",
+                text: "Conflicts",
+              },
+            ]}
+            errorName={"Please select teaching subject."}
+            errorDesc={"Invalid Teaching subject"}
+            boxInputError={true}
+            alt={"Book Image"}
+            imgPath={book2}
+          />
         </div>
       </div>
     </section>

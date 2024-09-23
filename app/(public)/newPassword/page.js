@@ -1,10 +1,37 @@
+"use client";
+import getSecurityLevelMessage from "@/utils/getSecurityLevelMessage";
+import NewPasswordForm from "./components/NewPasswordForm";
 import lockBlack from "../../assets/icons/lock-black.png";
+import BtnFormStatus from "@/app/components/BtnFormStatus";
+import { Input } from "@/app/components/InputUtilities";
 import lock from "../../assets/icons/lock.png";
 import Image from "next/image";
-import NewPasswordForm from "./components/NewPasswordForm";
-import BtnFormStatus from "@/app/components/BtnFormStatus";
+import { useState } from "react";
 
 export default function NewPassword() {
+  const [password, setPassword] = useState("");
+  const [securityLevel, setSecurityLevel] = useState(0);
+
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+
+    if (newPassword === "") {
+      setSecurityLevel(0);
+      return;
+    }
+
+    if (newPassword.length < 6) {
+      setSecurityLevel(1);
+    } else if (newPassword.length < 8) {
+      setSecurityLevel(2);
+    } else if (newPassword.length < 10) {
+      setSecurityLevel(3);
+    } else {
+      setSecurityLevel(4);
+    }
+  };
+
   return (
     <main className="max-w-[400px] mx-auto px-3 my-8">
       <h3 className="MT-SB-1">
@@ -21,36 +48,81 @@ export default function NewPassword() {
       </p>
 
       <NewPasswordForm structure={2}>
-        <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
-          <Image alt="Lock Icon" className="w-6" src={lock} />
-          <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-          <input
-            placeholder="Enter your new password"
-            className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-            type="password"
-            name="password"
-          />
+        <Input
+          inputProp={{
+            placeholder: "Enter your new password",
+            name: "password",
+            type: "password",
+            required: true,
+            onChange: handlePasswordChange,
+            passwordValue: password,
+          }}
+          errorName={"Invalid Password"}
+          errorDesc={"Please, make sure to input your password."}
+          boxInputError={true}
+          alt={"Lock Icon"}
+          imgPath={lock}
+        />
+
+        <Input
+          inputProp={{
+            placeholder: "Retape your new password",
+            name: "password",
+            type: "password",
+            required: true,
+          }}
+          errorName={"Invalid Password"}
+          errorDesc={"Please, make sure to input your repeat password."}
+          boxInputError={true}
+          alt={"Lock Icon"}
+          imgPath={lock}
+        />
+
+        <div className="flex gap-3 text-[#1C1C1E]">
+          <div
+            className={`flex-1 h-1.5 rounded-full transition-colors ${
+              securityLevel >= 1
+                ? securityLevel >= 2
+                  ? securityLevel >= 3
+                    ? securityLevel >= 4
+                      ? "bg-[#29FF64]" // Level 4
+                      : "bg-[#FFDD29]" // Level 3
+                    : "bg-[#FF9264]" // Level 2
+                  : "bg-[#FF2937]" // Level 1
+                : "bg-[#E5E5EA]" // Without color
+            }`}
+          ></div>
+          <div
+            className={`flex-1 h-1.5 rounded-full transition-colors ${
+              securityLevel >= 2
+                ? securityLevel >= 3
+                  ? securityLevel >= 4
+                    ? "bg-[#29FF64]" // Level 4
+                    : "bg-[#FFDD29]" // Level 3
+                  : "bg-[#FF9264]" // Level 2
+                : "bg-[#E5E5EA]" // Without color
+            }`}
+          ></div>
+          <div
+            className={`flex-1 h-1.5 rounded-full transition-colors ${
+              securityLevel >= 3
+                ? securityLevel >= 4
+                  ? "bg-[#29FF64]" // Level 4
+                  : "bg-[#FFDD29]" // Level 3
+                : "bg-[#E5E5EA]" // Without color
+            }`}
+          ></div>
+          <div
+            className={`flex-1 h-1.5 rounded-full transition-colors ${
+              securityLevel >= 4 ? "bg-[#29FF64]" : "bg-[#E5E5EA]"
+            }`}
+          ></div>
         </div>
 
-        <div className="flex items-center gap-2 rounded-lg py-3 px-2.5 bg-[#F2F2F7] mb-3">
-          <Image alt="Lock Icon" className="w-6" src={lock} />
-          <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-          <input
-            placeholder="Retape your new password"
-            className="bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5"
-            type="password"
-            name="repeatPassword"
-          />
-        </div>
-
-        <div className="flex gap-3">
-          <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-          <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-          <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-          <div className="flex-1 bg-[#E5E5EA] h-1.5 rounded-full"></div>
-        </div>
-
-        <h3 className="ST-4 mt-1 mb-6">Password Security Level</h3>
+        <h3 className="mt-2 ST-4">
+          Password Security Level{securityLevel > 0 ? ":" : ""}{" "}
+          {getSecurityLevelMessage(securityLevel)}
+        </h3>
 
         <BtnFormStatus
           buttonText={"Create an account"}

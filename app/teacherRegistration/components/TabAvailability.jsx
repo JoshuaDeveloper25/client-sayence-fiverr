@@ -2,15 +2,14 @@ import time from "../../assets/icons/time-alt.png";
 import clock1 from "../../assets/icons/clock-1.png";
 import clock2 from "../../assets/icons/clock-2.png";
 import clock3 from "../../assets/icons/clock-alt.png";
-import clock4 from "../../assets/icons/clock-alt-2.png";
-import clock5 from "../../assets/icons/clock-alt-3.png";
 import lugaggeClock from "../../assets/icons/lugagge-clock.png";
 import calendar from "../../assets/icons/calendar-alt.png";
 
 import Image from "next/image";
 import { dailyWorkTime, timeZones } from "./data";
+import { Select } from "@/app/components/InputUtilities";
 
-const TabAvailability = () => {
+const TabAvailability = ({ activeTabIndex }) => {
   return (
     <section>
       <div className="flex flex-col sm:flex-row gap-14">
@@ -33,22 +32,20 @@ const TabAvailability = () => {
           </div>
 
           <div>
-            <div className="flex items-center gap-2 rounded-lg py-3 px-3 bg-[#F2F2F7] mt-2">
-              <div className="sm:block hidden">
-                <Image alt="Time Icon" className="w-3 me-3" src={time} />
-              </div>
-              <div className="sm:hidden block">
-                <Image alt="Clock Icon" className="w-5 me-3" src={clock4} />
-              </div>
-
-              <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5">
-                <option value={""}>Select a time zone</option>
-                {timeZones?.map((item, index) => (
-                  <option key={index}>{item}</option>
-                ))}
-              </select>
-            </div>
+            <Select
+              selectProp={{
+                name: "subSubject",
+                required: activeTabIndex === 5 ? true : false,
+              }}
+              defaultOption={"Select a time zone"}
+              options={timeZones}
+              errorName={"Please select a time zone."}
+              errorDesc={"Invalid Time Zone"}
+              boxInputError={true}
+              iconStyles={"h-5 w-5 object-contain"}
+              alt={"Time Image"}
+              imgPath={time}
+            />
           </div>
         </div>
 
@@ -71,22 +68,20 @@ const TabAvailability = () => {
           </div>
 
           <div>
-            <div className="flex items-center gap-2 rounded-lg py-3 px-3 bg-[#F2F2F7] mt-2">
-              <div className="sm:block hidden">
-                <Image alt="Time Icon" className="w-4 me-3" src={clock3} />
-              </div>
-              <div className="sm:hidden block">
-                <Image alt="Clock Icon" className="w-5 me-3" src={clock5} />
-              </div>
-
-              <div className="h-4 w-[.1rem] bg-[#1C1C1E]/70"></div>
-              <select className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5">
-                <option value={""}>Define your daily work time</option>
-                {dailyWorkTime?.map((item, index) => (
-                  <option key={index}>{item}</option>
-                ))}
-              </select>
-            </div>
+            <Select
+              selectProp={{
+                name: "subSubject",
+                required: activeTabIndex === 5 ? true : false,
+              }}
+              defaultOption={"Define your daily work time"}
+              options={dailyWorkTime}
+              errorName={"Please select a time zone."}
+              errorDesc={"Invalid Time Zone"}
+              boxInputError={true}
+              iconStyles={"h-5 w-5"}
+              alt={"Clock Image"}
+              imgPath={clock3}
+            />
           </div>
         </div>
       </div>
@@ -356,10 +351,7 @@ const TableAvailability = () => {
           {/* Header Table */}
           <thead className="text-xs text-gray-700">
             <tr>
-              <th
-                scope="col"
-                className="border-r-2 border-white  py-3"
-              ></th>
+              <th scope="col" className="border-r-2 border-white  py-3"></th>
 
               {daysOfWeek?.map((day, index) => {
                 return (
