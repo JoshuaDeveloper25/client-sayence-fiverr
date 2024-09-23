@@ -1,13 +1,13 @@
-import time from "../../assets/icons/time-alt.png";
-import clock1 from "../../assets/icons/clock-1.png";
-import clock2 from "../../assets/icons/clock-2.png";
-import clock3 from "../../assets/icons/clock-alt.png";
-import lugaggeClock from "../../assets/icons/lugagge-clock.png";
-import calendar from "../../assets/icons/calendar-alt.png";
+import time from "../../../assets/icons/time-alt.png";
+import clock1 from "../../../assets/icons/clock-1.png";
+import clock2 from "../../../assets/icons/clock-2.png";
+import clock3 from "../../../assets/icons/clock-alt.png";
+import lugaggeClock from "../../../assets/icons/lugagge-clock.png";
+import calendar from "../../../assets/icons/calendar-alt.png";
 
-import Image from "next/image";
-import { dailyWorkTime, timeZones } from "./data";
 import { Select } from "@/app/components/InputUtilities";
+import { dailyWorkTime, timeZones } from "./data";
+import Image from "next/image";
 
 const TabAvailability = ({ activeTabIndex }) => {
   return (

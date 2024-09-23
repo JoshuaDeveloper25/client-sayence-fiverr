@@ -1,8 +1,8 @@
-import userListen from "../../assets/icons/user-listen.png";
 import { Input, Select, Textarea } from "@/app/components/InputUtilities";
-import userHat from "../../assets/icons/user-hat.png";
-import book2 from "../../assets/icons/book-alt-2.png";
-import book from "../../assets/icons/book-alt.png";
+import userListen from "../../../assets/icons/user-listen.png";
+import userHat from "../../../assets/icons/user-hat.png";
+import book2 from "../../../assets/icons/book-alt-2.png";
+import book from "../../../assets/icons/book-alt.png";
 import { IoIosAdd } from "react-icons/io";
 import Image from "next/image";
 import { useRef } from "react";

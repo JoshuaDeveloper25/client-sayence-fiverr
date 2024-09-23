@@ -1,5 +1,5 @@
-import studentHat from "../../assets/icons/student-hat.png";
-import userElegant from "../../assets/icons/user-elegant.png";
+import studentHat from "../../../assets/icons/student-hat.png";
+import userElegant from "../../../assets/icons/user-elegant.png";
 import Image from "next/image";
 
 const TabBackground = () => {

@@ -7,8 +7,8 @@ import TabPricing from "./TabPricing";
 import TabAvailability from "./TabAvailability";
 
 // Icons
-import chevronRightWhite from "../../assets/icons/chevron-right-white.png";
-import chevronLeftWhite from "../../assets/icons/chevron-left-white.png";
+import chevronRightWhite from "../../../assets/icons/chevron-right-white.png";
+import chevronLeftWhite from "../../../assets/icons/chevron-left-white.png";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";

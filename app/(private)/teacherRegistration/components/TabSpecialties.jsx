@@ -1,10 +1,10 @@
-import userLugagge from "../../assets/icons/user-lugagge.png";
+import userLugagge from "../../../assets/icons/user-lugagge.png";
+import userFill from "../../../assets/icons/user-fill.png";
 import { Select } from "@/app/components/InputUtilities";
-import userFill from "../../assets/icons/user-fill.png";
-import book2 from "../../assets/icons/book-alt-2.png";
-import metrics from "../../assets/icons/metrics.png";
-import eye from "../../assets/icons/eye.png";
-import pin from "../../assets/icons/pin.png";
+import book2 from "../../../assets/icons/book-alt-2.png";
+import metrics from "../../../assets/icons/metrics.png";
+import eye from "../../../assets/icons/eye.png";
+import pin from "../../../assets/icons/pin.png";
 import Image from "next/image";
 
 const TabSpecialties = ({ activeTabIndex }) => {

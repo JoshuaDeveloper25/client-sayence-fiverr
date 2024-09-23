@@ -1,12 +1,12 @@
-import unitedKingdom from "../../assets/countries/united-kingdom.png";
-import dollar2 from "../../assets/icons/dollar-alt-2.png";
-import finance from "../../assets/icons/finance-alt.png";
-import dollar from "../../assets/icons/dollar-alt.png";
-import email from "../../assets/icons/email-alt.png";
+import unitedKingdom from "../../../assets/countries/united-kingdom.png";
+import dollar2 from "../../../assets/icons/dollar-alt-2.png";
+import finance from "../../../assets/icons/finance-alt.png";
+import dollar from "../../../assets/icons/dollar-alt.png";
+import email from "../../../assets/icons/email-alt.png";
 import Image from "next/image";
 
-import payment1 from "../../assets/images/payment1.png";
-import payment2 from "../../assets/images/payment2.png";
+import payment1 from "../../../assets/images/payment1.png";
+import payment2 from "../../../assets/images/payment2.png";
 import { Input } from "@/app/components/InputUtilities";
 
 const TabPricing = ({ activeTabIndex }) => {

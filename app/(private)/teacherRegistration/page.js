@@ -1,4 +1,4 @@
-import book from "../assets/icons/book-alt.png";
+import book from "../../assets/icons/book-alt.png";
 import Tabs from "./components/Tabs";
 import Image from "next/image";
 

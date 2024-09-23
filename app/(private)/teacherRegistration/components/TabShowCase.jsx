@@ -1,8 +1,8 @@
+import addImage from "../../../assets/icons/add-image.png";
+import camera from "../../../assets/icons/camera-alt.png";
 import { Input } from "@/app/components/InputUtilities";
-import addImage from "../../assets/icons/add-image.png";
-import camera from "../../assets/icons/camera-alt.png";
-import video from "../../assets/icons/video.png";
-import link from "../../assets/icons/link.png";
+import video from "../../../assets/icons/video.png";
+import link from "../../../assets/icons/link.png";
 import Image from "next/image";
 
 const TabShowCase = ({ activeTabIndex }) => {
