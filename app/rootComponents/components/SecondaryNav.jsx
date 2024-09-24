@@ -138,8 +138,8 @@ const SecondaryNav = () => {
                     />
 
                     <div className="flex flex-col justify-between">
-                      <h3 className="text-[#1C1C1E] MT-SB-1">
-                        Hi, [First name]
+                      <h3 className="text-[#1C1C1E] MT-SB-1 capitalize">
+                        Hi, {userInfo?.firstName}
                       </h3>
                       <div className="flex gap-2 items-center">
                         <div className="h-2 w-2 rounded-full bg-[#00FF47]"></div>

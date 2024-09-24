@@ -5,7 +5,11 @@ import { getError } from "@/utils/getError";
 import { useContext } from "react";
 import axios from "axios";
 
-const LoginForm = ({ children }) => {
+const LoginForm = ({
+  children,
+  setWrongCredentialsMessage,
+  setDisableInternalValidation,
+}) => {
   const { setUserInfo } = useContext(AppContext);
 
   const handleSubmit = async (e) => {
@@ -27,6 +31,10 @@ const LoginForm = ({ children }) => {
       localStorage.setItem("userInfo", JSON.stringify(data));
     } catch (error) {
       console.log(getError(error));
+      
+      const errorMessage = getError(error);
+      setWrongCredentialsMessage(errorMessage);
+      setDisableInternalValidation(true);
     }
   };
 

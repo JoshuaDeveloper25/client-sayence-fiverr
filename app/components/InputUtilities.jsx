@@ -12,18 +12,29 @@ export const Input = ({
   twoColumns = false,
   iconStyles = false,
   handlePasswordChange,
+  setInputValue,
+  disableInternalValidation,
+  wrongCredentialsMessage,
 }) => {
   const [isInvalid, setIsInvalid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
+  console.log(wrongCredentialsMessage);
 
   const handleInputChange = (e) => {
-    // Mark the input as touched
+    const value = e.target.value;
+
+    if (setInputValue && typeof setInputValue === "function") {
+      setInputValue(value); // Asegúrate de que es una función
+    }
+
+    // Marcar el input como tocado
     setIsTouched(true);
 
-    // Validate the input
-    setIsInvalid(!e.target.validity.valid);
+    // Validación interna si no está deshabilitada
+    if (!disableInternalValidation) {
+      setIsInvalid(!e.target.validity.valid);
+    }
 
-    // Manejar el cambio de contraseña si se proporciona la función
     if (inputProp.type === "password" && handlePasswordChange) {
       handlePasswordChange(e);
     }
@@ -60,15 +71,22 @@ export const Input = ({
         />
       </label>
 
-      {/* Show error if input is touched and is invalid */}
-      {isTouched && (
-        <div
-          className={`transition-all duration-300 transform ${
-            isInvalid
-              ? "opacity-100 translate-y-0 mb-3"
-              : "opacity-0 -translate-y-2"
-          } ${isInvalid ? "max-h-screen" : "max-h-0 overflow-hidden"}`}
-        >
+      {/* Mostrar error si el input fue tocado Y es inválido */}
+      {!wrongCredentialsMessage ? (
+        isTouched &&
+        isInvalid && (
+          <div className="transition-all duration-300 transform opacity-100 translate-y-0 mb-3 max-h-screen">
+            <div className="flex items-center gap-3 my-2.5 rounded-md p-2 bg-[#FFED8F]">
+              <Image className="w-10" src={warning} alt="Warning Icon" />
+              <div>
+                <h3 className="text-[#1C1C1E] ST-SB-3">{errorName}</h3>
+                <p className="text-[#48484A] ST-3">{errorDesc}</p>
+              </div>
+            </div>
+          </div>
+        )
+      ) : (
+        <div className="transition-all duration-300 transform opacity-100 translate-y-0 mb-3 max-h-screen">
           <div className="flex items-center gap-3 my-2.5 rounded-md p-2 bg-[#FFED8F]">
             <Image className="w-10" src={warning} alt="Warning Icon" />
             <div>
