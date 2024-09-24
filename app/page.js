@@ -1223,7 +1223,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">
+                  <h3 className="MT-SB-1 mb-3 mt-3">
                     Teaching
                   </h3>
                   <div className="space-y-1.5">
@@ -1251,7 +1251,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">Legal</h3>
+                  <h3 className="MT-SB-1 mb-3 mt-3">Legal</h3>
                   <div className="space-y-1.5">
                     <Link className="ST-3 block" href={"#"}>
                       Terms of use
@@ -1274,7 +1274,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-3 sm:mt-0 mt-3">More</h3>
+                  <h3 className="MT-SB-1 mb-3 mt-3">More</h3>
                   <div className="space-y-1.5">
                     <Link className="ST-3 block" href={"#"}>
                       FAQ

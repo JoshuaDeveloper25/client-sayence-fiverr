@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     setIsLoading(true);
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" || typeof window !== "null") {
       const getUserInfoFromLocalStorage = localStorage.getItem("userInfo")
         ? JSON.parse(localStorage.getItem("userInfo"))
         : null;

@@ -5,13 +5,13 @@ import { useContext, useEffect } from "react";
 import { redirect } from "next/navigation";
 
 export default function Layout({ children }) {
-  const { userInfo } = useContext(AppContext);
+  const { userInfo, isLoading } = useContext(AppContext);
 
   useEffect(() => {
-    if (!userInfo?.token) {
+    if (!userInfo?.token && !isLoading) {
       redirect("/login");
     }
-  }, [userInfo?.token]);
+  }, [userInfo?.token, isLoading]);
 
   return children;
 }

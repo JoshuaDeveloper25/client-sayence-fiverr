@@ -51,8 +51,16 @@ const Tabs = () => {
       profileTitle: e?.target?.profileTitle?.value?.trim(),
       teachedSubjects: e?.target?.teachedSubjects?.value?.trim(),
       introductionOfYourself: e?.target?.introductionOfYourself?.value?.trim(),
+      videoLink: e?.target?.videoLink?.value,
       // masteredLanguages: masteredLanguages,
     };
+
+    if (
+      !teacherInfoRegistration?.videoLink.includes("https://www.youtube.com/")
+    ) {
+      console.log("se ejecuta");
+      return;
+    }
 
     console.log(teacherInfoRegistration);
 
