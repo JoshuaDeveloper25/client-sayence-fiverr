@@ -38,8 +38,8 @@ export default function LogIn() {
                 type: "email",
                 required: true,
               }}
-              errorName={"Please input a valid email."}
-              errorDesc={"Invalid Email"}
+              errorName={"Invalid Email"}
+              errorDesc={"Check your spelling email"}
               boxInputError={true}
               alt={"User Icon"}
               imgPath={user}
@@ -64,7 +64,7 @@ export default function LogIn() {
               buttonText={"Log In"}
             />
 
-            <Link href={'/passwordRecovery'}>
+            <Link href={"/passwordRecovery"}>
               <h2 className="text-center text-[#1C1C1E] ST-4 mt-6 underline">
                 I can&apos;t sign in, help!
               </h2>
