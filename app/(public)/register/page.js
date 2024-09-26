@@ -2,8 +2,8 @@
 import getSecurityLevelMessage from "@/utils/getSecurityLevelMessage";
 import doubleUsers from "../../assets/icons/double-users.png";
 import BtnFormStatus from "@/app/components/BtnFormStatus";
-import { Input } from "@/app/components/InputUtilities";
 import microsoft from "../../assets/icons/microsoft.png";
+import { Input } from "@/app/components/InputUtilities";
 import userPlus from "../../assets/icons/user-plus.png";
 import userFill from "../../assets/icons/user-fill.png";
 import RegisterForm from "./components/RegisterForm";

@@ -60,7 +60,7 @@ export const Input = ({
             ? "bg-[#FFCCCF] border border-[#F01]"
             : isTouched && isInvalid === false && inputComponentValue !== ""
             ? "border border-[#00AD30] bg-[#F2F2F7]"
-            : "bg-[#F2F2F7] has-[input:focus]:border-[#1A47FF] border  "
+            : "bg-[#F2F2F7] has-[input:focus]:border-[#1A47FF] border has-[input:valid]:border-[#00AD30] "
         }`}
       >
         {imgPath && (

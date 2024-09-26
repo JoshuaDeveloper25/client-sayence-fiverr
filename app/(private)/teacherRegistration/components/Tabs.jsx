@@ -56,9 +56,9 @@ const Tabs = () => {
     };
 
     if (
+      activeTabIndex === 3 &&
       !teacherInfoRegistration?.videoLink.includes("https://www.youtube.com/")
     ) {
-      console.log("se ejecuta");
       return;
     }
 
