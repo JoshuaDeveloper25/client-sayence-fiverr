@@ -17,7 +17,6 @@ const LoginFormLogic = () => {
   const [wrongCredentialsMessage, setWrongCredentialsMessage] = useState("");
   const [disableInternalValidation, setDisableInternalValidation] =
     useState(false);
-  console.log(wrongCredentialsMessage, "aqui estoyyy");
 
   // If it's empty or if account doesn't exists or if account is banned
   const emailValidation =

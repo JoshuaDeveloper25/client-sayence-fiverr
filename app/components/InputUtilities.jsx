@@ -12,25 +12,27 @@ export const Input = ({
   twoColumns = false,
   iconStyles = false,
   handlePasswordChange,
-  setInputValue,
+  setInputValue, // Esta función se pasa desde el padre
   disableInternalValidation,
   wrongCredentialsMessage,
+  maxTextLength,
 }) => {
   const [isInvalid, setIsInvalid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
-  console.log(wrongCredentialsMessage);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
 
-    if (setInputValue && typeof setInputValue === "function") {
-      setInputValue(value); // Asegúrate de que es una función
+    // Verifica que setInputValue es una función antes de llamarla
+    if (value.length <= maxTextLength) {
+      if (setInputValue && typeof setInputValue === "function") {
+        setInputValue(value);
+      }
     }
 
-    // Marcar el input como tocado
+    // Marca el input como tocado
     setIsTouched(true);
 
-    // Validación interna si no está deshabilitada
     if (!disableInternalValidation) {
       setIsInvalid(!e.target.validity.valid);
     }
@@ -45,12 +47,16 @@ export const Input = ({
   return (
     <>
       <label
-        className={`flex rounded-md overflow-hidden ${
-          isInvalid ? "bg-[#FFCCCF] border border-[#F01]" : "bg-[#F2F2F7] mb-3"
+        className={`group flex rounded-md overflow-hidden mb-3 ${
+          isInvalid
+            ? "bg-[#FFCCCF] border border-[#F01]"
+            : isTouched && !isInvalid && inputProp.value !== ""
+            ? "border border-[#00AD30] bg-[#F2F2F7]"
+            : "bg-[#F2F2F7] border"
         }`}
       >
         {imgPath && (
-          <div className="flex items-center gap-3 px-1.5">
+          <div className="transition-colors flex items-center gap-3 px-1.5 group-hover:bg-[#F1F0ED]">
             <Image
               alt={alt}
               className={iconStyles ? iconStyles : "w-6 h-6"}
@@ -65,13 +71,12 @@ export const Input = ({
         )}
 
         <input
-          className="bg-transparent outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 py-3.5"
+          className={`bg-transparent group-hover:bg-[#F1F0ED] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 py-3.5`}
           onChange={handleInputChange}
           {...inputProp}
         />
       </label>
 
-      {/* Mostrar error si el input fue tocado Y es inválido */}
       {!wrongCredentialsMessage ? (
         isTouched &&
         isInvalid && (
@@ -126,12 +131,14 @@ export const Select = ({
   return (
     <>
       <label
-        className={`flex rounded-md overflow-hidden ${
-          isInvalid ? "bg-[#FFCCCF] border border-[#F01]" : "bg-[#F2F2F7] mb-3"
+        className={`group flex rounded-md overflow-hidden ${
+          isInvalid
+            ? "bg-[#FFCCCF] border border-[#F01] "
+            : "bg-[#F2F2F7] mb-3 has-[select:focus]:border-[#1A47FF] has-[select:valid]:border-[#00AD30] border "
         }`}
       >
         {imgPath && (
-          <div className="flex items-center gap-3 px-1.5">
+          <div className="transition-colors flex items-center gap-3 px-1.5 group-hover:bg-[#F1F0ED]">
             <Image
               alt={alt}
               className={iconStyles ? iconStyles : "w-6"}
@@ -146,7 +153,7 @@ export const Select = ({
         )}
 
         <select
-          className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 py-3"
+          className="text-[#48484A] bg-[#F2F2F7] outline-none w-full placeholder-[#1C1C1E] ST-3 px-1.5 py-3 transition-colors group-hover:bg-[#F1F0ED]"
           onChange={handleSelectChange}
           {...selectProp}
         >
@@ -179,11 +186,23 @@ export const Select = ({
   );
 };
 
-export const Textarea = ({ textAreaProp = {}, errorName, errorDesc }) => {
+export const Textarea = ({
+  textAreaProp = {},
+  errorName,
+  errorDesc,
+  setTextareaText,
+  maxTextLength
+}) => {
   const [isInvalid, setIsInvalid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
 
   const handleTextareaChange = (e) => {
+    const value = e.target.value;
+
+    if (value.length <= maxTextLength) {
+      setTextareaText(value);
+    }
+
     // Mark the input as touched
     setIsTouched(true);
 
@@ -196,11 +215,13 @@ export const Textarea = ({ textAreaProp = {}, errorName, errorDesc }) => {
     <>
       <label
         className={`flex h-32 rounded-md overflow-hidden mt-2 ${
-          isInvalid ? "bg-[#FFCCCF] border border-[#F01]" : "bg-[#F2F2F7] mb-3"
+          isInvalid
+            ? "bg-[#FFCCCF] border border-[#F01]"
+            : "bg-[#F2F2F7] mb-3 has-[textarea:focus]:border-[#1A47FF] has-[textarea:valid]:border-[#00AD30] border"
         }`}
       >
         <textarea
-          className="bg-[#F2F2F7] text-[#48484A] outline-none h-full w-full placeholder-[#48484A] ST-3 py-2.5 px-2.5 resize-none"
+          className="transition-colors hover:bg-[#F1F0ED] bg-[#F2F2F7] text-[#48484A] outline-none h-full w-full placeholder-[#48484A] ST-3 py-2.5 px-2.5 resize-none"
           onChange={handleTextareaChange}
           {...textAreaProp}
         ></textarea>

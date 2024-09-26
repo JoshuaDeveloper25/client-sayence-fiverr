@@ -5,15 +5,21 @@ import book2 from "../../../assets/icons/book-alt-2.png";
 import book from "../../../assets/icons/book-alt.png";
 import { IoIosAdd } from "react-icons/io";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const TabSubject = ({
   setMasteredLanguages,
   masteredLanguages,
   activeTabIndex,
 }) => {
+  const [textareaIntroductionTeaches, setTextareaIntroductionTeaches] =
+    useState("");
+  const [textareaIntroductionYourself, setTextareaIntroductionYourself] =
+    useState("");
+  const [inputProfileTitle, setInputProfileTitle] = useState("");
   const languageKnownRef = useRef("");
   const levelKnownRef = useRef("");
+  const maxTextareaLength = 1000;
 
   const handleAddMasteredLanguage = () => {
     const masteredLanguageDetails = {
@@ -88,7 +94,10 @@ const TabSubject = ({
               name: "profileTitle",
               type: "text",
               required: activeTabIndex === 0 ? true : false,
+              value: inputProfileTitle,
             }}
+            maxTextLength={120}
+            setInputValue={setInputProfileTitle}
             iconStyles={"w-[1.2rem] h-[1.2rem] object-contain"}
             errorName={"Please input a profile title."}
             errorDesc={"Invalid Profile Title"}
@@ -99,7 +108,13 @@ const TabSubject = ({
           <div className="flex justify-between gap-3 text-sm text-[#45484A]">
             <h4 className="ST-2">Limited to 120 characters</h4>
 
-            <h4 className="ST-2">0/120</h4>
+            <h4
+              className={`${
+                inputProfileTitle?.length == 120 ? "text-[#F01]" : ""
+              } ST-2`}
+            >
+              {inputProfileTitle?.length}/120
+            </h4>
           </div>
         </div>
 
@@ -117,7 +132,10 @@ const TabSubject = ({
               placeholder: "Enter a text",
               name: "introductionSubject",
               required: activeTabIndex === 0 ? true : false,
+              value: textareaIntroductionTeaches,
             }}
+            setTextareaText={setTextareaIntroductionTeaches}
+            maxTextLength={maxTextareaLength}
             errorName={"Please input a text."}
             errorDesc={"Invalid Text"}
             boxInputError={true}
@@ -126,7 +144,13 @@ const TabSubject = ({
           <div className="flex justify-between gap-3 text-sm text-[#45484A]">
             <h4 className="ST-2">Limited to 1000 characters</h4>
 
-            <h4 className="ST-2">0/1000</h4>
+            <h4
+              className={`ST-2 ${
+                textareaIntroductionTeaches?.length == 1000 ? "text-[#F01]" : ""
+              }`}
+            >
+              {textareaIntroductionTeaches?.length}/1000
+            </h4>
           </div>
         </div>
       </div>
@@ -161,7 +185,10 @@ const TabSubject = ({
               placeholder: "Enter a text",
               name: "introductionOfYourself",
               required: activeTabIndex === 0 ? true : false,
+              value: textareaIntroductionYourself,
             }}
+            setTextareaText={setTextareaIntroductionYourself}
+            maxTextLength={maxTextareaLength}
             errorName={"Please input a text."}
             errorDesc={"Invalid Text"}
             boxInputError={true}
@@ -170,7 +197,15 @@ const TabSubject = ({
           <div className="flex justify-between gap-3 text-sm text-[#45484A]">
             <h4 className="ST-2">Limited to 1000 characters</h4>
 
-            <h4 className="ST-2">0/1000</h4>
+            <h4
+              className={`ST-2 ${
+                textareaIntroductionYourself?.length == 1000
+                  ? "text-[#F01]"
+                  : ""
+              }`}
+            >
+              {textareaIntroductionYourself?.length}/1000
+            </h4>
           </div>
         </div>
 
