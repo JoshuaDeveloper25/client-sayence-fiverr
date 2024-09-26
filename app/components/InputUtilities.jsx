@@ -15,19 +15,28 @@ export const Input = ({
   setInputValue, // Esta función se pasa desde el padre
   disableInternalValidation,
   wrongCredentialsMessage,
-  maxTextLength,
+  maxTextLength = 0,
 }) => {
+  const [inputComponentValue, setInputComponentValue] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
 
+    setInputComponentValue(value);
+
     // Verifica que setInputValue es una función antes de llamarla
-    if (value.length <= maxTextLength) {
-      if (setInputValue && typeof setInputValue === "function") {
-        setInputValue(value);
-      }
+    if (
+      !maxTextLength &&
+      setInputValue &&
+      typeof setInputValue === "function"
+    ) {
+      setInputValue(value);
+    }
+
+    if (maxTextLength && value.length <= maxTextLength) {
+      setInputValue(value);
     }
 
     // Marca el input como tocado
@@ -43,16 +52,15 @@ export const Input = ({
 
     if (inputProp.onChange) inputProp.onChange(e);
   };
-
   return (
     <>
       <label
         className={`group flex rounded-md overflow-hidden mb-3 ${
           isInvalid
             ? "bg-[#FFCCCF] border border-[#F01]"
-            : isTouched && !isInvalid && inputProp.value !== ""
+            : isTouched && isInvalid === false && inputComponentValue !== ""
             ? "border border-[#00AD30] bg-[#F2F2F7]"
-            : "bg-[#F2F2F7] border"
+            : "bg-[#F2F2F7] has-[input:focus]:border-[#1A47FF] border  "
         }`}
       >
         {imgPath && (
@@ -191,7 +199,7 @@ export const Textarea = ({
   errorName,
   errorDesc,
   setTextareaText,
-  maxTextLength
+  maxTextLength,
 }) => {
   const [isInvalid, setIsInvalid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
