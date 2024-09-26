@@ -32,7 +32,7 @@ const TabShowCase = ({ activeTabIndex }) => {
               name: "videoLink",
               type: "text",
               // required: activeTabIndex === 3 ? true : false,
-              required: true,
+              // required: false,
             }}
             iconStyles={"w-[1.3rem] h-[1.3rem] object-contain"}
             errorName={"Invalid link"}
