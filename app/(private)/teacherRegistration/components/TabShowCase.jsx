@@ -31,7 +31,8 @@ const TabShowCase = ({ activeTabIndex }) => {
               placeholder: "Enter your video link",
               name: "videoLink",
               type: "text",
-              required: activeTabIndex === 3 ? true : false,
+              // required: activeTabIndex === 3 ? true : false,
+              required: true,
             }}
             iconStyles={"w-[1.3rem] h-[1.3rem] object-contain"}
             errorName={"Invalid link"}

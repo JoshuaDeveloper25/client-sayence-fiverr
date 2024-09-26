@@ -12,7 +12,7 @@ export const Input = ({
   twoColumns = false,
   iconStyles = false,
   handlePasswordChange,
-  setInputValue, // Esta función se pasa desde el padre
+  setInputValue, 
   disableInternalValidation,
   wrongCredentialsMessage,
   maxTextLength = 0,
@@ -26,7 +26,6 @@ export const Input = ({
 
     setInputComponentValue(value);
 
-    // Verifica que setInputValue es una función antes de llamarla
     if (
       !maxTextLength &&
       setInputValue &&
@@ -39,7 +38,6 @@ export const Input = ({
       setInputValue(value);
     }
 
-    // Marca el input como tocado
     setIsTouched(true);
 
     if (!disableInternalValidation) {

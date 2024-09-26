@@ -55,12 +55,12 @@ const Tabs = () => {
       // masteredLanguages: masteredLanguages,
     };
 
-    if (
-      activeTabIndex === 3 &&
-      !teacherInfoRegistration?.videoLink.includes("https://www.youtube.com/")
-    ) {
-      return;
-    }
+    // if (
+    //   activeTabIndex === 3 &&
+    //   !teacherInfoRegistration?.videoLink.includes("https://www.youtube.com/")
+    // ) {
+    //   return;
+    // }
 
     console.log(teacherInfoRegistration);
 
