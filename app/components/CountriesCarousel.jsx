@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { countries } from "../db/data";
 
@@ -14,7 +15,6 @@ import chevronRight from "../assets/icons/chevron-right.png";
 import chevronLeft from "../assets/icons/chevron-left.png";
 
 const CountriesCarousel = () => {
-    
   return (
     <section className="container-page px-3">
       <div className="rounded-lg bg-[#F2F2F7] px-[20px] relative mb-5">
