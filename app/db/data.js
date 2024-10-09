@@ -1,3 +1,5 @@
+import tutorVideoPreview from "../assets/images/tutor-video-preview.png";
+import tutorImagePreview from "../assets/images/tutor-image-preview.png";
 import unitedKingdom from "../assets/countries/united-kingdom.png";
 import france from "../assets/countries/france.png";
 import italy from "../assets/countries/italy.png";
@@ -172,5 +174,52 @@ export const subjects = [
   {
     name: "Science",
     selected: false,
+  },
+];
+
+export const subjectsAndTutors = [
+  {
+    imageSrc: tutorVideoPreview,
+    tutorImagePreview: tutorImagePreview,
+    tutorName: "Alexandra",
+    tutorFlag: unitedKingdom,
+    tutorProfession: "Teaches English",
+    tutorExtraLanguages: "+1",
+  },
+
+  {
+    imageSrc: tutorVideoPreview,
+    tutorImagePreview: tutorImagePreview,
+    tutorName: "Alexandra",
+    tutorFlag: unitedKingdom,
+    tutorProfession: "Teaches English",
+    tutorExtraLanguages: "+1",
+  },
+
+  {
+    imageSrc: tutorVideoPreview,
+    tutorImagePreview: tutorImagePreview,
+    tutorName: "Alexandra",
+    tutorFlag: unitedKingdom,
+    tutorProfession: "Teaches English",
+    tutorExtraLanguages: "+1",
+  },
+
+  {
+    imageSrc: tutorVideoPreview,
+    tutorImagePreview: tutorImagePreview,
+    tutorName: "Alexandra",
+    tutorFlag: unitedKingdom,
+    tutorProfession: "Teaches English",
+    tutorExtraLanguages: "+1",
+  },
+
+  {
+    imageSrc: tutorVideoPreview,
+    tutorImagePreview: tutorImagePreview,
+    tutorName: "Alexandra",
+    tutorFlag: unitedKingdom,
+    tutorProfession: "Teaches English",
+    tutorExtraLanguages: "+1",
   },
 ];

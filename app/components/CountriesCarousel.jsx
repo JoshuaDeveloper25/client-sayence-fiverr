@@ -17,7 +17,7 @@ import chevronLeft from "../assets/icons/chevron-left.png";
 const CountriesCarousel = () => {
   return (
     <section className="container-page px-3">
-      <div className="rounded-lg bg-[#F2F2F7] px-[20px] relative mb-5">
+      <div className="rounded-lg bg-[#F2F2F7] px-[20px] relative mb-14">
         <Swiper
           loop={true}
           spaceBetween={30}

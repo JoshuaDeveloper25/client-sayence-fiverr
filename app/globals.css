@@ -13,7 +13,7 @@
   /* Typography and Buttons */
   .btn {
     display: inline-block;
-    padding: 0.5rem 1.5rem;
+    padding: 10px 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
     font-size: 16px;
@@ -21,8 +21,17 @@
   }
 
   .btn-black {
+    transition: background 0.5s ease;
     background: #1c1c1e;
     color: #ffffff;
+  }
+
+  .btn-black:hover {
+    background: #48484a;
+  }
+
+  .btn-black:focus {
+    background: #8E8E93;
   }
 
   .btn-blue {

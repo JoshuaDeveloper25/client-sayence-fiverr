@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { subjects } from "../db/data";
+import { subjects, subjectsAndTutors } from "../db/data";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,7 +24,7 @@ const LanguagesCarousel = () => {
   return (
     <section className="bg-[#F2F2F7] ">
       <div className="container-page px-3 py-12">
-        <h3 className="flex sm:items-center items-start MT-SB-2">
+        <h3 className="flex text-[#1C1C1E] sm:items-center items-start MT-SB-2">
           <Image
             alt="User Add Icon"
             className="w-6 inline-block me-2"
@@ -33,11 +33,11 @@ const LanguagesCarousel = () => {
           Browse our subjects and tutors to find the right Fit for You.
         </h3>
 
-        <p className="ST-3 text-[#8E8E93] mt-1">
+        <p className="ST-3 text-[#48484A] mt-1">
           Meet our top-rated tutors and learn at your own pace.
         </p>
 
-        <div className="relative rounded-xl bg-white px-[20px]">
+        <div className="relative rounded-xl bg-white px-9">
           <Swiper
             loop={true}
             pagination={{
@@ -73,9 +73,9 @@ const LanguagesCarousel = () => {
                   <h3
                     className={`${
                       subject?.selected
-                        ? "bg-black text-white rounded-lg w-fit mx-auto px-2"
-                        : "w-full px-2"
-                    } ST-SB-3 cursor-pointer py-1 text-center`}
+                        ? "bg-black text-white rounded-lg w-fit mx-auto px-3.5"
+                        : "w-full px-3.5"
+                    } ST-SB-3 cursor-pointer py-2 text-center`}
                   >
                     {subject?.name}
                   </h3>
@@ -101,426 +101,98 @@ const LanguagesCarousel = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5">
-          <div className="bg-white rounded-b-xl rounded-t-xl group">
-            <Image
-              alt={"Tutor Video Image"}
-              className="w-full rounded-t-xl"
-              src={tutorVideoPreview}
-            />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
+          {subjectsAndTutors?.map((subjectAndTutor) => (
+            <div className="bg-white rounded-b-xl rounded-t-xl group">
+              <Image
+                alt={"Tutor Video Image"}
+                className="w-full rounded-t-xl"
+                src={subjectAndTutor?.imageSrc}
+              />
 
-            <div className="p-3.5">
-              <div className="flex gap-3">
-                <div className="relative">
-                  <Image
-                    alt={"Tutor Image"}
-                    className="rounded-lg"
-                    src={tutorImagePreview}
-                  />
-                  <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
-                </div>
-
-                <div>
-                  <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
-                  <div className="flex gap-2 items-center">
+              <div className="p-3.5">
+                <div className="flex gap-3">
+                  <div className="relative">
                     <Image
-                      alt={"Country Image"}
-                      className="w-5 rounded-md"
-                      src={unitedKingdom}
+                      alt={"Tutor Image"}
+                      className="rounded-lg"
+                      src={subjectAndTutor?.tutorImagePreview}
                     />
-                    <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
+                    <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
                   </div>
-                </div>
-              </div>
 
-              <div className="flex gap-3 items-center justify-between my-3.5">
-                <ul className="flex items-center text-sm font-medium gap-3">
-                  <li className="ST-SB-2">English</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
-                    Native
-                  </li>
-                  <li className="ST-SB-2">French</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
-                    Fluent C2
-                  </li>
-                </ul>
-
-                <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                  <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
-                    +1
-                  </h4>
-                </div>
-              </div>
-
-              {/* Lesson Rate which disappears on hover */}
-              <div className="group-hover:hidden block transition-all duration-300 ease-in-out">
-                <div className="flex justify-between">
                   <div>
-                    <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
-                    <h3>
-                      <span className="MT-SB-1">8 USD/</span>
-                      <span className="ST-3">30 mins</span>
+                    <h3 className="ST-SB-4 text-[#48484A]">
+                      {subjectAndTutor?.tutorName}
                     </h3>
-                  </div>
-
-                  <div className="sm:hidden block">
-                    <button className="btn btn-black ST-SB-4">
-                      Book a trial
-                    </button>
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        alt={"Country Image"}
+                        className="w-5 rounded-md"
+                        src={subjectAndTutor?.tutorFlag}
+                      />
+                      <h4 className="text-[#8E8E93] ST-2">
+                        {subjectAndTutor?.tutorProfession}
+                      </h4>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Buttons that appear on hover */}
-              <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
-                <button className="bg-[#1C1C1E] p-3 rounded-md">
-                  <Image
-                    className="w-8 h-4 object-contain"
-                    alt="Message White Icon"
-                    src={messageFill}
-                  />
-                </button>
+                <div className="flex gap-3 items-center justify-between my-3.5">
+                  <ul className="flex items-center text-sm font-medium gap-3">
+                    <li className="ST-SB-2 text-[#1C1C1E]">English</li>
+                    <li className="ST-SB-1 px-1 rounded-md bg-black text-white">
+                      Native
+                    </li>
+                    <li className="ST-SB-2 text-[#1C1C1E]">French</li>
+                    <li className="ST-1 px-1 rounded-md bg-[#A3FFBD] text-[#1C1C1E]">
+                      Fluent C2
+                    </li> 
+                  </ul>
 
-                <button className="btn btn-black ST-SB-4">Book a trial</button>
+                  <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
+                    <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
+                      {subjectAndTutor?.tutorExtraLanguages}
+                    </h4>
+                  </div>
+                </div>
+
+                {/* Lesson Rate which disappears on hover */}
+                <div className="group-hover:hidden block transition-all duration-300 ease-in-out">
+                  <div className="flex justify-between">
+                    <div>
+                      <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
+                      <h3>
+                        <span className="MT-SB-1">8 USD/</span>
+                        <span className="ST-3">30 mins</span>
+                      </h3>
+                    </div>
+
+                    <div className="sm:hidden block">
+                      <button className="btn btn-black ST-SB-4">
+                        Book a trial
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Buttons that appear on hover */}
+                <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
+                  <button className="bg-[#1C1C1E] p-3 rounded-md">
+                    <Image
+                      className="w-8 h-4 object-contain"
+                      alt="Message White Icon"
+                      src={messageFill}
+                    />
+                  </button>
+
+                  <button className="btn btn-black ST-SB-4">
+                    Book a trial
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="bg-white rounded-b-xl rounded-t-xl group">
-            <Image
-              alt={"Tutor Video Image"}
-              className="w-full rounded-t-xl"
-              src={tutorVideoPreview}
-            />
-
-            <div className="p-3.5">
-              <div className="flex gap-3">
-                <div className="relative">
-                  <Image
-                    alt={"Tutor Image"}
-                    className="rounded-lg"
-                    src={tutorImagePreview}
-                  />
-                  <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
-                </div>
-
-                <div>
-                  <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
-                  <div className="flex gap-2 items-center">
-                    <Image
-                      alt={"Country Image"}
-                      className="w-5 rounded-md"
-                      src={unitedKingdom}
-                    />
-                    <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-3 items-center justify-between my-3.5">
-                <ul className="flex items-center text-sm font-medium gap-3">
-                  <li className="ST-SB-2">English</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
-                    Native
-                  </li>
-                  <li className="ST-SB-2">French</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
-                    Fluent C2
-                  </li>
-                </ul>
-
-                <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                  <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
-                    +1
-                  </h4>
-                </div>
-              </div>
-
-              {/* Lesson Rate which disappears on hover */}
-              <div className="group-hover:hidden block transition-all duration-300 ease-in-out">
-                <div className="flex justify-between">
-                  <div>
-                    <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
-                    <h3>
-                      <span className="MT-SB-1">8 USD/</span>
-                      <span className="ST-3">30 mins</span>
-                    </h3>
-                  </div>
-
-                  <div className="sm:hidden block">
-                    <button className="btn btn-black ST-SB-4">
-                      Book a trial
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Buttons that appear on hover */}
-              <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
-                <button className="bg-[#1C1C1E] p-3 rounded-md">
-                  <Image
-                    className="w-8 h-4 object-contain"
-                    alt="Message White Icon"
-                    src={messageFill}
-                  />
-                </button>
-
-                <button className="btn btn-black ST-SB-4">Book a trial</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-b-xl rounded-t-xl group">
-            <Image
-              alt={"Tutor Video Image"}
-              className="w-full rounded-t-xl"
-              src={tutorVideoPreview}
-            />
-
-            <div className="p-3.5">
-              <div className="flex gap-3">
-                <div className="relative">
-                  <Image
-                    alt={"Tutor Image"}
-                    className="rounded-lg"
-                    src={tutorImagePreview}
-                  />
-                  <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
-                </div>
-
-                <div>
-                  <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
-                  <div className="flex gap-2 items-center">
-                    <Image
-                      alt={"Country Image"}
-                      className="w-5 rounded-md"
-                      src={unitedKingdom}
-                    />
-                    <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-3 items-center justify-between my-3.5">
-                <ul className="flex items-center text-sm font-medium gap-3">
-                  <li className="ST-SB-2">English</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
-                    Native
-                  </li>
-                  <li className="ST-SB-2">French</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
-                    Fluent C2
-                  </li>
-                </ul>
-
-                <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                  <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
-                    +1
-                  </h4>
-                </div>
-              </div>
-
-              {/* Lesson Rate which disappears on hover */}
-              <div className="group-hover:hidden block transition-all duration-300 ease-in-out">
-                <div className="flex justify-between">
-                  <div>
-                    <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
-                    <h3>
-                      <span className="MT-SB-1">8 USD/</span>
-                      <span className="ST-3">30 mins</span>
-                    </h3>
-                  </div>
-
-                  <div className="sm:hidden block">
-                    <button className="btn btn-black ST-SB-4">
-                      Book a trial
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Buttons that appear on hover */}
-              <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
-                <button className="bg-[#1C1C1E] p-3 rounded-md">
-                  <Image
-                    className="w-8 h-4 object-contain"
-                    alt="Message White Icon"
-                    src={messageFill}
-                  />
-                </button>
-
-                <button className="btn btn-black ST-SB-4">Book a trial</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-b-xl rounded-t-xl group">
-            <Image
-              alt={"Tutor Video Image"}
-              className="w-full rounded-t-xl"
-              src={tutorVideoPreview}
-            />
-
-            <div className="p-3.5">
-              <div className="flex gap-3">
-                <div className="relative">
-                  <Image
-                    alt={"Tutor Image"}
-                    className="rounded-lg"
-                    src={tutorImagePreview}
-                  />
-                  <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
-                </div>
-
-                <div>
-                  <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
-                  <div className="flex gap-2 items-center">
-                    <Image
-                      alt={"Country Image"}
-                      className="w-5 rounded-md"
-                      src={unitedKingdom}
-                    />
-                    <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-3 items-center justify-between my-3.5">
-                <ul className="flex items-center text-sm font-medium gap-3">
-                  <li className="ST-SB-2">English</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
-                    Native
-                  </li>
-                  <li className="ST-SB-2">French</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
-                    Fluent C2
-                  </li>
-                </ul>
-
-                <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                  <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
-                    +1
-                  </h4>
-                </div>
-              </div>
-
-              {/* Lesson Rate which disappears on hover */}
-              <div className="group-hover:hidden block transition-all duration-300 ease-in-out">
-                <div className="flex justify-between">
-                  <div>
-                    <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
-                    <h3>
-                      <span className="MT-SB-1">8 USD/</span>
-                      <span className="ST-3">30 mins</span>
-                    </h3>
-                  </div>
-
-                  <div className="sm:hidden block">
-                    <button className="btn btn-black ST-SB-4">
-                      Book a trial
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Buttons that appear on hover */}
-              <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
-                <button className="bg-[#1C1C1E] p-3 rounded-md">
-                  <Image
-                    className="w-8 h-4 object-contain"
-                    alt="Message White Icon"
-                    src={messageFill}
-                  />
-                </button>
-
-                <button className="btn btn-black ST-SB-4">Book a trial</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-b-xl rounded-t-xl group">
-            <Image
-              alt={"Tutor Video Image"}
-              className="w-full rounded-t-xl"
-              src={tutorVideoPreview}
-            />
-
-            <div className="p-3.5">
-              <div className="flex gap-3">
-                <div className="relative">
-                  <Image
-                    alt={"Tutor Image"}
-                    className="rounded-lg"
-                    src={tutorImagePreview}
-                  />
-                  <div className="absolute right-1 bottom-1 rounded-full w-2.5 h-2.5 bg-[#00FF47]"></div>
-                </div>
-
-                <div>
-                  <h3 className="ST-SB-4 text-[#48484A]">Alexandra</h3>
-                  <div className="flex gap-2 items-center">
-                    <Image
-                      alt={"Country Image"}
-                      className="w-5 rounded-md"
-                      src={unitedKingdom}
-                    />
-                    <h4 className="text-[#8E8E93] ST-2">Teaches English</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-3 items-center justify-between my-3.5">
-                <ul className="flex items-center text-sm font-medium gap-3">
-                  <li className="ST-SB-2">English</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-black text-white">
-                    Native
-                  </li>
-                  <li className="ST-SB-2">French</li>
-                  <li className="ST-SB-1 p-1 rounded-lg bg-[#A3FFBD]">
-                    Fluent C2
-                  </li>
-                </ul>
-
-                <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
-                  <h4 className="ST-SB-1 text-center text-[#48484A] tracking-tighter flex h-full items-center justify-center">
-                    +1
-                  </h4>
-                </div>
-              </div>
-
-              {/* Lesson Rate which disappears on hover */}
-              <div className="group-hover:hidden block transition-all duration-300 ease-in-out">
-                <div className="flex justify-between">
-                  <div>
-                    <h4 className="text-[#8E8E93] ST-2">Lesson rate</h4>
-                    <h3>
-                      <span className="MT-SB-1">8 USD/</span>
-                      <span className="ST-3">30 mins</span>
-                    </h3>
-                  </div>
-
-                  <div className="sm:hidden block">
-                    <button className="btn btn-black ST-SB-4">
-                      Book a trial
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Buttons that appear on hover */}
-              <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
-                <button className="bg-[#1C1C1E] p-3 rounded-md">
-                  <Image
-                    className="w-8 h-4 object-contain"
-                    alt="Message White Icon"
-                    src={messageFill}
-                  />
-                </button>
-
-                <button className="btn btn-black ST-SB-4">Book a trial</button>
-              </div>
-            </div>
-          </div>
+          ))}
 
           <div className="bg-[#1C1C1E] text-whit p-3 rounded-b-xl rounded-t-xl">
             <div className="flex flex-col justify-between h-full">
