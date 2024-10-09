@@ -5,6 +5,7 @@ import GetStartedEasy from "./components/GetStartedEasy";
 import MeetOurServices from "./components/MeetOurServices";
 import OurLessons from "./components/OurLessons";
 import LearningEcosystem from "./components/LearningEcosystem";
+import GetStartedNotEasy from "./components/GetStartedNotEasy";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
       <MeetOurServices />
 
       {/* Get Started Not Easy*/}
-      <GetStartedEasy />
+      <GetStartedNotEasy />
 
       {/* Discover how our lessons support you */}
       <OurLessons />

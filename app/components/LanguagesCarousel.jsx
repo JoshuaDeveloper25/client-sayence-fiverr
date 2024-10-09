@@ -12,9 +12,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
 // Images && Icons
-import tutorVideoPreview from "../assets/images/tutor-video-preview.png";
-import tutorImagePreview from "../assets/images/tutor-image-preview.png";
-import unitedKingdom from "../assets/countries/united-kingdom.png";
 import chevronRight from "../assets/icons/chevron-right.png";
 import chevronLeft from "../assets/icons/chevron-left.png";
 import messageFill from "../assets/icons/message-fill.png";
@@ -70,15 +67,15 @@ const LanguagesCarousel = () => {
             {subjects?.map((subject, index) => {
               return (
                 <SwiperSlide key={index} className="flex place-content-center">
-                  <h3
+                  <button
                     className={`${
                       subject?.selected
-                        ? "bg-black text-white rounded-lg w-fit mx-auto px-3.5"
+                        ? "bg-[#1C1C1E] hover:bg-[#48484A] focus:bg-[#8E8E93] text-white rounded-lg w-fit mx-auto px-3.5"
                         : "w-full px-3.5"
-                    } ST-SB-3 cursor-pointer py-2 text-center`}
+                    } ST-SB-3 cursor-pointer py-2 text-center block transition-all duration-300`}
                   >
                     {subject?.name}
-                  </h3>
+                  </button>
                 </SwiperSlide>
               );
             })}
@@ -178,7 +175,7 @@ const LanguagesCarousel = () => {
 
                 {/* Buttons that appear on hover */}
                 <div className="hidden group-hover:flex gap-4 transition-all duration-300 ease-in-out">
-                  <button className="bg-[#1C1C1E] p-3 rounded-md">
+                  <button className="bg-[#1C1C1E] hover:bg-[#48484A] focus:bg-[#8E8E93] transition-colors duration-300 p-3 rounded-md">
                     <Image
                       className="w-8 h-4 object-contain"
                       alt="Message White Icon"

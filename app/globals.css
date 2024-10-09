@@ -31,7 +31,7 @@
   }
 
   .btn-black:focus {
-    background: #8E8E93;
+    background: #8e8e93;
   }
 
   .btn-blue {
@@ -40,8 +40,17 @@
   }
 
   .btn-white {
-    background: white;
+    transition: background 0.5s ease;
+    background: #ffffff;
     color: black;
+  }
+
+  .btn-white:hover {
+    background: #f1f0ed;
+  }
+
+  .btn-white:focus {
+    background: #dfddd9;
   }
 }
 

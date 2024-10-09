@@ -6,7 +6,7 @@ import Image from "next/image";
 const LearningEcosystem = () => {
   return (
     <section className="container-page px-3 py-12">
-      <h3 className="flex sm:items-center items-start MT-SB-2">
+      <h3 className="flex sm:items-center items-start MT-SB-2 text-[#1C1C1E]">
         <Image
           alt="Shield Icon"
           className="w-6 inline-block me-2"
@@ -15,12 +15,12 @@ const LearningEcosystem = () => {
         Safe learning environment
       </h3>
 
-      <p className=" text-[#8E8E93] mt-1 ST-3">
+      <p className=" text-[#48484A] mt-1 ST-3">
         Our platform provides a secure, monitored space with verified tutors,
         ensuring a safe and supportive learning experience for all.
       </p>
 
-      <article className="flex flex-col-reverse md:flex-row gap-5 mt-5">
+      <article className="flex flex-col-reverse md:flex-row gap-6 mt-5">
         <div className="flex-1">
           <div className="bg-[#F2F2F7] flex-1 text-center rounded-xl py-8 px-8 mb-6">
             <Image alt={"Camera Icon"} className="w-14 mx-auto" src={camera} />

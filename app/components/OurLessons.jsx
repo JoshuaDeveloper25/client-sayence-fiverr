@@ -11,7 +11,7 @@ const OurLessons = () => {
   return (
     <section className="bg-[#F2F2F7]">
       <div className="container-page px-3 py-12">
-        <h3 className="flex sm:items-center items-start MT-SB-2">
+        <h3 className="flex sm:items-center items-start MT-SB-2 text-[#1C1C1E]">
           <Image
             alt="Sparkle Icon"
             className="w-5 inline-block me-2"
@@ -20,22 +20,22 @@ const OurLessons = () => {
           Discover how our lessons can support You
         </h3>
 
-        <p className=" text-[#8E8E93] mt-1 ST-3">
+        <p className=" text-[#48484A] mt-1 ST-3">
           From school support to professional skill improvement, find lessons
           that fit your needs and learning style.
         </p>
 
-        <article className="flex flex-col-reverse md:flex-row gap-5 my-8">
+        <article className="flex flex-col-reverse md:flex-row gap-6 my-8">
           <div className="flex-1">
             <div className="flex flex-col justify-between">
-              <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
+              <div className="bg-white flex-1 text-center rounded-xl py-7 px-5">
                 <Image
                   alt={"Parachute Icon"}
                   className="w-12 mx-auto"
                   src={parachute}
                 />
 
-                <h2 className="text-[#48484A] MT-SB-1 my-1.5">
+                <h2 className="text-[#48484A] MT-SB-1 my-3">
                   School support
                 </h2>
                 <p className="text-[#8E8E93] ST-3">
@@ -44,14 +44,14 @@ const OurLessons = () => {
                 </p>
               </div>
 
-              <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 my-6">
+              <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 my-7">
                 <Image
                   alt={"Luggage Icon"}
                   className="w-12 mx-auto"
                   src={luggage}
                 />
 
-                <h2 className="text-[#48484A] MT-SB-1 my-1.5">
+                <h2 className="text-[#48484A] MT-SB-1 my-3">
                   Conversational lessons
                 </h2>
                 <p className="text-[#8E8E93] ST-3">
@@ -60,14 +60,14 @@ const OurLessons = () => {
                 </p>
               </div>
 
-              <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
+              <div className="bg-white flex-1 text-center rounded-xl py-7 px-5">
                 <Image
                   alt={"Badge Star Icon"}
                   className="w-6 mx-auto"
                   src={badgeStar}
                 />
 
-                <h2 className="text-[#48484A] MT-SB-1 my-1.5">
+                <h2 className="text-[#48484A] MT-SB-1 my-3">
                   Exam preparation
                 </h2>
                 <p className="text-[#8E8E93] ST-3 font-medium">
@@ -81,19 +81,19 @@ const OurLessons = () => {
             <div className="max-w-full mx-auto">
               <Image
                 alt="Woman Working"
-                className="w-full h-[33.4rem] object-cover rounded-2xl"
+                className="w-full h-[38rem] object-cover rounded-2xl"
                 src={womanWorking}
               />{" "}
             </div>
           </div>
         </article>
 
-        <article className="flex flex-col md:flex-row gap-5">
+        <article className="flex flex-col md:flex-row gap-7">
           <div className="flex-[30%]">
             <div className="max-w-full mx-auto">
               <Image
                 alt="Woman Working"
-                className="w-full h-[23rem] object-cover rounded-2xl"
+                className="w-full h-[26.5rem] object-cover rounded-2xl"
                 src={womanWorking}
               />{" "}
             </div>
@@ -101,10 +101,10 @@ const OurLessons = () => {
 
           <div className="flex-1">
             <div className="flex flex-col justify-between">
-              <div className="bg-white flex-1 text-center rounded-xl py-5 px-8 mb-6">
+              <div className="bg-white flex-1 text-center rounded-xl py-7 px-8 mb-6">
                 <Image alt={"Icon Sun"} className="w-12 mx-auto" src={sun} />
 
-                <h2 className="text-[#48484A] MT-SB-1 my-1.5">
+                <h2 className="text-[#48484A] MT-SB-1 my-3">
                   Initiation lessons
                 </h2>
                 <p className="text-[#8E8E93] ST-3">
@@ -113,10 +113,10 @@ const OurLessons = () => {
                 </p>
               </div>
 
-              <div className="bg-white flex-1 text-center rounded-xl py-5 px-5">
+              <div className="bg-white flex-1 text-center rounded-xl py-7 px-5">
                 <Image alt={"Icon Bee"} className="w-12 mx-auto" src={bee} />
 
-                <h2 className="text-[#48484A] MT-SB-1 my-1.5 leading-5">
+                <h2 className="text-[#48484A] MT-SB-1 my-3 leading-5">
                   Professional skills improvement
                 </h2>
                 <p className="text-[#8E8E93] ST-3">
