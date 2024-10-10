@@ -99,8 +99,11 @@ const LanguagesCarousel = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
-          {subjectsAndTutors?.map((subjectAndTutor) => (
-            <div className="bg-white rounded-b-xl rounded-t-xl group">
+          {subjectsAndTutors?.map((subjectAndTutor, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-b-xl rounded-t-xl group"
+            >
               <Image
                 alt={"Tutor Video Image"}
                 className="w-full rounded-t-xl"
@@ -144,7 +147,7 @@ const LanguagesCarousel = () => {
                     <li className="ST-SB-2 text-[#1C1C1E]">French</li>
                     <li className="ST-1 px-1 rounded-md bg-[#A3FFBD] text-[#1C1C1E]">
                       Fluent C2
-                    </li> 
+                    </li>
                   </ul>
 
                   <div className="flex items-center justify-center bg-[#F5F5F7] w-6 h-6 rounded-full">
