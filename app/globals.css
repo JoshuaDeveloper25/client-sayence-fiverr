@@ -59,10 +59,6 @@ body {
   font-family: "Poppins", system-ui;
 }
 
-.transition-colors {
-  transition: background-color 0.9s ease;
-}
-
 .poppins-medium {
   font-weight: 500;
 }

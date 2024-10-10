@@ -58,11 +58,11 @@ export const Input = ({
             ? "bg-[#FFCCCF] border border-[#F01]"
             : isTouched && isInvalid === false && inputComponentValue !== ""
             ? "border border-[#00AD30] bg-[#F2F2F7] has-[input:valid]:border-[#00AD30]"
-            : "bg-[#F2F2F7] has-[input:focus]:border-[#1A47FF] border  "
+            : "bg-[#F2F2F7] has-[input:focus]:border-[#1A47FF] border"
         }`}
       >
         {imgPath && (
-          <div className="transition-colors flex items-center gap-3 px-1.5 group-hover:bg-[#F1F0ED]">
+          <div className="flex items-center gap-3 px-1.5 group-hover:bg-[#F1F0ED]">
             <Image
               alt={alt}
               className={iconStyles ? iconStyles : "w-6 h-6"}
