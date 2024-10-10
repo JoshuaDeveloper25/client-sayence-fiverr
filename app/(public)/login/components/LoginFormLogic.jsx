@@ -19,15 +19,17 @@ const LoginFormLogic = () => {
     useState(false);
 
   // If it's empty or if account doesn't exists or if account is banned
-  const emailValidation =
-    !emailInput || !wrongCredentialsMessage
-      ? { errorName: "Invalid Email", errorDesc: "Check your spelling email" }
-      : wrongCredentialsMessage?.includes("Wrong Credentials")
-      ? {
-          errorName: "No account exists for this email address.",
-          errorDesc: `Check your spelling email or create an account if you don't have one`,
-        }
-      : null;
+  const emailValidation = !emailInput
+    ? null 
+    : wrongCredentialsMessage?.includes("Wrong Credentials")
+    ? {
+        errorName: "No account exists for this email address.",
+        errorDesc:
+          "Check your spelling email or create an account if you don't have one",
+      }
+    : !emailInput || !wrongCredentialsMessage
+    ? { errorName: "Invalid Email", errorDesc: "Check your spelling email" }
+    : null;
 
   return (
     <LoginForm

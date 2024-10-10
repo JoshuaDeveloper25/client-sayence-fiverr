@@ -12,7 +12,7 @@ export const Input = ({
   twoColumns = false,
   iconStyles = false,
   handlePasswordChange,
-  setInputValue, 
+  setInputValue,
   disableInternalValidation,
   wrongCredentialsMessage,
   maxTextLength = 0,
@@ -54,7 +54,7 @@ export const Input = ({
     <>
       <label
         className={`group flex rounded-md overflow-hidden mb-3 ${
-          isInvalid
+          isInvalid && inputComponentValue !== ""
             ? "bg-[#FFCCCF] border border-[#F01]"
             : isTouched && isInvalid === false && inputComponentValue !== ""
             ? "border border-[#00AD30] bg-[#F2F2F7] has-[input:valid]:border-[#00AD30]"
@@ -83,30 +83,31 @@ export const Input = ({
         />
       </label>
 
-      {!wrongCredentialsMessage ? (
-        isTouched &&
-        isInvalid && (
-          <div className="transition-all duration-300 transform opacity-100 translate-y-0 mb-3 max-h-screen">
-            <div className="flex items-center gap-3 my-2.5 rounded-md p-2 bg-[#FFED8F]">
-              <Image className="w-10" src={warning} alt="Warning Icon" />
-              <div>
-                <h3 className="text-[#1C1C1E] ST-SB-3">{errorName}</h3>
-                <p className="text-[#48484A] ST-3">{errorDesc}</p>
+      {!wrongCredentialsMessage
+        ? isTouched &&
+          isInvalid &&
+          inputComponentValue !== "" && (
+            <div className="transition-all duration-300 transform opacity-100 translate-y-0 mb-3 max-h-screen">
+              <div className="flex items-center gap-3 my-2.5 rounded-md p-2 bg-[#FFED8F]">
+                <Image className="w-10" src={warning} alt="Warning Icon" />
+                <div>
+                  <h3 className="text-[#1C1C1E] ST-SB-3">{errorName}</h3>
+                  <p className="text-[#48484A] ST-3">{errorDesc}</p>
+                </div>
               </div>
             </div>
-          </div>
-        )
-      ) : (
-        <div className="transition-all duration-300 transform opacity-100 translate-y-0 mb-3 max-h-screen">
-          <div className="flex items-center gap-3 my-2.5 rounded-md p-2 bg-[#FFED8F]">
-            <Image className="w-10" src={warning} alt="Warning Icon" />
-            <div>
-              <h3 className="text-[#1C1C1E] ST-SB-3">{errorName}</h3>
-              <p className="text-[#48484A] ST-3">{errorDesc}</p>
+          )
+        : inputComponentValue !== "" && (
+            <div className="transition-all duration-300 transform opacity-100 translate-y-0 mb-3 max-h-screen">
+              <div className="flex items-center gap-3 my-2.5 rounded-md p-2 bg-[#FFED8F]">
+                <Image className="w-10" src={warning} alt="Warning Icon" />
+                <div>
+                  <h3 className="text-[#1C1C1E] ST-SB-3">{errorName}</h3>
+                  <p className="text-[#48484A] ST-3">{errorDesc}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          )}
     </>
   );
 };
