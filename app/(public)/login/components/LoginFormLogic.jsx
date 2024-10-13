@@ -18,7 +18,7 @@ const LoginFormLogic = () => {
   const [disableInternalValidation, setDisableInternalValidation] =
     useState(false);
 
-  // If it's empty or if account doesn't exists or if account is banned
+  // If it's empty or if account doesn't exists or if account is banned.
   const emailValidation = !emailInput
     ? null 
     : wrongCredentialsMessage?.includes("Wrong Credentials")
